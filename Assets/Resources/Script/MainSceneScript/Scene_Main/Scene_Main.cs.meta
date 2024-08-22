@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7731f434598864f67a52e62b42f5bcb3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MyScript: {instanceID: 0}
+  - Monster_prefab_Set: {instanceID: 0}
+  - ui_displayTitle: {instanceID: 0}
+  - ui_displayTitle_text: {instanceID: 0}
+  - ui_displayTitle_box: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1588999441132411235
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3681901215188262095, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_Name
+      value: Collectable_Bush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215188262192, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681901215626750915, guid: 022b681eb9e8c48cb8f89679707a1345,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9f6b66254d66e437280f5830e69de555,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 022b681eb9e8c48cb8f89679707a1345, type: 3}
+--- !u!114 &2672322566734951072 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3681901215626750915, guid: 022b681eb9e8c48cb8f89679707a1345,
+    type: 3}
+  m_PrefabInstance: {fileID: 1588999441132411235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2672322567374489004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3681901215188262095, guid: 022b681eb9e8c48cb8f89679707a1345,
+    type: 3}
+  m_PrefabInstance: {fileID: 1588999441132411235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8434680866358652127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2672322567374489004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df03f0ab0cecf4809abd34bb72dfd750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  position: 
+  ShaderMaterial: {fileID: 0}
+  startScale: {x: 0, y: 0, z: 0}
+  AnimApparition_StartingY: {x: 0, y: 10, z: 0}
+  AnimApparition_Speed: 0.5
+  AnimApparition_WaitTime: 0.3
+  AnimShake_str: 15
+  AnimShake_speed: 0.35
+  timer_periodic: 5
+  timer: 0
+  img: {fileID: 2672322566734951072}
+  combat_obstacleThis: {fileID: 0}
+  Clicked: 0
+  RememberMouseOver: 0
+  outline_thicness: 0
+  outline_speed: 1.5
+  outline_max: 3.5
+  level: 0
+  Recolted: 0
+  SpRecolted: {fileID: 21300000, guid: 9695db1373d944fe184989bd986eb507, type: 3}
+  SpNonRecolted: {fileID: 21300000, guid: 9f6b66254d66e437280f5830e69de555, type: 3}

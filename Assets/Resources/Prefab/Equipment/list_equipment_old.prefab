@@ -1,0 +1,6111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &247695578084190332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3674924917123292352}
+  - component: {fileID: 2999532344462950598}
+  m_Layer: 0
+  m_Name: RustyChestPlate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3674924917123292352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247695578084190332}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6899981976004555673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2999532344462950598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247695578084190332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 1
+  Graphic: {fileID: 21300000, guid: 8400485ce79a144f8b39dd47f0eb938a, type: 3}
+  fr_title: Plastron
+  fr_desc: Un plastron des temps anciens.
+  uk_title: Chestplate
+  uk_desc: A breastplate from ancient times
+  primaryEffect: 10
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 14000000
+  Spell: 0
+--- !u!1 &445674683137127996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2159747358719156403}
+  m_Layer: 0
+  m_Name: $Chest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2159747358719156403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445674683137127996}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8472506136064084936}
+  - {fileID: 302982228473944720}
+  - {fileID: 297026563526981480}
+  - {fileID: 8340118765600052959}
+  m_Father: {fileID: 4015885628492686117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &485088187798772444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5381284992566384308}
+  - component: {fileID: 6692496135957580220}
+  m_Layer: 0
+  m_Name: UtilityBelt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5381284992566384308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485088187798772444}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4842145061263362365}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6692496135957580220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485088187798772444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 2
+  Graphic: {fileID: 21300000, guid: c5dc0c9012b7e4473bf55636429249c1, type: 3}
+  fr_title: Ceinture a outils
+  fr_desc: 
+  uk_title: Utility belt
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 0a000000
+  Spell: 0
+--- !u!1 &517534271100750836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1794540764095164492}
+  - component: {fileID: 6390713923728740925}
+  m_Layer: 0
+  m_Name: Winter shoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1794540764095164492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517534271100750836}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9001469335613093405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6390713923728740925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517534271100750836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 2299c1c1346434e168cb3d5c28d13d73, type: 3}
+  fr_title: Chaussure hivernal
+  fr_desc: 
+  uk_title: Winter shoes
+  uk_desc: 
+  primaryEffect: 2
+  secondaryEffect: 
+  effects_type: 0200000006000000
+  effects_strenght: 0200000001000000
+  Spell: 0
+--- !u!1 &601103547001204410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6025954928674334674}
+  - component: {fileID: 1739975293507256783}
+  m_Layer: 0
+  m_Name: Gold belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6025954928674334674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601103547001204410}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2776024767029353644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739975293507256783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601103547001204410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 8460f58f2979f4a368d3609179f4af07, type: 3}
+  fr_title: Ceinture en or
+  fr_desc: 
+  uk_title: Gold belt
+  uk_desc: 
+  primaryEffect: 7
+  secondaryEffect: 01000000
+  effects_type: 070000000100000005000000
+  effects_strenght: 010000000a00000001000000
+  Spell: 0
+--- !u!1 &722016942486715464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4842145061263362365}
+  m_Layer: 0
+  m_Name: $Belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4842145061263362365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722016942486715464}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2110419223851982767}
+  - {fileID: 5716231951160034106}
+  - {fileID: 5381284992566384308}
+  - {fileID: 7277372736887504440}
+  m_Father: {fileID: 7613883105653314212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &751206513290246564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4213591139064295935}
+  - component: {fileID: 7835099656309132106}
+  m_Layer: 0
+  m_Name: Angel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4213591139064295935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751206513290246564}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7348412722493869536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7835099656309132106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751206513290246564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 3c579a01dd9f54d198b715bc9db876cc, type: 3}
+  fr_title: Ange
+  fr_desc: 
+  uk_title: Angel
+  uk_desc: 
+  primaryEffect: 2
+  secondaryEffect: 02000000
+  effects_type: 02000000
+  effects_strenght: 05000000
+  Spell: 0
+--- !u!1 &837352975415999262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5650069265211206734}
+  - component: {fileID: 5271046503870732143}
+  m_Layer: 0
+  m_Name: bowling ball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5650069265211206734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837352975415999262}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6052241635486634010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5271046503870732143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837352975415999262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 5
+  Graphic: {fileID: 21300000, guid: 1182d9d78d68e40a1a236d5854c5a97f, type: 3}
+  fr_title: Boule de bowling
+  fr_desc: Strike !
+  uk_title: Bowling ball
+  uk_desc: Strike !
+  primaryEffect: 10
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 28000000
+  Spell: 73
+--- !u!1 &868595169329345343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297026563526981480}
+  - component: {fileID: 1584122884105830869}
+  m_Layer: 0
+  m_Name: knight armor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &297026563526981480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868595169329345343}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2159747358719156403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1584122884105830869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868595169329345343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 1
+  Graphic: {fileID: 21300000, guid: 18ed0db953afc46b48b5612ed2761b8e, type: 3}
+  fr_title: Armure de chevalier
+  fr_desc: Une armure extremement puissante
+  uk_title: Knight armor
+  uk_desc: A very powerful armor
+  primaryEffect: 0
+  secondaryEffect: 0000000001000000
+  effects_type: 0000000001000000
+  effects_strenght: 7800000014000000
+  Spell: 0
+--- !u!1 &888548368852925413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5444047984992595464}
+  - component: {fileID: 5135481502680353321}
+  m_Layer: 0
+  m_Name: Totem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5444047984992595464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888548368852925413}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7743170283608457867}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5135481502680353321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888548368852925413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 6
+  Graphic: {fileID: 21300000, guid: f65005a9a8e1b4030acd9c4077858812, type: 3}
+  fr_title: Totem
+  fr_desc: Une statue incroyable capable de faire revivre n'importe qui
+  uk_title: Totem
+  uk_desc: An incredible statue capable of reviving anyone
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 50000000
+  Spell: 41
+--- !u!1 &938197551639939157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5681397566576875196}
+  - component: {fileID: 7140962160702936598}
+  m_Layer: 0
+  m_Name: littleSword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5681397566576875196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938197551639939157}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6309394687939601852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7140962160702936598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938197551639939157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 5
+  Graphic: {fileID: 21300000, guid: bd6acae8501024447a21cffde3595cc0, type: 3}
+  fr_title: Petite epee
+  fr_desc: Chling...
+  uk_title: Little sword
+  uk_desc: Chling...
+  primaryEffect: 2
+  secondaryEffect: 
+  effects_type: 02000000
+  effects_strenght: 02000000
+  Spell: 24
+--- !u!1 &1015555260838103788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2988615247571220524}
+  - component: {fileID: 629197480028712855}
+  m_Layer: 0
+  m_Name: GoldArmor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2988615247571220524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015555260838103788}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 591733988047135960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &629197480028712855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015555260838103788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 1
+  Graphic: {fileID: 21300000, guid: fc6abdee0b6eb4e1f91dd5a654f476a5, type: 3}
+  fr_title: Armure en or
+  fr_desc: 
+  uk_title: Gold armor
+  uk_desc: 
+  primaryEffect: 7
+  secondaryEffect: 01000000
+  effects_type: 0700000001000000
+  effects_strenght: 010000000a000000
+  Spell: 0
+--- !u!1 &1052134587792147531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074707576697418046}
+  - component: {fileID: 4103579253891612255}
+  m_Layer: 0
+  m_Name: t-shirt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074707576697418046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052134587792147531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6899981976004555673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4103579253891612255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052134587792147531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 1
+  Graphic: {fileID: 21300000, guid: c5b77c736ca384618b54bc47af6bd046, type: 3}
+  fr_title: T-shirt
+  fr_desc: Taille S
+  uk_title: T-shirt
+  uk_desc: S size
+  primaryEffect: 2
+  secondaryEffect: 
+  effects_type: 02000000
+  effects_strenght: 02000000
+  Spell: 0
+--- !u!1 &1092207906737219183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 690760118607218656}
+  - component: {fileID: 5411180894796391880}
+  m_Layer: 0
+  m_Name: Overalls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &690760118607218656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092207906737219183}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 591733988047135960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5411180894796391880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092207906737219183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 1
+  Graphic: {fileID: 21300000, guid: f974ae6436196456d841d2f66b382f14, type: 3}
+  fr_title: Salopette
+  fr_desc: 
+  uk_title: OverAll
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 0a000000
+  effects_type: 00000000
+  effects_strenght: 14000000
+  Spell: 0
+--- !u!1 &1189646422116713705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2776024767029353644}
+  m_Layer: 0
+  m_Name: $Belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2776024767029353644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189646422116713705}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5784666621697075452}
+  - {fileID: 2985605444218116442}
+  - {fileID: 1972565775186692444}
+  - {fileID: 6371876758668647029}
+  - {fileID: 3903524850871338906}
+  - {fileID: 6025954928674334674}
+  - {fileID: 7056804888171577827}
+  - {fileID: 1301274970352373131}
+  m_Father: {fileID: 6279075012005577613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1440726755972115043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357250232727846152}
+  - component: {fileID: 2989147451940253691}
+  m_Layer: 0
+  m_Name: Statue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1357250232727846152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440726755972115043}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6052241635486634010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2989147451940253691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440726755972115043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 5
+  Graphic: {fileID: 21300000, guid: a60d02e941bea4d7b846c3ab19fb1312, type: 3}
+  fr_title: Statue
+  fr_desc: "Une tr\xE8s lourde statue"
+  uk_title: Statue
+  uk_desc: A very heavy statue
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 14000000
+  Spell: 26
+--- !u!1 &1458082311205770645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6081458647385925537}
+  m_Layer: 0
+  m_Name: $Belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6081458647385925537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458082311205770645}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3115438351986044677}
+  - {fileID: 4704970684662223102}
+  - {fileID: 6631797160367954980}
+  - {fileID: 7813276880152629704}
+  m_Father: {fileID: 4015885628492686117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1552191450673008716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6206792525670450490}
+  - component: {fileID: 72116370997990441}
+  m_Layer: 0
+  m_Name: Sunglasses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6206792525670450490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552191450673008716}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858686370868069359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &72116370997990441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552191450673008716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 0
+  Graphic: {fileID: 21300000, guid: b1dbe460eb2ce4ed091a160400df40e1, type: 3}
+  fr_title: Lunettes de soleil
+  fr_desc: "A une epoque l'intense lumiere du soleil g\xE9rer les humains... quel
+    luxe"
+  uk_title: Sunglasses
+  uk_desc: At one time the intense sunlight managed humans... what a luxury
+  primaryEffect: 0
+  secondaryEffect: 00000000
+  effects_type: 00000000
+  effects_strenght: 3c000000
+  Spell: 0
+--- !u!1 &1651112313517193853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6241343144789559317}
+  m_Layer: 0
+  m_Name: $Pant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6241343144789559317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651112313517193853}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4788404603527625766}
+  m_Father: {fileID: 7613883105653314212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1662625647341187907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6309394687939601852}
+  m_Layer: 0
+  m_Name: $Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6309394687939601852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662625647341187907}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 180092137381238958}
+  - {fileID: 4253805659919949123}
+  - {fileID: 5681397566576875196}
+  m_Father: {fileID: 7613883105653314212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1716749508248977300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301274970352373131}
+  - component: {fileID: 7304075532777433055}
+  m_Layer: 0
+  m_Name: Fine belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1301274970352373131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716749508248977300}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2776024767029353644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7304075532777433055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716749508248977300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 3bb8a7e81b98c4099b197dabd0604dd7, type: 3}
+  fr_title: Fine ceinture
+  fr_desc: 
+  uk_title: Fine belt
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 0100000004000000
+  effects_strenght: 0700000005000000
+  Spell: 0
+--- !u!1 &1773248720195749798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2322098492237520208}
+  - component: {fileID: 6149258683606708490}
+  m_Layer: 0
+  m_Name: Watch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2322098492237520208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773248720195749798}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7743170283608457867}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6149258683606708490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773248720195749798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 6
+  Graphic: {fileID: 21300000, guid: 55d7f09bb7f9547778e7a85fdc0fa255, type: 3}
+  fr_title: Montre
+  fr_desc: 
+  uk_title: Watch
+  uk_desc: 
+  primaryEffect: 2
+  secondaryEffect: 
+  effects_type: 02000000
+  effects_strenght: 06000000
+  Spell: 37
+--- !u!1 &1820869522408185231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6044546926613975079}
+  - component: {fileID: 3804499202369404205}
+  m_Layer: 0
+  m_Name: Hawaiian shirt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6044546926613975079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820869522408185231}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 591733988047135960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3804499202369404205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820869522408185231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 1
+  Graphic: {fileID: 21300000, guid: 9d7498e72cfaf498cbbe5b93882e2d85, type: 3}
+  fr_title: Chemise hawaienne
+  fr_desc: '"Ooohh les enfants..."'
+  uk_title: Hawaiian shirt
+  uk_desc: '"Ooooohh children..."'
+  primaryEffect: 0
+  secondaryEffect: 01000000
+  effects_type: 0000000001000000
+  effects_strenght: 280000000a000000
+  Spell: 0
+--- !u!1 &1832420042040094206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4704970684662223102}
+  - component: {fileID: 607554986302685220}
+  m_Layer: 0
+  m_Name: ReinforcedBelt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4704970684662223102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832420042040094206}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6081458647385925537}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &607554986302685220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832420042040094206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 2
+  Graphic: {fileID: 21300000, guid: f029956827ca64084bdc402eb64dfa62, type: 3}
+  fr_title: "Ceinture renforc\xE9"
+  fr_desc: 
+  uk_title: Reinforced belt
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 0000000000000000
+  effects_type: 00000000
+  effects_strenght: a0000000
+  Spell: 0
+--- !u!1 &1896889504003573779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7292538370144226763}
+  - component: {fileID: 1575241098431704982}
+  m_Layer: 0
+  m_Name: MilitaryHelmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7292538370144226763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896889504003573779}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858686370868069359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1575241098431704982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896889504003573779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 0
+  Graphic: {fileID: 21300000, guid: 98137d08500944b94aa520a730001e3b, type: 3}
+  fr_title: Casque militaire
+  fr_desc: 
+  uk_title: Military helmet
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 02000000
+  effects_type: 0100000002000000
+  effects_strenght: 1400000002000000
+  Spell: 0
+--- !u!1 &2019079082426505188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3446901560831746630}
+  - component: {fileID: 3495056896366351737}
+  m_Layer: 0
+  m_Name: Knight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3446901560831746630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019079082426505188}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858686370868069359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3495056896366351737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019079082426505188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 0
+  Graphic: {fileID: 21300000, guid: ab05707d6a5db4cd28adcb195ad7bd8d, type: 3}
+  fr_title: Chevalier
+  fr_desc: 
+  uk_title: Knight
+  uk_desc: 
+  primaryEffect: 2
+  secondaryEffect: 01000000
+  effects_type: 0200000001000000
+  effects_strenght: 030000000a000000
+  Spell: 0
+--- !u!1 &2062602213112964396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8527755546920182977}
+  - component: {fileID: 853675865188034815}
+  m_Layer: 0
+  m_Name: FireFighterHelmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8527755546920182977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062602213112964396}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858686370868069359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &853675865188034815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062602213112964396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 0
+  Graphic: {fileID: 21300000, guid: 2973e9ba5718b4a2bb643bf0d129501f, type: 3}
+  fr_title: Casque de pompier
+  fr_desc: 
+  uk_title: Fire fighter helmet
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 00000000
+  effects_type: 0100000000000000
+  effects_strenght: 1400000014000000
+  Spell: 0
+--- !u!1 &2184100651678464185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5716231951160034106}
+  - component: {fileID: 1392991817214226382}
+  m_Layer: 0
+  m_Name: Medal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5716231951160034106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184100651678464185}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4842145061263362365}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1392991817214226382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184100651678464185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 4f978bb2142f845f4920ba3bacb17938, type: 3}
+  fr_title: Medaille
+  fr_desc: 
+  uk_title: Medal
+  uk_desc: 
+  primaryEffect: 2
+  secondaryEffect: 
+  effects_type: 02000000
+  effects_strenght: 02000000
+  Spell: 0
+--- !u!1 &2200287039601865384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6631797160367954980}
+  - component: {fileID: 3969843097014324027}
+  m_Layer: 0
+  m_Name: SpikeBelt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6631797160367954980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200287039601865384}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6081458647385925537}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3969843097014324027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200287039601865384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 423b6ca3f37f249a9922414bcfde38ce, type: 3}
+  fr_title: Ceinture de pique
+  fr_desc: "Une ceinture tr\xE8s puissante... Mais piquante"
+  uk_title: Spike belt
+  uk_desc: A very powerful belt... But spiky
+  primaryEffect: 0
+  secondaryEffect: 0100000001000000
+  effects_type: 0000000001000000
+  effects_strenght: 5000000028000000
+  Spell: 0
+--- !u!1 &2321707747772434796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4883172917950563411}
+  - component: {fileID: 7889741582251814400}
+  m_Layer: 0
+  m_Name: LongueVue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4883172917950563411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321707747772434796}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4084282087501622302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7889741582251814400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321707747772434796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 6
+  Graphic: {fileID: 21300000, guid: 430b79c0c2b0e41eb844b8906333dc00, type: 3}
+  fr_title: Longue vue
+  fr_desc: Grace a cette objet vous pourrez connaitre les ennemis des prochaines
+    zones a l'avance.. Non je rigole
+  uk_title: Field-glass
+  uk_desc: Thanks to this object you will be able to know the enemies of the next
+    zones in advance.. No I'm kidding
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 14000000
+  Spell: 35
+--- !u!1 &2383824664940456089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3624015647407699448}
+  - component: {fileID: 5040114756703235693}
+  m_Layer: 0
+  m_Name: Sweater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3624015647407699448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2383824664940456089}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6899981976004555673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5040114756703235693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2383824664940456089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 1
+  Graphic: {fileID: 21300000, guid: eb3902d0ccc6a43ac842915c07e73357, type: 3}
+  fr_title: Pull
+  fr_desc: "Un pull r\xE9chauffant et confortable"
+  uk_title: Sweat
+  uk_desc: A warm and comforting sweater
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 0a000000
+  Spell: 0
+--- !u!1 &2488506213784115499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067846719701434463}
+  - component: {fileID: 6644653449547135671}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067846719701434463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2488506213784115499}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7743170283608457867}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6644653449547135671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2488506213784115499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 6
+  Graphic: {fileID: 21300000, guid: 1bee908c8294a400e9aea023eed45022, type: 3}
+  fr_title: Farine
+  fr_desc: "Une farine assez rare tr\xE8s efficace au combat mais d\xE9vastateur
+    sur le long terme"
+  uk_title: Floor
+  uk_desc: A fairly rare flour very effective in combat but devastating in the long
+    run
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 28000000
+  Spell: 40
+--- !u!1 &2490030331846491931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184658489105956437}
+  - component: {fileID: 1143559924063427574}
+  m_Layer: 0
+  m_Name: Rush
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &184658489105956437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490030331846491931}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7081083256745783564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1143559924063427574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490030331846491931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 6
+  Graphic: {fileID: 21300000, guid: de135ce8e200d41ab92334ca35ca24e6, type: 3}
+  fr_title: Rush
+  fr_desc: 
+  uk_title: Rush
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 0a000000
+  Spell: 39
+--- !u!1 &2495480639307673849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4253805659919949123}
+  - component: {fileID: 7552137626101181296}
+  m_Layer: 0
+  m_Name: Bow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4253805659919949123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495480639307673849}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6309394687939601852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7552137626101181296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495480639307673849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 5
+  Graphic: {fileID: 21300000, guid: d54eac416996e433daa126f0ab2dfa23, type: 3}
+  fr_title: Arc
+  fr_desc: "Pour les amateurs \xE0 distance"
+  uk_title: Bow
+  uk_desc: For distance amator
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 0a000000
+  Spell: 23
+--- !u!1 &2514711240843697882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7081083256745783564}
+  m_Layer: 0
+  m_Name: $Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7081083256745783564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514711240843697882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2621241094304191858}
+  - {fileID: 6483258510992387053}
+  - {fileID: 184658489105956437}
+  m_Father: {fileID: 7613883105653314212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2623579400367045672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6371876758668647029}
+  - component: {fileID: 7139821239734703200}
+  m_Layer: 0
+  m_Name: Big belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6371876758668647029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623579400367045672}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2776024767029353644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7139821239734703200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623579400367045672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 2
+  Graphic: {fileID: 21300000, guid: f71d45a2f1cc04cb3bb09ff60413614b, type: 3}
+  fr_title: Grande ceinture
+  fr_desc: 
+  uk_title: Big belt
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 00000000
+  effects_type: 0000000005000000
+  effects_strenght: 3c00000001000000
+  Spell: 0
+--- !u!1 &2654331039446422844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4129298329059537350}
+  - component: {fileID: 6870076924477641459}
+  m_Layer: 0
+  m_Name: Cap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4129298329059537350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654331039446422844}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 591733988047135960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6870076924477641459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654331039446422844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 1
+  Graphic: {fileID: 21300000, guid: 44b4a73502f614d92a33238f52e64746, type: 3}
+  fr_title: Cape
+  fr_desc: '"Pas de cape !"'
+  uk_title: Cap
+  uk_desc: '"No cap !"'
+  primaryEffect: 1
+  secondaryEffect: 00000000
+  effects_type: 0100000000000000
+  effects_strenght: 1400000014000000
+  Spell: 0
+--- !u!1 &2730071254640353253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6254049099998098826}
+  m_Layer: 0
+  m_Name: $Helmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6254049099998098826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2730071254640353253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1711782649528540823}
+  - {fileID: 8050795107294729348}
+  - {fileID: 2699574671513700485}
+  - {fileID: 7823901840185829370}
+  m_Father: {fileID: 7613883105653314212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2755703866634349539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3341172651899746968}
+  - component: {fileID: 5657274320989270277}
+  m_Layer: 0
+  m_Name: GreenArmor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3341172651899746968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2755703866634349539}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 591733988047135960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5657274320989270277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2755703866634349539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 1
+  Graphic: {fileID: 21300000, guid: a65c1077d2d244920be9229a885e3cee, type: 3}
+  fr_title: Armure verte
+  fr_desc: 
+  uk_title: Green armor
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 02000000
+  effects_type: 0100000002000000
+  effects_strenght: 1400000002000000
+  Spell: 0
+--- !u!1 &2784075608290592724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6411025366098315797}
+  m_Layer: 0
+  m_Name: $Boot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6411025366098315797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784075608290592724}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7907907320676431823}
+  - {fileID: 4028292378962845993}
+  - {fileID: 7341389795539549100}
+  - {fileID: 3504684478438961034}
+  m_Father: {fileID: 4015885628492686117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3081056003050429719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1972565775186692444}
+  - component: {fileID: 3206656941873113757}
+  m_Layer: 0
+  m_Name: Leather belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1972565775186692444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3081056003050429719}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2776024767029353644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3206656941873113757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3081056003050429719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 0ebad544bc50a44e4bbd6303e280522f, type: 3}
+  fr_title: Ceinture en cuir
+  fr_desc: "Une ceinture r\xE9sistente et agr\xE9able au toucher"
+  uk_title: Leather belt
+  uk_desc: A resistant belt that is pleasant to the touch
+  primaryEffect: 0
+  secondaryEffect: 02000000
+  effects_type: 000000000200000005000000
+  effects_strenght: 280000000200000001000000
+  Spell: 0
+--- !u!1 &3366231896831683469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7613883105653314212}
+  m_Layer: 0
+  m_Name: $Commun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7613883105653314212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3366231896831683469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6254049099998098826}
+  - {fileID: 6899981976004555673}
+  - {fileID: 4842145061263362365}
+  - {fileID: 6241343144789559317}
+  - {fileID: 9001469335613093405}
+  - {fileID: 6309394687939601852}
+  - {fileID: 7081083256745783564}
+  m_Father: {fileID: 1966104687556408533}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3454780848663614045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6279075012005577613}
+  m_Layer: 0
+  m_Name: $UnCommun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6279075012005577613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3454780848663614045}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 858686370868069359}
+  - {fileID: 591733988047135960}
+  - {fileID: 2776024767029353644}
+  - {fileID: 3927814869371867904}
+  - {fileID: 7348412722493869536}
+  - {fileID: 6052241635486634010}
+  - {fileID: 4084282087501622302}
+  m_Father: {fileID: 1966104687556408533}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3733848032566523042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4778566665406458608}
+  - component: {fileID: 5342367403362620699}
+  m_Layer: 0
+  m_Name: FootballShoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4778566665406458608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733848032566523042}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7348412722493869536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5342367403362620699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733848032566523042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 5f3fd84fee5584ad2bae99d056cf3e3c, type: 3}
+  fr_title: Chaussure de foot
+  fr_desc: 
+  uk_title: Football shoes
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 0a000000
+  effects_type: 0000000001000000
+  effects_strenght: 1400000005000000
+  Spell: 0
+--- !u!1 &3791167796047413975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7495691120721476030}
+  - component: {fileID: 1661840302435691260}
+  m_Layer: 0
+  m_Name: BikeHelmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7495691120721476030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791167796047413975}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858686370868069359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1661840302435691260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791167796047413975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 0
+  Graphic: {fileID: 21300000, guid: e8fcc1bf7df2f4dfda8d404c4b457f63, type: 3}
+  fr_title: Casque de velo
+  fr_desc: 
+  uk_title: Bike helmet
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 01000000
+  effects_type: 0000000001000000
+  effects_strenght: 280000000a000000
+  Spell: 0
+--- !u!1 &3820297020813202341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985738504293191205}
+  - component: {fileID: 8871813239192647455}
+  m_Layer: 0
+  m_Name: Pantalon d'ovnis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &985738504293191205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820297020813202341}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4540198530158084366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8871813239192647455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820297020813202341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 3
+  Graphic: {fileID: 21300000, guid: 24503030c63f34197911aed91f72e6bf, type: 3}
+  fr_title: Pantalon d'ovnis
+  fr_desc: Un incroyable pantalon d'origine inconnue
+  uk_title: Ufo pant
+  uk_desc: Incredible pants of unknown origin
+  primaryEffect: 2
+  secondaryEffect: 0200000001000000
+  effects_type: 0200000001000000
+  effects_strenght: 0900000014000000
+  Spell: 0
+--- !u!1 &3927446177782370397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2699574671513700485}
+  - component: {fileID: 7112176129034407794}
+  m_Layer: 0
+  m_Name: Bonnet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2699574671513700485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927446177782370397}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6254049099998098826}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7112176129034407794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927446177782370397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 0
+  Graphic: {fileID: 21300000, guid: a72d1f81a830f4344a5192e151d2a390, type: 3}
+  fr_title: Bonnet
+  fr_desc: Un bonnet rechauffant
+  uk_title: Bonnet
+  uk_desc: A warming cap
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 0a000000
+  Spell: 0
+--- !u!1 &4109603545916636128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858686370868069359}
+  m_Layer: 0
+  m_Name: $Helmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &858686370868069359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109603545916636128}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6206792525670450490}
+  - {fileID: 966450792243591800}
+  - {fileID: 7495691120721476030}
+  - {fileID: 8527755546920182977}
+  - {fileID: 7292538370144226763}
+  - {fileID: 3446901560831746630}
+  - {fileID: 1665835732442212994}
+  m_Father: {fileID: 6279075012005577613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4154010664540809717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2385431952769908755}
+  - component: {fileID: 9047080429743099378}
+  m_Layer: 0
+  m_Name: Ripped pant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2385431952769908755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154010664540809717}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3927814869371867904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9047080429743099378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154010664540809717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 3
+  Graphic: {fileID: 21300000, guid: 1acbb1fabe6694f23bbaa9e60ca92776, type: 3}
+  fr_title: "Pantalon trou\xE9e"
+  fr_desc: 
+  uk_title: Ripped pant
+  uk_desc: 
+  primaryEffect: 2
+  secondaryEffect: 02000000
+  effects_type: 02000000
+  effects_strenght: 05000000
+  Spell: 0
+--- !u!1 &4288829137543389282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4084282087501622302}
+  m_Layer: 0
+  m_Name: $Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4084282087501622302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288829137543389282}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8364829592355875890}
+  - {fileID: 4883172917950563411}
+  - {fileID: 3702671991741689741}
+  - {fileID: 1418185074153560229}
+  m_Father: {fileID: 6279075012005577613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4305963099911098045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6601049017280705957}
+  - component: {fileID: 5644405209426778672}
+  m_Layer: 0
+  m_Name: Ak47
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6601049017280705957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4305963099911098045}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4287215954600014734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5644405209426778672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4305963099911098045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 5
+  Graphic: {fileID: 21300000, guid: 95e04988b6d37433597eb1eed252c7f8, type: 3}
+  fr_title: Ak47
+  fr_desc: WOW
+  uk_title: Ak47
+  uk_desc: WOW
+  primaryEffect: 2
+  secondaryEffect: 
+  effects_type: 02000000
+  effects_strenght: 06000000
+  Spell: 29
+--- !u!1 &4360334609572740134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3702671991741689741}
+  - component: {fileID: 3964093499050708290}
+  m_Layer: 0
+  m_Name: Sacrifice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3702671991741689741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360334609572740134}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4084282087501622302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3964093499050708290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360334609572740134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 6
+  Graphic: {fileID: 21300000, guid: 41267e4cdf758419882e868647c8e74c, type: 3}
+  fr_title: Sacrifice
+  fr_desc: 
+  uk_title: Sacrifice
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 14000000
+  Spell: 36
+--- !u!1 &4423627334837088908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705956320660944168}
+  - component: {fileID: 2711891911989062969}
+  m_Layer: 0
+  m_Name: BulletproofVest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &705956320660944168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423627334837088908}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6899981976004555673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2711891911989062969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423627334837088908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 1
+  Graphic: {fileID: 21300000, guid: db9351e3d538d4ab48e5168c41e87677, type: 3}
+  fr_title: Gilet par balle
+  fr_desc: A un temps les humains se devaient de se proteger contre eux meme
+  uk_title: Bulletproof
+  uk_desc: At one time humans had to protect themselves against themselves
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 0000000001000000
+  effects_strenght: 0f00000005000000
+  Spell: 0
+--- !u!1 &4535914471713923212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664295947634989714}
+  - component: {fileID: 2255443590425241883}
+  m_Layer: 0
+  m_Name: HighTech boot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1664295947634989714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4535914471713923212}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7348412722493869536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2255443590425241883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4535914471713923212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 4
+  Graphic: {fileID: 21300000, guid: d8ff440608f3148b8a34a6a5865e9a76, type: 3}
+  fr_title: Chaussure high tech
+  fr_desc: 
+  uk_title: High tech boot
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 02000000
+  effects_type: 0100000002000000
+  effects_strenght: 1400000002000000
+  Spell: 0
+--- !u!1 &4577967519401924823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6216983003650764882}
+  - component: {fileID: 3305939631708833567}
+  m_Layer: 0
+  m_Name: Spear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6216983003650764882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4577967519401924823}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6052241635486634010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3305939631708833567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4577967519401924823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 5
+  Graphic: {fileID: 21300000, guid: ad04f1580c5094920a64155e32518c40, type: 3}
+  fr_title: Lance
+  fr_desc: "Lancez-vous \xE0 l'aventure !"
+  uk_title: Spear
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 28000000
+  Spell: 74
+--- !u!1 &4783244552466070854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4540198530158084366}
+  m_Layer: 0
+  m_Name: $Pant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4540198530158084366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4783244552466070854}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7629698653627175939}
+  - {fileID: 76940144113329343}
+  - {fileID: 985738504293191205}
+  m_Father: {fileID: 4015885628492686117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4889426685056039737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180092137381238958}
+  - component: {fileID: 6188786470529292407}
+  m_Layer: 0
+  m_Name: CrowBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &180092137381238958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889426685056039737}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6309394687939601852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6188786470529292407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889426685056039737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 5
+  Graphic: {fileID: 21300000, guid: f43e3bd0ffcc94828ab50dc4299d27c3, type: 3}
+  fr_title: Pied de biche
+  fr_desc: '"Bienvenue chez Black mesa"'
+  uk_title: Crowbar
+  uk_desc: '"Welcome to Black mesa"'
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 14000000
+  Spell: 28
+--- !u!1 &4925679424098019607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418185074153560229}
+  - component: {fileID: 4239675680271451213}
+  m_Layer: 0
+  m_Name: dice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1418185074153560229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925679424098019607}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4084282087501622302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4239675680271451213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925679424098019607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 6
+  Graphic: {fileID: 21300000, guid: ee2b67a6cfb6d406c9f2d637c835fee2, type: 3}
+  fr_title: "D\xE9s"
+  fr_desc: 
+  uk_title: Dice
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 28000000
+  Spell: 72
+--- !u!1 &4995584208647062699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8340118765600052959}
+  - component: {fileID: 192060035095808439}
+  m_Layer: 0
+  m_Name: StrangeArmor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8340118765600052959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4995584208647062699}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2159747358719156403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192060035095808439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4995584208647062699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 1
+  Graphic: {fileID: 21300000, guid: 8d462ac2274bf4fb08f60274bb8b1ce3, type: 3}
+  fr_title: Armure etrange
+  fr_desc: 
+  uk_title: Strange armor
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 0a0000000a000000
+  effects_type: 0000000001000000
+  effects_strenght: 0a0000000a000000
+  Spell: 0
+--- !u!1 &5107794467165201454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7907907320676431823}
+  - component: {fileID: 4562455363779312682}
+  m_Layer: 0
+  m_Name: Shoe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7907907320676431823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5107794467165201454}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6411025366098315797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4562455363779312682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5107794467165201454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 4
+  Graphic: {fileID: 21300000, guid: f7b926ce505ef489d868aba47f0e3504, type: 3}
+  fr_title: Chaussure
+  fr_desc: "Une inscription y est grav\xE9e mais elle est partiellement ind\xE9chiffrable
+    : \"*ik*\""
+  uk_title: Shoes
+  uk_desc: 'An inscription is engraved there but it''s partially indecipherable:
+    "*ik*"'
+  primaryEffect: 7
+  secondaryEffect: 0200000000000000
+  effects_type: 070000000200000000000000
+  effects_strenght: 010000000300000028000000
+  Spell: 0
+--- !u!1 &5153209108781011871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9099744984450493743}
+  - component: {fileID: 578747447628614345}
+  m_Layer: 0
+  m_Name: AvancedHelmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9099744984450493743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153209108781011871}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 954184700782581095}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &578747447628614345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153209108781011871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 0
+  Graphic: {fileID: 21300000, guid: 166b0345a136647d79413a7b5f67c118, type: 3}
+  fr_title: "Casque avanc\xE9"
+  fr_desc: 
+  uk_title: Avanced helet
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 0a0000000b000000
+  effects_type: 0000000001000000
+  effects_strenght: 0a00000007000000
+  Spell: 0
+--- !u!1 &5163732850497296156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7277372736887504440}
+  - component: {fileID: 9039603518144489412}
+  m_Layer: 0
+  m_Name: Simple holster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7277372736887504440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163732850497296156}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4842145061263362365}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9039603518144489412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163732850497296156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 2
+  Graphic: {fileID: 21300000, guid: bd1cd3949873d4529867feb40e1a195a, type: 3}
+  fr_title: "Simple \xE9tui"
+  fr_desc: 
+  uk_title: Simple holster
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 
+  effects_type: 0000000001000000
+  effects_strenght: 0a00000005000000
+  Spell: 0
+--- !u!1 &5202641119822015066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1665835732442212994}
+  - component: {fileID: 2110511466158994742}
+  m_Layer: 0
+  m_Name: SecurityHelmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1665835732442212994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5202641119822015066}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858686370868069359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2110511466158994742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5202641119822015066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 0
+  Graphic: {fileID: 21300000, guid: 45d997322353049c39e710e061c36d7e, type: 3}
+  fr_title: "Casque de s\xE9curit\xE9"
+  fr_desc: 
+  uk_title: Security helmet
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 0a000000
+  effects_type: 00000000
+  effects_strenght: 1e000000
+  Spell: 0
+--- !u!1 &5220543620794153685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7348412722493869536}
+  m_Layer: 0
+  m_Name: $Boot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7348412722493869536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220543620794153685}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9006483946544725340}
+  - {fileID: 433579259021570703}
+  - {fileID: 2705238643625228450}
+  - {fileID: 8698689868205644531}
+  - {fileID: 4213591139064295935}
+  - {fileID: 2189890272651991044}
+  - {fileID: 1664295947634989714}
+  - {fileID: 4778566665406458608}
+  m_Father: {fileID: 6279075012005577613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5280634363625368415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3769493617110163510}
+  - component: {fileID: 1411474196709234675}
+  m_Layer: 0
+  m_Name: MagicWand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3769493617110163510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280634363625368415}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4287215954600014734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1411474196709234675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280634363625368415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 5
+  Graphic: {fileID: 21300000, guid: 16d36d6a9cdd44dc3b136285cd90b3d1, type: 3}
+  fr_title: Baguette magique
+  fr_desc: '"Avada kevadra !"'
+  uk_title: Magic wand
+  uk_desc: '"Avada kevadra !"'
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 28000000
+  Spell: 25
+--- !u!1 &5499549944238024811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3115438351986044677}
+  - component: {fileID: 2256693393391227358}
+  m_Layer: 0
+  m_Name: Ceinture a munition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3115438351986044677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5499549944238024811}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6081458647385925537}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2256693393391227358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5499549944238024811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 14eb30926bc4148c197091b8dd78f110, type: 3}
+  fr_title: Ceinture a munition
+  fr_desc: "Une ceinture tr\xE8s pratique"
+  uk_title: Munition belt
+  uk_desc: A very practical belt
+  primaryEffect: 2
+  secondaryEffect: 0200000002000000
+  effects_type: 02000000
+  effects_strenght: 0c000000
+  Spell: 0
+--- !u!1 &5569425428504981599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5888630469956518572}
+  - component: {fileID: 1587734805953355058}
+  m_Layer: 0
+  m_Name: MotorcycleHelmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5888630469956518572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569425428504981599}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 954184700782581095}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1587734805953355058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569425428504981599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 0
+  Graphic: {fileID: 21300000, guid: ae87000c14bea4bff887128aa42b761a, type: 3}
+  fr_title: Casque de moto
+  fr_desc: Un puissant casque
+  uk_title: Motorcycle helmet
+  uk_desc: A powerful helmet
+  primaryEffect: 2
+  secondaryEffect: 0200000000000000
+  effects_type: 020000000000000005000000
+  effects_strenght: 090000002800000001000000
+  Spell: 0
+--- !u!1 &5598351418936946727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5784666621697075452}
+  - component: {fileID: 2094670481898378105}
+  m_Layer: 0
+  m_Name: Banana
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5784666621697075452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598351418936946727}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2776024767029353644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2094670481898378105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598351418936946727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 98a40c7e4de6f46b3bb60c6d4cbe79e3, type: 3}
+  fr_title: Banane
+  fr_desc: Une ceinture avec une petite poche... vous pourriez y ranger.. vos stylos
+    ?
+  uk_title: Banana
+  uk_desc: A belt with a small pocket... you could.. put your pens in it?
+  primaryEffect: 0
+  secondaryEffect: 01000000
+  effects_type: 000000000100000005000000
+  effects_strenght: 280000000a00000001000000
+  Spell: 0
+--- !u!1 &5693012301465951116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9001469335613093405}
+  m_Layer: 0
+  m_Name: $Boot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9001469335613093405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693012301465951116}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5827194292150002829}
+  - {fileID: 4047442500933842241}
+  - {fileID: 1794540764095164492}
+  - {fileID: 6558515227881347326}
+  m_Father: {fileID: 7613883105653314212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5721330798279300408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6134478282046583843}
+  - component: {fileID: 2208855605184786881}
+  m_Layer: 0
+  m_Name: Samurai
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6134478282046583843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721330798279300408}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 591733988047135960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2208855605184786881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721330798279300408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 1
+  Graphic: {fileID: 21300000, guid: 480be6ad484944b55893dc013b27a0a4, type: 3}
+  fr_title: "Samoura\xEF"
+  fr_desc: 
+  uk_title: Samourai
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 02000000
+  effects_type: 0000000002000000
+  effects_strenght: 2800000002000000
+  Spell: 0
+--- !u!1 &5768182247771300986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8698689868205644531}
+  - component: {fileID: 4616025019032468099}
+  m_Layer: 0
+  m_Name: CoolShoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8698689868205644531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768182247771300986}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7348412722493869536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4616025019032468099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768182247771300986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 456b8a7650c7b4dd097ea5d04b6909d4, type: 3}
+  fr_title: Chaussure cool
+  fr_desc: Trop cool tes chaussures vieux !
+  uk_title: Cool shoes
+  uk_desc: Your shoes so cool bro !
+  primaryEffect: 0
+  secondaryEffect: 02000000
+  effects_type: 0000000002000000
+  effects_strenght: 2800000002000000
+  Spell: 0
+--- !u!1 &5784241524698392095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8364829592355875890}
+  - component: {fileID: 8448622883599998937}
+  m_Layer: 0
+  m_Name: BloodShield
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8364829592355875890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784241524698392095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4084282087501622302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8448622883599998937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784241524698392095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 6
+  Graphic: {fileID: 21300000, guid: 56d4ae0f837594035ba511e4c2a7b1f2, type: 3}
+  fr_title: Bouclier de sang
+  fr_desc: "Fabriqu\xE9 en sang de monstre"
+  uk_title: Blood shield
+  uk_desc: Made in monster's blood
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 28000000
+  Spell: 34
+--- !u!1 &5951356399253631648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966450792243591800}
+  - component: {fileID: 7914032257698570944}
+  m_Layer: 0
+  m_Name: Double eye patch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &966450792243591800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951356399253631648}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858686370868069359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7914032257698570944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951356399253631648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 0
+  Graphic: {fileID: 21300000, guid: 983f117eed1594916b8d71f88ff69fa7, type: 3}
+  fr_title: Double cache oeil
+  fr_desc: Eeeuh...
+  uk_title: Double eye patch
+  uk_desc: Hum...
+  primaryEffect: 1
+  secondaryEffect: 01000000
+  effects_type: 01000000
+  effects_strenght: 1e000000
+  Spell: 0
+--- !u!1 &5970031394014259900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776464496020128943}
+  - component: {fileID: 9061666672051185501}
+  m_Layer: 0
+  m_Name: Worker pant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &776464496020128943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5970031394014259900}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3927814869371867904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9061666672051185501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5970031394014259900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 3
+  Graphic: {fileID: 21300000, guid: d435ab59e9e36460dad4540f124d2a2e, type: 3}
+  fr_title: Pantalon d'ouvrier
+  fr_desc: 
+  uk_title: Worker pant
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 02000000
+  effects_type: 0100000002000000
+  effects_strenght: 1400000002000000
+  Spell: 0
+--- !u!1 &6004616935029789080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954184700782581095}
+  m_Layer: 0
+  m_Name: $Helmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954184700782581095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6004616935029789080}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1076025385400601332}
+  - {fileID: 1201480096768624765}
+  - {fileID: 5888630469956518572}
+  - {fileID: 9099744984450493743}
+  m_Father: {fileID: 4015885628492686117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6039600079017847736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9006483946544725340}
+  - component: {fileID: 128552049592816770}
+  m_Layer: 0
+  m_Name: Leather
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9006483946544725340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6039600079017847736}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7348412722493869536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &128552049592816770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6039600079017847736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 35097715df9c54156ac62d13a1d0ffe8, type: 3}
+  fr_title: Chaussure en cuir
+  fr_desc: 
+  uk_title: Leather boot
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 02000000
+  effects_type: 0000000002000000
+  effects_strenght: 2800000002000000
+  Spell: 0
+--- !u!1 &6165021155116775048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8472506136064084936}
+  - component: {fileID: 2609030454567351768}
+  m_Layer: 0
+  m_Name: Rainbow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8472506136064084936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6165021155116775048}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2159747358719156403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2609030454567351768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6165021155116775048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 1
+  Graphic: {fileID: 21300000, guid: 49ba13db6de2044e4bdd3e0ebff67d03, type: 3}
+  fr_title: Arc en ciel
+  fr_desc: Un incroyable t-shirt
+  uk_title: Rainbow
+  uk_desc: An amazing t-shirt
+  primaryEffect: 0
+  secondaryEffect: 0100000002000000
+  effects_type: 000000000100000002000000
+  effects_strenght: 500000001400000003000000
+  Spell: 0
+--- !u!1 &6233604031123412809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101663498719212684}
+  - component: {fileID: 4055370769688378852}
+  m_Layer: 0
+  m_Name: BulletproofVestReinforced
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1101663498719212684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233604031123412809}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 591733988047135960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4055370769688378852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233604031123412809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 1
+  Graphic: {fileID: 21300000, guid: 181430b9a568048df904b34c2bb3df98, type: 3}
+  fr_title: "Gilet par balle renforc\xE9"
+  fr_desc: "Un \xE9pais blindage prot\xE8gent le torse seulement"
+  uk_title: Bulletproof vest reinforced
+  uk_desc: Thick armor protecting only the torso
+  primaryEffect: 0
+  secondaryEffect: 00000000
+  effects_type: 00000000
+  effects_strenght: 3c000000
+  Spell: 0
+--- !u!1 &6309264630573243708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6899981976004555673}
+  m_Layer: 0
+  m_Name: $Chest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6899981976004555673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309264630573243708}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3674924917123292352}
+  - {fileID: 3624015647407699448}
+  - {fileID: 2074707576697418046}
+  - {fileID: 705956320660944168}
+  m_Father: {fileID: 7613883105653314212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6337796042102946224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7056804888171577827}
+  - component: {fileID: 3840168712202030009}
+  m_Layer: 0
+  m_Name: Holster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7056804888171577827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337796042102946224}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2776024767029353644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3840168712202030009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337796042102946224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 0e923bd42bf844410bf2c72d3b950cae, type: 3}
+  fr_title: "\xE9tui"
+  fr_desc: 
+  uk_title: holster
+  uk_desc: 
+  primaryEffect: 2
+  secondaryEffect: 02000000
+  effects_type: 0200000005000000
+  effects_strenght: 0500000001000000
+  Spell: 0
+--- !u!1 &6396731046127900134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7341389795539549100}
+  - component: {fileID: 2196354171922950135}
+  m_Layer: 0
+  m_Name: MilitaryShoe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7341389795539549100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396731046127900134}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6411025366098315797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2196354171922950135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396731046127900134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 7cf5979d47e0c4ae2b42e8037450394f, type: 3}
+  fr_title: Chaussure militaire
+  fr_desc: "Des chaussures militaires, tr\xE8s resistante"
+  uk_title: Military shoes
+  uk_desc: Military shoes, very resistant
+  primaryEffect: 0
+  secondaryEffect: 0000000000000000
+  effects_type: 00000000
+  effects_strenght: a0000000
+  Spell: 0
+--- !u!1 &6424879558873286108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1711782649528540823}
+  - component: {fileID: 171949736870868906}
+  m_Layer: 0
+  m_Name: SimpleHelmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1711782649528540823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424879558873286108}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.41, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6254049099998098826}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171949736870868906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424879558873286108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 0
+  Graphic: {fileID: 21300000, guid: 19edddf878f094bb7a261531ce3294f8, type: 3}
+  fr_title: Casque simple
+  fr_desc: "Utile contre la gr\xE8le"
+  uk_title: Simple helmet
+  uk_desc: Useful against hail
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 14000000
+  Spell: 0
+--- !u!1 &6516938282794181850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302982228473944720}
+  - component: {fileID: 1826364135313185476}
+  m_Layer: 0
+  m_Name: Lava
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &302982228473944720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516938282794181850}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2159747358719156403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826364135313185476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516938282794181850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 1
+  Graphic: {fileID: 21300000, guid: d5972054922614f219694c1fad8d77e6, type: 3}
+  fr_title: Armure en fusion
+  fr_desc: Une armure faites de lave en fusion. Surpuissant !
+  uk_title: Melting armor
+  uk_desc: Armor made of molten lava. Overpowerful!
+  primaryEffect: 1
+  secondaryEffect: 0100000001000000
+  effects_type: 01000000
+  effects_strenght: 50000000
+  Spell: 0
+--- !u!1 &6577936132359859681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4113312890287020086}
+  - component: {fileID: 6663434870652371966}
+  m_Layer: 0
+  m_Name: Skirt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4113312890287020086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577936132359859681}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3927814869371867904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6663434870652371966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577936132359859681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 3
+  Graphic: {fileID: 21300000, guid: 5274535f980b943b29ccd484976c2bdd, type: 3}
+  fr_title: Jupe
+  fr_desc: "Surement tr\xE8s adapt\xE9 pour le combat"
+  uk_title: Skirt
+  uk_desc: Surely very suitable for combat
+  primaryEffect: 0
+  secondaryEffect: 00000000
+  effects_type: 00000000
+  effects_strenght: 3c000000
+  Spell: 0
+--- !u!1 &6738343613060975166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201480096768624765}
+  - component: {fileID: 172221839425991889}
+  m_Layer: 0
+  m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1201480096768624765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738343613060975166}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 954184700782581095}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &172221839425991889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738343613060975166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 0
+  Graphic: {fileID: 21300000, guid: cb127f521e3a04480a51ae741b9843dc, type: 3}
+  fr_title: Masque
+  fr_desc: Une folle puissance se degage de ce masque
+  uk_title: Mask
+  uk_desc: A mad power emerges from this mask
+  primaryEffect: 7
+  secondaryEffect: 0100000001000000
+  effects_type: 070000000100000005000000
+  effects_strenght: 010000002800000001000000
+  Spell: 0
+--- !u!1 &6811335447033875163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7629698653627175939}
+  - component: {fileID: 223115292302853447}
+  m_Layer: 0
+  m_Name: Jogging
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7629698653627175939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811335447033875163}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4540198530158084366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &223115292302853447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811335447033875163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 3
+  Graphic: {fileID: 21300000, guid: b1f8300c5a94f4b6f940d383efbde9d9, type: 3}
+  fr_title: Jogging
+  fr_desc: "Pour \xEAtre confortable dans toutes les situations"
+  uk_title: Jogging
+  uk_desc: To be comfortable in all situations
+  primaryEffect: 0
+  secondaryEffect: 0000000000000000
+  effects_type: 00000000
+  effects_strenght: a0000000
+  Spell: 0
+--- !u!1 &6954586694381820872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7813276880152629704}
+  - component: {fileID: 8107897730879097028}
+  m_Layer: 0
+  m_Name: ClimbingBelt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7813276880152629704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954586694381820872}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6081458647385925537}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8107897730879097028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954586694381820872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 2
+  Graphic: {fileID: 21300000, guid: e2d8b4be53d6a4efaa287435029972c6, type: 3}
+  fr_title: Ceinture d'escalade
+  fr_desc: 
+  uk_title: Climbing belt
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 0a0000000a000000
+  effects_type: 01000000
+  effects_strenght: 0c000000
+  Spell: 0
+--- !u!1 &7005398178543286678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3504684478438961034}
+  - component: {fileID: 5427315245041013632}
+  m_Layer: 0
+  m_Name: Sneaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3504684478438961034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7005398178543286678}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6411025366098315797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5427315245041013632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7005398178543286678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 4cc2b2322dbee48b5b4359d1f02ecc3b, type: 3}
+  fr_title: Basket
+  fr_desc: 
+  uk_title: Sneaker
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 0a0000000b000000
+  effects_type: 000000000300000004000000
+  effects_strenght: 060000000400000003000000
+  Spell: 0
+--- !u!1 &7006681689861683404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2985605444218116442}
+  - component: {fileID: 4823759840444601998}
+  m_Layer: 0
+  m_Name: Kimono
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2985605444218116442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7006681689861683404}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2776024767029353644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4823759840444601998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7006681689861683404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 08ea0afe965f04f51af5e02a29f276df, type: 3}
+  fr_title: Kimono
+  fr_desc: '"Je connais le kung fu"'
+  uk_title: Kimono
+  uk_desc: '"I know kung fu"'
+  primaryEffect: 1
+  secondaryEffect: 01000000
+  effects_type: 0100000005000000
+  effects_strenght: 1e00000001000000
+  Spell: 0
+--- !u!1 &7012824037451358371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3903524850871338906}
+  - component: {fileID: 8776751143242179019}
+  m_Layer: 0
+  m_Name: Lutte
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3903524850871338906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012824037451358371}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2776024767029353644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8776751143242179019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012824037451358371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 2
+  Graphic: {fileID: 21300000, guid: 9b441793f4c984cfe92f2e7404621f84, type: 3}
+  fr_title: Lutte
+  fr_desc: Autrefois le combat entre humains etait un spectable
+  uk_title: Wrestling
+  uk_desc: Formerly the fight between humans was a spectacle
+  primaryEffect: 1
+  secondaryEffect: 02000000
+  effects_type: 010000000200000005000000
+  effects_strenght: 140000000200000001000000
+  Spell: 0
+--- !u!1 &7140857574120901511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2705238643625228450}
+  - component: {fileID: 657790360972819465}
+  m_Layer: 0
+  m_Name: Ice skate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2705238643625228450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7140857574120901511}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7348412722493869536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &657790360972819465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7140857574120901511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 0072a7b66da524a7c80e67fb5d71d56f, type: 3}
+  fr_title: "Patin \xE0 glace"
+  fr_desc: 
+  uk_title: Ice skate
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 01000000
+  effects_type: 01000000
+  effects_strenght: 1e000000
+  Spell: 0
+--- !u!1 &7194888060627526797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3725953987804488415}
+  - component: {fileID: 2088624782830097778}
+  m_Layer: 0
+  m_Name: Mace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3725953987804488415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194888060627526797}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6052241635486634010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2088624782830097778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194888060627526797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 5
+  Graphic: {fileID: 21300000, guid: b16feea02e3bc4513a8c5c34954c9db6, type: 3}
+  fr_title: Massue
+  fr_desc: "Une massue d\xE9vastatrice au sein des bonnes personnes"
+  uk_title: Bow
+  uk_desc: A devastating club for the right people
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 28000000
+  Spell: 21
+--- !u!1 &7233213716335164608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433579259021570703}
+  - component: {fileID: 1995341603172534999}
+  m_Layer: 0
+  m_Name: Tenacity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433579259021570703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233213716335164608}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7348412722493869536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1995341603172534999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233213716335164608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 8703563ee81fa4331b8ba071062f8a52, type: 3}
+  fr_title: "Botte de tenacit\xE9"
+  fr_desc: 
+  uk_title: Tenacity boot
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 00000000
+  effects_type: 00000000
+  effects_strenght: 3c000000
+  Spell: 0
+--- !u!1 &7259060076798148793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4028292378962845993}
+  - component: {fileID: 7325132027590283008}
+  m_Layer: 0
+  m_Name: Energic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4028292378962845993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259060076798148793}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6411025366098315797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7325132027590283008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259060076798148793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 4
+  Graphic: {fileID: 21300000, guid: f7e4f3d37a56743b1a66b1a5ed13e343, type: 3}
+  fr_title: Energie
+  fr_desc: WOW ! Attend... Arrete de courir !
+  uk_title: Energic
+  uk_desc: WOW ! Wait... Stop moving !
+  primaryEffect: 2
+  secondaryEffect: 0200000001000000
+  effects_type: 0200000001000000
+  effects_strenght: 0900000014000000
+  Spell: 0
+--- !u!1 &7278339488113331462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4015885628492686117}
+  m_Layer: 0
+  m_Name: $Rare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4015885628492686117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7278339488113331462}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 954184700782581095}
+  - {fileID: 2159747358719156403}
+  - {fileID: 6081458647385925537}
+  - {fileID: 4540198530158084366}
+  - {fileID: 6411025366098315797}
+  - {fileID: 4287215954600014734}
+  - {fileID: 7743170283608457867}
+  m_Father: {fileID: 1966104687556408533}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7309167369316762468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2189890272651991044}
+  - component: {fileID: 2952037758933406570}
+  m_Layer: 0
+  m_Name: Electric boot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2189890272651991044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309167369316762468}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7348412722493869536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2952037758933406570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309167369316762468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 12a4f36f275cc44dbb3e6c0d45b5916c, type: 3}
+  fr_title: Botte electrique
+  fr_desc: 
+  uk_title: Electric boot
+  uk_desc: 
+  primaryEffect: 2
+  secondaryEffect: 01000000
+  effects_type: 0200000001000000
+  effects_strenght: 030000000a000000
+  Spell: 0
+--- !u!1 &7324421242476223403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76940144113329343}
+  - component: {fileID: 1092555186256992490}
+  m_Layer: 0
+  m_Name: Military pant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76940144113329343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324421242476223403}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4540198530158084366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1092555186256992490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324421242476223403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 3
+  Graphic: {fileID: 21300000, guid: ce006ca1318d344bd91b2f9943a433f4, type: 3}
+  fr_title: Pantalon militaire
+  fr_desc: Un pantalon que les anciens soldats portaient
+  uk_title: Military pant
+  uk_desc: Pants that ancient soldiers wore
+  primaryEffect: 0
+  secondaryEffect: 0100000001000000
+  effects_type: 0000000001000000
+  effects_strenght: 5000000028000000
+  Spell: 0
+--- !u!1 &7336512150957227936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2110419223851982767}
+  - component: {fileID: 2692103833377498200}
+  m_Layer: 0
+  m_Name: Belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2110419223851982767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336512150957227936}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4842145061263362365}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2692103833377498200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336512150957227936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 2
+  Graphic: {fileID: 21300000, guid: dd3f429fd3680404b86bff221cf9f2af, type: 3}
+  fr_title: Ceinture
+  fr_desc: Une ceinture pour serrer votre pantalon... Quoi ? Vous n'avez pas de pantalon
+    ?
+  uk_title: Belt
+  uk_desc: A belt to tighten your pants... What? You don't have pants?
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 14000000
+  Spell: 0
+--- !u!1 &7480586761126339936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6558515227881347326}
+  - component: {fileID: 1152666219944326315}
+  m_Layer: 0
+  m_Name: GreenBoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6558515227881347326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480586761126339936}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9001469335613093405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1152666219944326315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480586761126339936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 4
+  Graphic: {fileID: 21300000, guid: a6ee6b70e83a042deb8354d1bbf55544, type: 3}
+  fr_title: Chaussure verte
+  fr_desc: 
+  uk_title: Green boot
+  uk_desc: 
+  primaryEffect: 10
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 0a000000
+  Spell: 0
+--- !u!1 &7501162689230989495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2083912174829364532}
+  - component: {fileID: 6392733521317041589}
+  m_Layer: 0
+  m_Name: Marine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2083912174829364532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501162689230989495}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3927814869371867904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6392733521317041589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501162689230989495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 3
+  Graphic: {fileID: 21300000, guid: 1bb9ff8dfe0a6499f8a41e59a3f9116c, type: 3}
+  fr_title: Pantalon de marine
+  fr_desc: 
+  uk_title: Navy pants
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 01000000
+  effects_type: 01000000
+  effects_strenght: 1e000000
+  Spell: 0
+--- !u!1 &7643039405874264265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2759691643591483126}
+  - component: {fileID: 5740720998225641113}
+  m_Layer: 0
+  m_Name: Sport pant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2759691643591483126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643039405874264265}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3927814869371867904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5740720998225641113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643039405874264265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 3
+  Graphic: {fileID: 21300000, guid: d7be2f2dbb49e4d628e3b1ff9beeeaf3, type: 3}
+  fr_title: Pantalon de sport
+  fr_desc: 
+  uk_title: Sport pant
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 01000000
+  effects_type: 01000000
+  effects_strenght: 1e000000
+  Spell: 0
+--- !u!1 &7652787809715872378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966104687556408533}
+  m_Layer: 0
+  m_Name: list_equipment_old
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966104687556408533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7652787809715872378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7613883105653314212}
+  - {fileID: 6279075012005577613}
+  - {fileID: 4015885628492686117}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7823642379876686467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6052241635486634010}
+  m_Layer: 0
+  m_Name: $Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6052241635486634010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823642379876686467}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3126508505431757277}
+  - {fileID: 3725953987804488415}
+  - {fileID: 1357250232727846152}
+  - {fileID: 5650069265211206734}
+  - {fileID: 6216983003650764882}
+  m_Father: {fileID: 6279075012005577613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8036619661219861575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6483258510992387053}
+  - component: {fileID: 5157916751633965420}
+  m_Layer: 0
+  m_Name: EnergeticDrink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6483258510992387053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8036619661219861575}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7081083256745783564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5157916751633965420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8036619661219861575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 6
+  Graphic: {fileID: 21300000, guid: 7d99e40e1537841fcb1982ebb843f2fb, type: 3}
+  fr_title: Boisson energisante
+  fr_desc: Pour faire le plein d'energie
+  uk_title: Energetic drink
+  uk_desc: To fill up on energy
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 0a000000
+  Spell: 33
+--- !u!1 &8267127698136033080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5307754271021257660}
+  - component: {fileID: 6932028866351178143}
+  m_Layer: 0
+  m_Name: Sniper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5307754271021257660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267127698136033080}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4287215954600014734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6932028866351178143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267127698136033080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 5
+  Graphic: {fileID: 21300000, guid: d7245c661d913465486b7efb76c43229, type: 3}
+  fr_title: Sniper
+  fr_desc: Une arme ancienne... Un miracle qu'elle soit rester intacte
+  uk_title: Sniper
+  uk_desc: An ancient weapon... A miracle that it remained intact
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 28000000
+  Spell: 30
+--- !u!1 &8290241408976462180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7743170283608457867}
+  m_Layer: 0
+  m_Name: $Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7743170283608457867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290241408976462180}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2322098492237520208}
+  - {fileID: 2067846719701434463}
+  - {fileID: 5444047984992595464}
+  m_Father: {fileID: 4015885628492686117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8307660032072850687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203356556312080370}
+  - component: {fileID: 3104157058271855004}
+  m_Layer: 0
+  m_Name: Short
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203356556312080370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307660032072850687}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3927814869371867904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3104157058271855004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307660032072850687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 3
+  Graphic: {fileID: 21300000, guid: a88930fb3ec3e4ae599762d46f7baefe, type: 3}
+  fr_title: Short
+  fr_desc: 
+  uk_title: Short
+  uk_desc: 
+  primaryEffect: 0
+  secondaryEffect: 02000000
+  effects_type: 0000000002000000
+  effects_strenght: 2800000002000000
+  Spell: 0
+--- !u!1 &8349399374441316010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4788404603527625766}
+  - component: {fileID: 7024766516583882054}
+  m_Layer: 0
+  m_Name: Jean
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4788404603527625766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349399374441316010}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6241343144789559317}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7024766516583882054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349399374441316010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 3
+  Graphic: {fileID: 21300000, guid: 2e1cde566863a48ad825014d134b57d9, type: 3}
+  fr_title: Jean
+  fr_desc: Un pantalon... Enfin...
+  uk_title: Jean
+  uk_desc: Pants... Finally
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 14000000
+  Spell: 0
+--- !u!1 &8428508130524864007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7823901840185829370}
+  - component: {fileID: 7033133626266813143}
+  m_Layer: 0
+  m_Name: Eye patch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7823901840185829370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428508130524864007}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6254049099998098826}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7033133626266813143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428508130524864007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 0
+  Graphic: {fileID: 21300000, guid: 1868ef3ef193842758e0f2c22dc9639b, type: 3}
+  fr_title: Cache oeil
+  fr_desc: Oh Oh mousaillon !
+  uk_title: Eye patch
+  uk_desc: Oh Oh boy!
+  primaryEffect: 10
+  secondaryEffect: 
+  effects_type: 01000000
+  effects_strenght: 07000000
+  Spell: 0
+--- !u!1 &8502682567510022000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8050795107294729348}
+  - component: {fileID: 5220268358839971011}
+  m_Layer: 0
+  m_Name: Glasses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8050795107294729348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8502682567510022000}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6254049099998098826}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5220268358839971011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8502682567510022000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 0
+  Graphic: {fileID: 21300000, guid: bcbe00e988df04123bbb0c4747290317, type: 3}
+  fr_title: Lunettes
+  fr_desc: '"Il ne faut pas prononcer son nom..."'
+  uk_title: Glasses
+  uk_desc: '"You must not pronounce his name..."'
+  primaryEffect: 2
+  secondaryEffect: 
+  effects_type: 02000000
+  effects_strenght: 02000000
+  Spell: 0
+--- !u!1 &8586056101444756077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4047442500933842241}
+  - component: {fileID: 7921883262221998787}
+  m_Layer: 0
+  m_Name: Soft shoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4047442500933842241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586056101444756077}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9001469335613093405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7921883262221998787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586056101444756077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 4
+  Graphic: {fileID: 21300000, guid: a6dc77d0508714ca6ab515f49d3466a0, type: 3}
+  fr_title: Chaussure souple
+  fr_desc: 
+  uk_title: Soft shoes
+  uk_desc: 
+  primaryEffect: 1
+  secondaryEffect: 
+  effects_type: 0100000006000000
+  effects_strenght: 0a00000001000000
+  Spell: 0
+--- !u!1 &8732029919199729634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4287215954600014734}
+  m_Layer: 0
+  m_Name: $Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4287215954600014734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732029919199729634}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6601049017280705957}
+  - {fileID: 5307754271021257660}
+  - {fileID: 3769493617110163510}
+  m_Father: {fileID: 4015885628492686117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8798588095080362379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076025385400601332}
+  - component: {fileID: 4487605182673068489}
+  m_Layer: 0
+  m_Name: BloodBag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1076025385400601332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798588095080362379}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 954184700782581095}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4487605182673068489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798588095080362379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 2
+  Type: 0
+  Graphic: {fileID: 21300000, guid: f2c6fbdeb30d44ba1bb758bd717dee9d, type: 3}
+  fr_title: Poche de sang
+  fr_desc: "Une technique... tr\xE8s bizarre"
+  uk_title: Blood bag
+  uk_desc: A  technique... very strange
+  primaryEffect: 0
+  secondaryEffect: 0000000000000000
+  effects_type: 0000000005000000
+  effects_strenght: a000000001000000
+  Spell: 0
+--- !u!1 &8959166806978110796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591733988047135960}
+  m_Layer: 0
+  m_Name: $Chest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &591733988047135960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959166806978110796}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6044546926613975079}
+  - {fileID: 1101663498719212684}
+  - {fileID: 6134478282046583843}
+  - {fileID: 2988615247571220524}
+  - {fileID: 3341172651899746968}
+  - {fileID: 4129298329059537350}
+  - {fileID: 690760118607218656}
+  m_Father: {fileID: 6279075012005577613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9062017725037007549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3927814869371867904}
+  m_Layer: 0
+  m_Name: $Pant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3927814869371867904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062017725037007549}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4113312890287020086}
+  - {fileID: 1203356556312080370}
+  - {fileID: 2083912174829364532}
+  - {fileID: 2385431952769908755}
+  - {fileID: 776464496020128943}
+  - {fileID: 2759691643591483126}
+  m_Father: {fileID: 6279075012005577613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9069284303792377386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2621241094304191858}
+  - component: {fileID: 3566189930078014851}
+  m_Layer: 0
+  m_Name: LifePotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2621241094304191858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069284303792377386}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7081083256745783564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3566189930078014851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069284303792377386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 6
+  Graphic: {fileID: 21300000, guid: f0a3b3d747ba14ad2abe19347d7cd3f3, type: 3}
+  fr_title: Potion de vie
+  fr_desc: Une potion revigorante
+  uk_title: Life potion
+  uk_desc: An invigorating potion
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 14000000
+  Spell: 32
+--- !u!1 &9200151134867646004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5827194292150002829}
+  - component: {fileID: 3419194818340403342}
+  m_Layer: 0
+  m_Name: Boot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5827194292150002829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200151134867646004}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9001469335613093405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3419194818340403342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200151134867646004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 0
+  Type: 4
+  Graphic: {fileID: 21300000, guid: 1ef44b6fec2664fbd8d44e39f99ff735, type: 3}
+  fr_title: Botte
+  fr_desc: Des bottes impermeable, parfait pour la pluie ou la boue
+  uk_title: Boot
+  uk_desc: Waterproof boots, perfect for rain or mud
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 0000000006000000
+  effects_strenght: 1400000001000000
+  Spell: 0
+--- !u!1 &9200336581455453652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3126508505431757277}
+  - component: {fileID: 4257180634704408624}
+  m_Layer: 0
+  m_Name: Taser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3126508505431757277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200336581455453652}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4978514, y: 1.4003103, z: 55.162315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6052241635486634010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4257180634704408624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200336581455453652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eafef7b23f545aa823d7a14143b6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rarity: 1
+  Type: 5
+  Graphic: {fileID: 21300000, guid: c0c0f37ceb04a49498a5fa91cf9b36bd, type: 3}
+  fr_title: Taser
+  fr_desc: Tzzzzz
+  uk_title: Taser
+  uk_desc: Tzzzzz
+  primaryEffect: 0
+  secondaryEffect: 
+  effects_type: 00000000
+  effects_strenght: 28000000
+  Spell: 22

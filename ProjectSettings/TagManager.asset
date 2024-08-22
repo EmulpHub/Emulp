@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Grid
+  - Monster
+  - Neutral
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Animation
+  - Water
+  - UI
+  - UI+1
+  - UI+2
+  - UI+3
+  - txt
+  - Artifact
+  - Pause
+  - Confirmation
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Void
+    uniqueID: 1684934261
+    locked: 0
+  - name: Map_Ground
+    uniqueID: 3103517361
+    locked: 0
+  - name: Map
+    uniqueID: 2922492621
+    locked: 0
+  - name: Map_positionning
+    uniqueID: 23129209
+    locked: 0
+  - name: Combat_tile
+    uniqueID: 2994887305
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Default_Above
+    uniqueID: 1117432337
+    locked: 0
+  - name: UI
+    uniqueID: 1307397115
+    locked: 0
+  - name: UI_Above
+    uniqueID: 3455718785
+    locked: 0
+  - name: PauseMenu
+    uniqueID: 1843253229
+    locked: 0
+  - name: Confirmation
+    uniqueID: 14286015
+    locked: 0
