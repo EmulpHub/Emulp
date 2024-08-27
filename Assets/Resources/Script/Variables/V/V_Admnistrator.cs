@@ -4,7 +4,7 @@ using UnityEngine;
 
 public partial class V : MonoBehaviour
 {
-    public static bool administrator = false;
+    public static bool administrator = true;
 
     public static void Administrator_update()
     {

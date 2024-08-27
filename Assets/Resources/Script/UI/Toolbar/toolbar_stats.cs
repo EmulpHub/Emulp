@@ -14,7 +14,7 @@ public class toolbar_stats : MonoBehaviour
 
         V.player_info.event_armor_gain.Add(manage_fa);
         V.player_info.event_armor_loose.Add(manage_fa);
-        V.player_entity.event_life_dmg.Add(manage_fa);
+        V.player_entity.event_life_dmg.Add(manage_fa_lifeDmg);
         V.player_entity.event_life_heal.Add(manage_fa);
 
         PlayerInfo.event_calculateValue.Add(manage_fa);
@@ -48,6 +48,11 @@ public class toolbar_stats : MonoBehaviour
     #region fillAmount
 
     public Image fa_life, fa_armor, txt_exp;
+
+    void manage_fa_lifeDmg (InfoDamage info)
+    {
+        manage_fa();
+    }
 
     void manage_fa()
     {

@@ -281,9 +281,9 @@ public partial class Entity : MonoBehaviour
 
         if (infoDamage.damage > 0)
         {
-            Main_UI.MovingStruct n = Main_UI.Display_movingText_basicValue("- " + infoDamage.damage, V.Color.red, transform.position, null);
+            //Main_UI.MovingStruct n = Main_UI.Display_movingText_basicValue("- " + infoDamage.damage, V.Color.red, transform.position, null);
 
-            n.size = Mathf.Clamp(infoDamage.damage - 20, 0, 300) / 100 + 1;
+            //n.size = Mathf.Clamp(infoDamage.damage - 20, 0, 300) / 100 + 1;
         }
 
         Vector3 Direction = transform.position - infoDamage.caster.transform.position;
@@ -306,7 +306,7 @@ public partial class Entity : MonoBehaviour
             Renderer_movable.transform.DOPunchScale(new Vector3(0, -0.3f, 1), 0.5f);
         }
 
-        event_life_dmg.Call();
+        event_life_dmg.Call(infoDamage);
 
         event_allEntity_dmg.Call(this, infoDamage);
 

@@ -49,11 +49,7 @@ public partial class Player : Entity
     {
         base.OnAwake();
 
-        print("awake ");
-
         Info = new PlayerInfo();
-
-        print("after awake info is null = " +(Info is null));
 
         Info.InitInfo(this);
     }

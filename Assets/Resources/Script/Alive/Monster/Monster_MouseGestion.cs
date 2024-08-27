@@ -40,12 +40,8 @@ public partial class Monster : Entity
         base.OnMouseIsOver();
 
         AddHighLightMonster();
-
-        if (V.game_state != V.State.fight && !Scene_Main.aWindowIsUsed)
-        {
-            Main_UI.Display_Title(monsterInfo.Title(), Renderer_movable.transform.position, title_currentDistance);
-        }
-        else if (V.game_state == V.State.fight && !Scene_Main.aWindowIsUsed && Scene_Main.entityShowMovement != this && V.game_state_action == V.State_action.movement && !V.Tutorial_Get())
+        
+        if (V.game_state == V.State.fight && !Scene_Main.aWindowIsUsed && Scene_Main.entityShowMovement != this && V.game_state_action == V.State_action.movement && !V.Tutorial_Get())
         {
             Scene_Main.SetGameAction_showMonsterMovement(this);
         }

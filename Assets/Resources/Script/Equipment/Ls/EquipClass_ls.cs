@@ -229,7 +229,7 @@ public class EquipClass_AccumulationWhenDamage : EquipClass
         V.player_entity.event_life_dmg.Remove(id);
     }
 
-    public void Application()
+    public void Application(InfoDamage info)
     {
         warrior_spent.AddAcumulation(V.player_entity, 1);
     }

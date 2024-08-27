@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.80784315, g: 0.20784314, b: 0.19607843, a: 1}
+  m_Color: {r: 0.69803923, g: 0.13725491, b: 0.1254902, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5124,7 +5124,7 @@ MonoBehaviour:
   predefinedRelic_bool: 0
   predefinedRelic: 10
   focus_monster: 
-  focus_spell: 
+  focus_spell: 36000000
   focus_Equipment: []
   AddSpell: 0
   levelMonster: 0
@@ -5142,7 +5142,7 @@ MonoBehaviour:
   ForcePm: 3
   ForcePa_Monster: 0
   ForcePm_Monster: 0
-  Invulnerable: 0
+  Invulnerable: 1
   activeFps: 0
   unlockAllEquipments: 0
   unlockAllTalents: 0
@@ -5209,7 +5209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3372549, g: 0.3372549, b: 0.32156864, a: 1}
+  m_Color: {r: 0.81568635, g: 0.7725491, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

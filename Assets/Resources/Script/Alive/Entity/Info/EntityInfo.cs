@@ -32,7 +32,7 @@ public partial class EntityInfo : MonoBehaviour
     {
         LifeBar lifeBar = Instantiate(Resources.Load<GameObject>("Script/Alive/LifeBar/LifeBar")).GetComponent<LifeBar>();
 
-        lifeBar.InitInfo(holder);
+        lifeBar.Init(holder);
     }
 
     public enum Type { player, monster, playerFriendly }
