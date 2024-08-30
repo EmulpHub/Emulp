@@ -109,20 +109,19 @@ public class Panel_character_effect : MonoBehaviour
     {
         if (!IsAnEffect)
         {
-            Display_description_text.Display_Description(RelicInit.relic_title(relic), RelicInit.relic_desc(relic), position, 0.2f/* RelicInit.relic_equipmentValue(relic)*/);
+            Description_text.Display(RelicInit.relic_title(relic), RelicInit.relic_desc(relic), position, 0.2f/* RelicInit.relic_equipmentValue(relic)*/);
             return;
         }
 
         string title = effect.GetTitle();
         string description = effect.GetDescription();
 
-        Main_UI.Display_Description(title, description, position, distance, false);
+        Description_text.Display(title, description,position,distance);
     }
 
     public void WhenMouseExit()
     {
-        Main_UI.Display_Description_Erase();
-
+        Description_text.EraseDispay();
         TreeElement.Animation_scale(gameObject, baseScale.x, 0.2f);
     }
 }

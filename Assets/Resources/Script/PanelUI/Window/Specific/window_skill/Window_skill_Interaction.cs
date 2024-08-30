@@ -37,7 +37,7 @@ public partial class Window_skill : Window
             highLightedSkill.Window_Interaction_MouseOver_End();
 
             highLightedSkill = null;
-            Main_UI.Display_Description_Erase();
+            Description_text.EraseDispay();
         }
     }
 

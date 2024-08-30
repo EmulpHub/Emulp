@@ -5,32 +5,12 @@ using UnityEngine.UI;
 
 public partial class Main_UI : MonoBehaviour
 {
-    /// <summary>
-    ///The current title or description that is instantiate right now
-    /// </summary>
-    public static GameObject ui_displayTitle_Current, ui_displayDescription_Current, ui_displayMonsterList_Current;
+    public static GameObject ui_displayTitle_Current, ui_displayMonsterList_Current;
 
-    public static descType ui_displayDesc_descType = descType.none;
-
-    public enum descType
-    {
-        none
-            , text, equipment
-    };
-
-    public static Display_description ui_displayDescription_Current_script;
+    public static DescriptionStatic.Type ui_displayDesc_descType = DescriptionStatic.Type.none;
 
     public static Display_title ui_displayTitle_Current_script;
 
-    /// <summary>
-    /// Display title with some text "text" at "Position" with "distance" move y value and some specification
-    /// </summary>
-    /// <param name="text">The text that we show</param>
-    /// <param name="Position">The position where the title will be</param>
-    /// <param name="distance">The y distance of the title</param>
-    /// <param name="box_color">The color of the box</param>
-    /// <param name="box_contour_color">The color of the box's contour</param>
-    /// <param name="text_color">The color of the text</param>
     public static void Display_Title(string text, Vector3 Position, float distance, V.Color text_color = V.Color.white)
     {
         //Set the parent
@@ -191,7 +171,6 @@ public partial class Main_UI : MonoBehaviour
     public static void Display_EraseAllType()
     {
         Display_Title_Erase();
-        Display_Description_Erase();
         Display_MonsterList_Erase();
     }
 

@@ -153,7 +153,7 @@ public class Combat_Effect : MonoBehaviour
         string title = effect.GetTitle();
         string description = effect.GetDescription();
 
-        Main_UI.Display_Description(title, description, position, distance, false);
+        Description_text.Display(title, description, position, distance);
     }
 
     [HideInInspector]
@@ -225,7 +225,7 @@ public class Combat_Effect : MonoBehaviour
 
     public void MouseExit()
     {
-        Main_UI.Display_Description_Erase(effect.GetTitle());
+        Description_text.EraseDispay(effect.GetTitle());
     }
 
     [HideInInspector]

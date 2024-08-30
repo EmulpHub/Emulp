@@ -90,7 +90,7 @@ public class TalentHolderIndividual : WindowSkillElement
 
         TreeElement.Animation_scale(gameObject, baseScale.x, scaleDownSpeed);
 
-        Main_UI.Display_Description_Erase();
+        Description_text.EraseDispay();
     }
 
     public override void Window_Interaction_Click()
@@ -148,7 +148,7 @@ public class TalentHolderIndividual : WindowSkillElement
             }
         }
 
-        Main_UI.Display_Description(title, description, -1, 0, 0, 0, talentHolder.DisplayUiDescriptionPosition, 0, Spell.Range_type.normal);
+        Description_text.Display(title, description, talentHolder.DisplayUiDescriptionPosition, 0);
     }
 
     public float setScaleStrengh, scaleDownSpeed;

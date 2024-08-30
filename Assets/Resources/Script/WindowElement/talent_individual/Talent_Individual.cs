@@ -159,7 +159,7 @@ public partial class Talent_Individual : WindowSkillElement
 
         if (currentTalent == this && DisplayInfo_isShowed())
         {
-            Main_UI.Display_Description_Erase();
+            Description_text.EraseDispay();
             currentTalent = null;
         }
 
@@ -170,11 +170,11 @@ public partial class Talent_Individual : WindowSkillElement
     /// </summary>
     public override void DisplayInfo()
     {
-        Main_UI.Display_Description(title, description, parentHolder.DisplayUiDescriptionPosition, 0);
+        Description_text.Display(title, description, parentHolder.DisplayUiDescriptionPosition, 0);
     }
 
     public override bool DisplayInfo_isShowed()
     {
-        return Main_UI.ui_displayDescription_Current_script != null && Main_UI.ui_displayDescription_Current_script.title.text == title;
+        return DescriptionStatic.CurrentDescription != null && DescriptionStatic.CurrentDescription_script.title.text == title;
     }
 }

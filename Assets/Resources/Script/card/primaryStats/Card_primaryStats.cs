@@ -65,7 +65,7 @@ public partial class card_primaryStats : card
 
     public void Init_Specific(primaryStatsSetterInfo info)
     {
-        var desc_txt = Display_description.SeparateDesc(info.description());
+        var desc_txt = DescriptionStatic.SeparateDesc(info.description());
 
         desc.text = descColor.convert(desc_txt.normal);
 

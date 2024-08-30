@@ -18,12 +18,12 @@ public partial class TreeSkill : TreeElementBuyable
 
         if (CurrentlyLocked())
         {
-            Main_UI.Display_Description(V.IsFr() ? "Vérouillé" : "Locked", V.IsFr() ? "Vérouillé jusqu'au niveau " + LockedByLevel_val : "Locked until level " + LockedByLevel_val, transform.position, transform.lossyScale.x * distanceMultiplicator);
+            Description_text.Display(V.IsFr() ? "Vérouillé" : "Locked", V.IsFr() ? "Vérouillé jusqu'au niveau " + LockedByLevel_val : "Locked until level " + LockedByLevel_val, transform.position, transform.lossyScale.x * distanceMultiplicator);
 
             return;
         }
 
-        Main_UI.Display_Description(spell, transform.position, transform.lossyScale.x * distanceMultiplicator);
+        Description_text.Display(spell, transform.position, transform.lossyScale.x * distanceMultiplicator);
     }
 
     public Sprite Lock;

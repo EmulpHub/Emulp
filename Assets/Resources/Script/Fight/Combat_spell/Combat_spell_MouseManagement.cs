@@ -21,7 +21,7 @@ public partial class Spell : MonoBehaviour
     {
         MakeAnimation(TypeOfAnimation.reset);
 
-        Main_UI.Display_Description_Erase();
+        Description_text.EraseDispay();
         mouseIsOver = false;
     }
 

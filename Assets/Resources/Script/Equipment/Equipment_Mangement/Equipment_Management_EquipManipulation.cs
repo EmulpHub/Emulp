@@ -31,7 +31,7 @@ public partial class Equipment_Management : MonoBehaviour
         if (!NotEquipedContain && !Force)
             throw new System.Exception("cette equipement n'a pas été obtenue par ce joueur (EquipEquipment dans Equipment_Management)");
 
-        Main_UI.Display_Description_Erase();
+        Description_text.EraseDispay();
 
         SingleEquipment.type type = newEquip.Type;
 
@@ -146,7 +146,7 @@ public partial class Equipment_Management : MonoBehaviour
         if (!Equiped.ContainsKey(type))
             throw new System.Exception("cette equipement n'a pas été obtenue par ce joueur (EquipEquipment dans Equipment_Management)");
 
-        Main_UI.Display_Description_Erase();
+        Description_text.EraseDispay();
 
         SoundManager.PlaySound(SoundManager.list.equipment_desequip);
 

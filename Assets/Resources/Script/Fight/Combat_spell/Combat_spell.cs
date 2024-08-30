@@ -189,9 +189,7 @@ public partial class Spell : MonoBehaviour
 
         float YPos = V.player_entity.GetListShowedEffect().Count == 0 ? Display_YPos : Display_YPos_WithEffect;
 
-        Main_UI.Display_Description(spell, this.transform.position, -transform.position.y + YPos, false, this);
-
-        //Main_UI.Display_Description(title, description, pa_cost, cd, range_min, range_max, this.transform.position, -transform.position.y + YPos, Main_UI.DescBoxType.normal, range_Type, range_Effect, WithTab, classe);
+        Description_text.Display(spell, this.transform.position, -transform.position.y + YPos, this);
     }
 
 
@@ -222,7 +220,7 @@ public partial class Spell : MonoBehaviour
         }
 
         //If the mouse is over this spell show the text
-        if (Main_UI.ui_displayDescription_Current == null && mouseIsOver)
+        if (DescriptionStatic.CurrentDescription == null && mouseIsOver)
         {
             DisplayInfo();
 

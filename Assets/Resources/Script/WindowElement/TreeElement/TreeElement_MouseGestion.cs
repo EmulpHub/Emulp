@@ -38,7 +38,7 @@ public partial class TreeElement : WindowSkillElement
         Animation_scale(gameObject,baseScale.x, punchScaleSpeed_Down);
 
         Main_UI.Display_Title_Erase();
-        Main_UI.Display_Description_Erase();
+        Description_text.EraseDispay();
     }
 
     public virtual void Cursor() { }

@@ -7,18 +7,12 @@ using UnityEngine.EventSystems;
 
 public class Combat_EndOfTurn : MonoBehaviour
 {
-    /// <summary>
-    /// THe sprite when the play is obligated or not to press the button
-    /// </summary>
     public Image EndOfTurn;
 
     public Color32 normal, green;
 
     RectTransform rectThis;
 
-    /// <summary>
-    /// When the button is press
-    /// </summary>
     public void Pressed()
     {
         if (Scene_Main.aWindowIsUsed || !ClickAutorization.Autorized(this.gameObject))
@@ -48,21 +42,17 @@ public class Combat_EndOfTurn : MonoBehaviour
         rectThis = GetComponent<RectTransform>();
     }
 
-    /// <summary>
-    /// The renderer of the button
-    /// </summary>
     [HideInInspector]
     public Image Renderer;
 
-    /// <summary>
-    /// The delay max before to show the obligated sprite 
-    /// </summary>
     public float DelayMax;
 
     [HideInInspector]
     public float Delay;
 
     public bool MouseIsOver;
+
+    public GameObject subHolder;
 
     public void Update()
     {
@@ -133,9 +123,6 @@ public class Combat_EndOfTurn : MonoBehaviour
 
     public Text EndOfTurn_txt;
 
-    /// <summary>
-    /// Update the text of the button
-    /// </summary>
     public void Update_ui()
     {
         if (V.game_state == V.State.positionning)
@@ -153,11 +140,11 @@ public class Combat_EndOfTurn : MonoBehaviour
         {
             if (V.IsFr())
             {
-                EndOfTurn_txt.text = "FIN\nTOUR";
+                EndOfTurn_txt.text = "FIN DU TOUR";
             }
             else
             {
-                EndOfTurn_txt.text = "END\nTURN";
+                EndOfTurn_txt.text = "END TURN";
             }
         }
     }

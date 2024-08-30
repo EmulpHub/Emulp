@@ -30,7 +30,7 @@ public class EndScreenObject_Equipment : EndScreenObject
             //V.Color RarColor = equipment.getColorFromRarity();
 
             Main_UI.Display_Title(e.GetTitle(), transform.position, dis);
-            Main_UI.Display_Description_Erase();
+            Description_text.EraseDispay();
 
             isDesc = false;
 
@@ -51,7 +51,7 @@ public class EndScreenObject_Equipment : EndScreenObject
         base.EraseDisplayInfo();
 
         if (isDesc)
-            Main_UI.Display_Description_Erase(t);
+            Description_text.EraseDispay(t);
         else
             Main_UI.Display_Title_Erase(t);
     }

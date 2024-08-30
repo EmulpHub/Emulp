@@ -18,14 +18,14 @@ public class EndScreenObject_Talent : EndScreenObject
     {
         base.DisplayInfo();
 
-        Main_UI.Display_Description(t, transform.position, dis);
+        Description_text.Display(t,transform.position,dis);
     }
 
     public override void EraseDisplayInfo()
     {
         base.EraseDisplayInfo();
 
-        Main_UI.Display_Description_Erase(Talent_Gestion.GetTitle(t));
+        Description_text.EraseDispay();
     }
 
     public static void Add(Transform parent, Talent_Gestion.talent t)

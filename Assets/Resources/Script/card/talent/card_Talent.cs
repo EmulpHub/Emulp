@@ -73,7 +73,7 @@ public partial class card_Talent : card
         currentTalent = e;
         title.text = descColor.convert(Talent_Gestion.GetTitle(e));
 
-        string desc_txt = Display_description.SeparateDesc(Talent_Gestion.GetDescription(e)).normal;
+        string desc_txt = DescriptionStatic.SeparateDesc(Talent_Gestion.GetDescription(e)).normal;
 
         desc.text = descColor.convert(desc_txt);
 

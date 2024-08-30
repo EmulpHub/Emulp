@@ -285,8 +285,7 @@ public class Slot_Inventory : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     public void EraseTitleImmediate()
     {
-
         Main_UI.Display_Title_Erase();
-        Main_UI.Display_Description_Erase();
+        Description_text.EraseDispay();
     }
 }

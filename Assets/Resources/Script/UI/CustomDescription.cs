@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-/// <summary>
-/// Display a description when the mouse is over an ui or box collider (can set a delay even if it's optionnal
-/// </summary>
 public class CustomDescription : MonoBehaviour,
  IPointerExitHandler, IPointerEnterHandler//, IPointerDownHandler
 {
@@ -33,8 +30,6 @@ public class CustomDescription : MonoBehaviour,
 
     [HideInInspector]
     public bool mouseOver;
-
-    public bool withoutTab;
 
     public GameObject AutorizationReference;
 
@@ -83,9 +78,6 @@ public class CustomDescription : MonoBehaviour,
         }
     }
 
-    /// <summary>
-    /// Set title and description depending of custom string or typical text
-    /// </summary>
     public void UpdateText()
     {
         if (delay_current <= 0)
@@ -125,8 +117,8 @@ public class CustomDescription : MonoBehaviour,
                     {
                         if (EntityOrder.IsTurnOf_Player())
                         {
-                            titre = "FIN\nTOUR";
-                            description = descColor.convert("Appuyez sur *bon<i>Espace</i> *end pour finir votre tour");
+                            titre = "FINIR SON TOUR";
+                            description = descColor.convert("Cliquez ou appuyez sur *bonEspace*end pour finir votre tour");
                         }
                         else
                         {
@@ -189,8 +181,8 @@ public class CustomDescription : MonoBehaviour,
                     {
                         if (EntityOrder.IsTurnOf_Player())
                         {
-                            titre = "END\nTURN";
-                            description = descColor.convert("Press *bon<i>Space</i> *end to end your turn");
+                            titre = "END TURN";
+                            description = descColor.convert("Click or press *bonSpace*end to end your turn");
                         }
                         else
                         {
@@ -232,9 +224,9 @@ public class CustomDescription : MonoBehaviour,
                 }
 
                 if (typeOfText == SpecialText.Spell)
-                    Main_UI.Display_Description(sp, pos, distanceY);
+                    Description_text.Display(sp, pos, distanceY);
                 else
-                    Main_UI.Display_Description(titre, description, pos, distanceY, !withoutTab);
+                    Description_text.Display(titre,description,pos,distanceY);
             }
         }
     }
@@ -262,6 +254,6 @@ public class CustomDescription : MonoBehaviour,
         delay_current = delay;
         mouseOver = false;
 
-        Main_UI.Display_Description_Erase();
+        Description_text.EraseDispay();
     }
 }

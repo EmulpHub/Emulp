@@ -58,7 +58,7 @@ public partial class Window_Equipment : Window
         {
             if (Slot_MouseOver == null)
             {
-                Main_UI.Display_Description_Erase();
+                Description_text.EraseDispay();
             }
             else
             {

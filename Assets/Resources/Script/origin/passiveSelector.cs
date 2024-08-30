@@ -34,15 +34,13 @@ public class passiveSelector : MonoBehaviour, IPointerClickHandler, IPointerEnte
         card.UseThis(passive);
     }
 
-    //Detect if the Cursor starts to pass over the GameObject
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        Main_UI.Display_Description(title,description, transform.position, 1);
+        Description_text.Display(title, description,transform.position,1);
     }
 
-    //Detect when Cursor leaves the GameObject
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        Main_UI.Display_Description_Erase();
+        Description_text.EraseDispay();
     }
 }

@@ -82,7 +82,7 @@ public class Slot_Equiped : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
                 window.CreateDragGraphic(equipment); //Start Drag 
             }
 
-            if (Main_UI.ui_displayDescription_Current == null && equipment != null)
+            if (DescriptionStatic.CurrentDescription == null && equipment != null)
             {
                 Slot_Inventory.ShowEquipmentInfoDescOrTitle(equipment, transform.position);
                 //DisplayEquipmentInfo(equipment, transform.position);
@@ -132,8 +132,7 @@ public class Slot_Equiped : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
         //Display_description_equipment.Display_Description(t, position, distance, e);
 
-
-        Main_UI.Display_Description(t, v.description, position, distance);
+        Description_text.Display(t,v.description,position,distance);
 
         return t;
     }
@@ -174,7 +173,7 @@ public class Slot_Equiped : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
         string title = GetTitleDesc(v, equipment);
 
-        Main_UI.Display_Description_Erase(title);
+        Description_text.EraseDispay(title);
         Main_UI.Display_Title_Erase(title);
     }
 

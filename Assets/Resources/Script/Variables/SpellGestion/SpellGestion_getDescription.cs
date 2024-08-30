@@ -62,6 +62,9 @@ public partial class SpellGestion : MonoBehaviour
                                 {
                                     int.TryParse(nb_string, out int nb);
 
+                                    if (e is null)
+                                        throw new System.Exception("spell can't be null ? je crois ?");
+
                                     total += "" + calcValueDesc(colorTag, nb, baseValue, e, current);
 
                                     itsNumber = false;
@@ -77,6 +80,9 @@ public partial class SpellGestion : MonoBehaviour
                         if (itsNumber)
                         {
                             int.TryParse(nb_string, out int nb);
+
+                            if (e is null)
+                                throw new System.Exception("spell can't be null ? je crois ?");
 
                             total += "" + calcValueDesc(colorTag, nb, baseValue, e, totalWithoutnb);
                         }

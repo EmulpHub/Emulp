@@ -84,8 +84,6 @@ public partial class Scene_Main : MonoBehaviour
 
         V.Initializing_startScene_Start();
 
-        //Instantiate a selectionnedSpell that we will use later on for show our spell aside our mouse
-        selectionnedSpell = Instantiate(selectionnedSpell);
 
         //Make the game be out combat for the start
         V.game_state = V.State.passive;
@@ -108,14 +106,7 @@ public partial class Scene_Main : MonoBehaviour
 
     //The button in the bottom right of the toolbar
     //And the sprite that show aside the mouse when a spell is selectionned
-    public GameObject button_EndOfturn, selectionnedSpell;
-
-    /// <summary>
-    /// The gape the selectionnedSpell will have from the mouse (the difference)
-    /// </summary>
-    public Vector3 selectionnedSpell_gap;
-
-    public Sprite icon_Movement;
+    public GameObject button_EndOfturn;
 
     public static bool aWindowIsUsed;
 
@@ -137,8 +128,6 @@ public partial class Scene_Main : MonoBehaviour
         {
             WindowInfo.Instance.DeselectionnateAllWindow();
         }
-
-        SelectionnateSpell_Management();
 
         //Managing input and state
         if (V.game_state == V.State.positionning)
