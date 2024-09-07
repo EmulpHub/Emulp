@@ -153,6 +153,19 @@ public class SpellInfo : MonoBehaviour
                 range_effect_wayPoint = CircularWayPoint(4);
 
                 break;
+
+            case SpellGestion.range_effect_size.fiveSquareAround: //five square around the target
+                range_effect_tile = new List<string> {
+                    "0_0","1_0","0_1","-1_0","0_-1",
+                    "2_0","1_1","0_2","-2_0","-1_-1","-1_1","1_-1","0_-2",
+                    "3_0","2_1","1_2","0_3","-3_0","-2_-1","-2_1","2_-1","-1_-2","-1_2","1_-2","0_-3",
+                    "4_0","3_1","2_2","1_3","0_4","-4_0","-3_-1","-3_1","3_-1","-2_-2","-2_2","2_-2","-1_-3","-1_3","1_-3","0_-4",
+                    "5_0","4_1","3_2","2_3","1_4","0_5","-5_0","-4_-1","-4_1","4_-1","-3_-2","-3_2","3_-2","-2_-3","-2_3","2_-3","-1_-4","-1_4","1_-4","0_-5"
+                };
+
+                range_effect_wayPoint = CircularWayPoint(6);
+
+                break;
             default:
                 throw new System.Exception("NOT VALID RANGE EFFECT");
         }

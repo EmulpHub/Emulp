@@ -94,6 +94,11 @@ public class spellEffect : MonoBehaviour
         return calc(V.player_info.CalcDexStats(value, infoPlayer.dex));
     }
 
+    public float calcFDEX(float value)
+    {
+        return calc(V.player_info.CalcDexStats(value, infoPlayer.dex));
+    }
+
     public int calcRES(float value)
     {
         return calc(V.player_info.CalcResStats(value, infoPlayer.res));

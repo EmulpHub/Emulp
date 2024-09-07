@@ -40,9 +40,8 @@ public partial class Scene_Main : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Void that come in the end of the combat
-    /// </summary>
+    public static EventHandlerNoArg eventEndOfCombat = new EventHandlerNoArg(true);
+
     public static void EndOfCombat(bool playerWin, Entity lastKill, bool endOfRun = false)
     {
 
@@ -125,6 +124,8 @@ public partial class Scene_Main : MonoBehaviour
         Save_SaveSystem.SaveGame_WithoutWarning();
 
         MonsterKilled.Clear();
+
+        eventEndOfCombat.Call();
     }
 
     public static void EndCombatScreenManage(List<int> lvls, bool playerWin, int lvlMoyen, int xp, int sum)

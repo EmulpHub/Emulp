@@ -37,8 +37,6 @@ public partial class Player : Entity
             Action_spell.Add(info);
         }
 
-        warrior_endurance.Application();
-
         return infoDamage.damage;
     }
 

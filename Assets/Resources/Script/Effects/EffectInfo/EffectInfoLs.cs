@@ -86,9 +86,9 @@ public class Effect_accumulation : Effect
     internal override string calcDescription()
     {
         if (V.IsFr())
-            return "Infligez des dégâts donne *spe+1 accumulation*end\n\nAccumulation: *bon" + Str + "*end";
+            return "L'accumulation augmente l'effet de certains sort\nCertains sort vous donnent la possibilité d'en gagner\n\nAccumulation: *bon" + Str + "*end";
         else
-            return "Dealing damage give *spe+1 accumulation*end\n\nAccumulation: *bon" + Str + "*end";
+            return "Accumulation increase effect to some of your spell\nSome of your spell can give accumulation\nAccumulation: *bon" + Str + "*end";
     }
 
     public override void SetInfoString(calcStringValue i = null)

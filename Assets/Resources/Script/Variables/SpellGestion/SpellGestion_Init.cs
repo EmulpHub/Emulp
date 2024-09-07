@@ -36,7 +36,7 @@ public partial class SpellGestion : MonoBehaviour
 
         //NorticeSurface
         norticeSurface_wand, norticeSurface_energeticWand, norticeSurface_rapidity, norticeSurface_amplifiedHeal, norticeSurface_amplifiedArmor, norticeSurface_whirlwind, norticeSurface_crystalGift, norticeSurface_energy,
-        norticeSurface_BigWand, norticeSurface_book, norticeSurface_poisonedVial, norticeSurface_Optimisation, norticeSurface_meteorite, warrior_shield, warrior_endurance, warrior_spent
+        norticeSurface_BigWand, norticeSurface_book, norticeSurface_poisonedVial, norticeSurface_Optimisation, norticeSurface_meteorite, warrior_shield, warrior_endurance, warrior_spent,warrior_spikeConversion
     };
 
     public static void AddStartingSpellToTheToolbar()

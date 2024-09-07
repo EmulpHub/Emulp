@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603654333146748664}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7940968608100423025
 MonoBehaviour:
@@ -44,30 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02390b4b3375418f9458cda4e0d8508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nb: 0
-  endPos: {x: 0, y: 0, z: 0}
-  col:
-    serializedVersion: 2
-    rgba: 0
-  col_power:
-    serializedVersion: 2
-    rgba: 4279501000
-  col_defense:
-    serializedVersion: 2
-    rgba: 4292894004
-  power: 0
-  part: {fileID: 4642941204220423997, guid: f2a781cf7aac54c7684fb21ee8c9b9f4, type: 3}
-  lastAddingWaitTime: 0
-  partLs: []
-  partLs_LastPos: []
-  speedInSec_first: 0.1
-  speedInSec_Jump: 0.3
-  PositionStartMultiplicator: 1
-  jumpPower: 1.3
-  baseScalePart: 0.03914287
-  SizeBySpeedModifier: 20
-  additionalDegree: 90
-  endPos_variation: 0.3
-  impact_speedInSec: 3
-  Impact_SizeModifier: 0.3
-  nbPartDestroyed: 0
+  ScaleEndless: 0.0058
+  ScaleStart: 0.015
+  prefab: {fileID: 4642941204220423997, guid: f2a781cf7aac54c7684fb21ee8c9b9f4, type: 3}
+  startPosDistance: 0.3
+  ApparitionTime: 0.5
+  endless_rotationSpeed: 30
+  endless_distance: 0.7
+  AccumulationPerLine: 15
+  AccumulationLevel: 0.15
+  FastRotateSpeed: 0.2
+  FastRotateStrenght: 45
+  PunchPositionStr: 0.1
+  punchScaleStr: 2
+  punchScaleSpeed: 0.5

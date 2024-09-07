@@ -8,26 +8,28 @@ public partial class card_primaryStats : card
     {
         try
         {
-            List<primaryStatsSetter.list> stats = new List<primaryStatsSetter.list>();
+            //List<primaryStatsSetter.list> stats = new List<primaryStatsSetter.list>();
 
-            List<primaryStatsSetter.list> availableKeys = new List<primaryStatsSetter.list>(primaryStatsSetter.dicInfo.Keys);
+            //List<primaryStatsSetter.list> availableKeys = new List<primaryStatsSetter.list>(primaryStatsSetter.dicInfo.Keys);
 
-            if (availableKeys.Count < 3) return false;
+            //if (availableKeys.Count < 3) return false;
 
-            while (stats.Count < 3)
-            {
-                int randomRange = Random.Range(0, availableKeys.Count);
+            //while (stats.Count < 3)
+            //{
+            //    int randomRange = Random.Range(0, availableKeys.Count);
 
-                primaryStatsSetter.list list = availableKeys[randomRange];
+            //    primaryStatsSetter.list list = availableKeys[randomRange];
 
-                var setterInfo = primaryStatsSetter.dicInfo[list];
+            //    var setterInfo = primaryStatsSetter.dicInfo[list];
 
-                if (setterInfo.checkIfPossible())
-                    stats.Add(list);
+            //    if (setterInfo.checkIfPossible())
+            //        stats.Add(list);
 
 
-                availableKeys.RemoveAt(randomRange);
-            }
+            //    availableKeys.RemoveAt(randomRange);
+            //}
+
+            List<primaryStatsSetter.list> stats = new List<primaryStatsSetter.list> { primaryStatsSetter.list.life };
 
             CreateChoiceCard(stats);
         } catch(System.Exception e)

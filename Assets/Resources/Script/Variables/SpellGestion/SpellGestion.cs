@@ -11,7 +11,7 @@ public partial class SpellGestion : MonoBehaviour
     public enum range_effect_size
     {
         singleTarget, oneSquareAround, Cone, twoSquareAround, threeSquareAround, Cone_Inverted, line_2, Front3line,
-        oneSquareAround_line, twoSquareAround_line, threeSquareAround_line
+        oneSquareAround_line, twoSquareAround_line, threeSquareAround_line,fiveSquareAround
     }
 
     public static void Initialize()

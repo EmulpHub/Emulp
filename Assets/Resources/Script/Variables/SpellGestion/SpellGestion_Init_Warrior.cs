@@ -12,35 +12,37 @@ public partial class SpellGestion : MonoBehaviour
         Color32 col = spellInteriorCol_underground;
 
         AddSpell_info(List.warrior_rockThrow, range: "0", pa_cost: 4, cd: 5, Spell.Range_type.normal, CursorMode.physical, range_effect_size.singleTarget, TargetMode.all, col);
-        AddSpell_info(List.warrior_Punch, range: "1", pa_cost: 3, cd: -2, Spell.Range_type.normal, CursorMode.physical, range_effect_size.Cone_Inverted, TargetMode.all, col);
+        AddSpell_info(List.warrior_Punch, range: "1", pa_cost: 3, cd: -2, Spell.Range_type.normal, CursorMode.physical, range_effect_size.Cone, TargetMode.all, col);
         AddSpell_info(List.warrior_divineSword, range: "0", pa_cost: 4, cd: -2, Spell.Range_type.normal, CursorMode.magical, range_effect_size.oneSquareAround, TargetMode.entity, col);
         AddSpell_info(List.warrior_Double, range: "0", pa_cost: 0, cd: 6, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.entity, col);
         AddSpell_info(List.warrior_spikeAttack, range: "1_3", pa_cost: 4, cd: -2, Spell.Range_type.line, CursorMode.magical, range_effect_size.singleTarget, TargetMode.entity, col);
         AddSpell_info(List.warrior_jump, range: "1_3", pa_cost: 3, cd: 3, Spell.Range_type.noNeedOfLineOfView, CursorMode.magical, range_effect_size.oneSquareAround, TargetMode.empty, col);
         AddSpell_info(List.warrior_endurance, range: "0", pa_cost: 0, cd: 5, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
-        AddSpell_info(List.warrior_strength, range: "0", pa_cost: 2, cd: 2, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
+        AddSpell_info(List.warrior_strength, range: "0", pa_cost: 4, cd: 6, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
         AddSpell_info(List.warrior_earthTotem, range: "3_3", pa_cost: 3, cd: 6, Spell.Range_type.noNeedOfLineOfView, CursorMode.magical, range_effect_size.twoSquareAround, TargetMode.empty, col);
-        AddSpell_info(List.warrior_os, range: "0", pa_cost: 0, cd: 4, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
+        AddSpell_info(List.warrior_os, range: "0", pa_cost: 2, cd: 4, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
         AddSpell_info(List.warrior_heal, range: "0", pa_cost: 3, cd: 5, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
         AddSpell_info(List.warrior_attack, range: "1", pa_cost: 3, cd: 1, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
-        AddSpell_info(List.warrior_execution, range: "1", pa_cost: 5, cd: 4, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
-        AddSpell_info(List.warrior_spent, range: "0", pa_cost: 0, cd: 2, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
+        AddSpell_info(List.warrior_execution, range: "0", pa_cost: 3, cd: 4, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
+        AddSpell_info(List.warrior_spent, range: "0", pa_cost: 4, cd: 4, Spell.Range_type.normal, CursorMode.magical, range_effect_size.fiveSquareAround, TargetMode.all, col);
+        AddSpell_info(List.warrior_spikeConversion, range: "0", pa_cost: 0, cd: 4, Spell.Range_type.normal, CursorMode.magical, range_effect_size.singleTarget, TargetMode.all, col);
 
         if (V.IsFr())
         {
             ModifySpell_string(List.warrior_rockThrow, "Défense d'épines", "*arm+20 armure*end\n*dex+1 épine*end *spe(3 tours)*end\nGagnez une épine *sperénitialise*end la durée de vie toutes les épines");
-            ModifySpell_string(List.warrior_Punch, "Embrasement", "*dmg10 dégâts*end*spe(Cone)*end");
-            ModifySpell_string(List.warrior_divineSword, "Epee divine", "*dmg8dégâts*end*spe(1 case)*end\n*dmg12 dégâts*end*spe(1 case)*end\n*arm+5 armure*end par ennemie touchés");
-            ModifySpell_string(List.warrior_spikeAttack, "Attaque épineuse", "Frappe avec vos épines à *dex100%*end de dégâts");
-            ModifySpell_string(List.warrior_jump, "Saut", "Téléporte\n*dmg13 dégâts*end*spe(1 cases)*end\n*res+10 armure*end par ennemi touché\n\nDépense *speannule*end le temps de recharge et réduit le cout en pa a *spe0*end de ce sort pour ce tour");
+            ModifySpell_string(List.warrior_Punch, "Embrasement", "Frappez l'ennemie et infligez *dmg10 dégâts*end\nLa premiere fois que vous lancez ce sort ce tour vous gagnez *res4 armure*end et *eff1 accumuluation*end par ennemie touchés");
+            ModifySpell_string(List.warrior_divineSword, "Epee divine", "Invoquez une épee qui inflige *dmg5 dégâts*end puis *dmg10 dégâts*end autour de vous\n\nPour chaque ennemie touchés gagnez *eff1 accumulation*end");
+            ModifySpell_string(List.warrior_spikeAttack, "Attaque épineuse", "Frappez avec vos épines a hauteur de *spe100%*end de dégâts + *dex10%*end par point d'*speaccumulation*end");
+            ModifySpell_string(List.warrior_jump, "Saut", "Sautez sur la case cible et infligez *dmg13 dégâts*end aux ennemie autour\nPour chaque ennemie touchés gagné *res10 armure*end");
             ModifySpell_string(List.warrior_endurance, "Endurance", "*dex+3 pa*end");
-            ModifySpell_string(List.warrior_strength, "Force", "Votre prochain sort se lance une deuxieme fois avec *dex+30%*end d'effet");
-            ModifySpell_string(List.warrior_earthTotem, "Earth totem", "Invoquez un totem avec *res50%*end de vos pv max\nA la fin de votre tour, à la mort du Totem ou à son apparition ce totem déclanche son *speeffet*end\nEffet: *dmg10*end dégâts au ennemies à moins de *spe2 cases*end");
-            ModifySpell_string(List.warrior_os, "Os", "Subissez *spe20%*end de vos pv max\n*dex+1 épine*end");
-            ModifySpell_string(List.warrior_heal, "Soin", "*res+30 pv*end\n*res+15 pv*end a vos *speTotem*end");
+            ModifySpell_string(List.warrior_strength, "Force", "Votre prochain sort se lance une *spedeuxieme fois*end");
+            ModifySpell_string(List.warrior_earthTotem, "Earth totem", "Invoquez un *spetotem*end sur la case ciblée qui infligera *dmg10 dégâts*end aux ennemies à moins de *spe2 case*end autour de lui.\nSi ce totem tue un ennemie vous gagnez *eff2 accumulation*end.\n\nLes *spetotems*end declenchent leur *speeffets*end a *spela fin de votre tour*end, *spea la mort du totem*end ou *spelors de son apparition*end");
+            ModifySpell_string(List.warrior_os, "Os", "Subissez *spe25%*end de vos pv max\n*dex+2 épine*end");
+            ModifySpell_string(List.warrior_heal, "Soin", "Soignez vous de *res30*end et vos totem de *res15*end\nLes *spesoins*end sont augmentés de *dex10%*end par *speaccumulation*end");
             ModifySpell_string(List.warrior_attack, "Attaque", "13 dégâts\n-33% dégâts subis ce tour");
-            ModifySpell_string(List.warrior_execution, "Execution", "*dmgInflige 5 à 25 dégâts*end selon les pv de la cible *spe(degats max à 30% de pv)*end\n\nSi la cible meurt, tous les ennemies subissent *dex50%*end des dégâts originaux *spe(récursif)*end");
-            ModifySpell_string(List.warrior_spent, "Dépense", "Infligez *dmg10*end dégâts à un ennemie aléatoire pour chaque tranche de *spe10*end accumulation\nChaque météorite augmente les dégats des prochaines météorite de *eff4*end");
+            ModifySpell_string(List.warrior_execution, "Execution", "Détruisez votre *spearmure*end, l'*spearmure*end perdu est ensuite répartis en dégâts parmi tous les ennemis en vie à hauteur de *spe100%*end + *dex10%*end par point d'*speccumulation*end");
+            ModifySpell_string(List.warrior_spent, "Dépense", "Lancez une *speméteorite*end aux ennemies proche de vous aléatoirement qui inflige *dmg10 dégâts*end à l'ennemie et a tous les autres a moins de *spe1 case*end\nChaque méteorite vous soigne de *res5 pv*end.\n\nLancez une nouvelle *speméteorite*end pour chaque point d'*speaccumulation*end");
+            ModifySpell_string(List.warrior_spikeConversion, "Conversion d'épine", "Perdez vos *speépines*end et gagnez le montant perdu en *speaccumulation*end");
         }
         else
         {

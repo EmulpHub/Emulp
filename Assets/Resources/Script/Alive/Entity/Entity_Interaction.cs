@@ -45,13 +45,14 @@ public partial class Entity : MonoBehaviour
 
         if (strenght < 0)
         {
-            dir = DirectionData.GetDirection(posOrigin, CurrentPosition_string);
+            dir = DirectionData.GetDirection(CurrentPosition_string, posOrigin);
             strenght *= -1;
         }
         else
         {
-            dir = DirectionData.GetDirection(CurrentPosition_string, posOrigin);
+            dir = DirectionData.GetDirection(posOrigin, CurrentPosition_string);
         }
+
 
         Vector2Int PosToPush = CurrentPosition;
         while (strenght > 0)
@@ -68,6 +69,8 @@ public partial class Entity : MonoBehaviour
                 break;
             }
         }
+
+        Action_waitFixed.Add(0.5f);
 
         GoHere(PosToPush, 0.4f);
 
@@ -94,7 +97,7 @@ public partial class Entity : MonoBehaviour
     }
 
     public void GoHere(string pos, float time, Ease ease = Ease.Flash)
-    {
+    {          
         TimeBeforeNotInMovement = Time.time + time;
 
         //SetPosition(CurrentPosition_string, true);
@@ -287,6 +290,7 @@ public partial class Entity : MonoBehaviour
         }
 
         Vector3 Direction = transform.position - infoDamage.caster.transform.position;
+        Direction.Normalize();
         Vector3 punchPos = Direction * damage_RecalStrenght;
 
         if (infoDamage.animate)

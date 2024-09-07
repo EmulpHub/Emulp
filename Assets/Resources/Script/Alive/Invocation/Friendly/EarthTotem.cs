@@ -47,6 +47,10 @@ public class EarthTotem : Invocation
                 spellAnimation.anim_simple("EarthTotem", V.CalcEntityDistanceToBody(m));
 
                 SoundManager.PlaySound(SoundManager.list.spell2_warrior_EarthTotemDamage);
+
+                if (m.IsDead())
+                    warrior_spent.AddAcumulation(V.player_entity,2 + V.player_entity.InfoPlayer.eff);
+
             }
         }
     }

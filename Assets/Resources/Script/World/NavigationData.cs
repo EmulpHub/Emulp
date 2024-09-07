@@ -53,7 +53,7 @@ public class NavigationData : MonoBehaviour
     {
         DirectionData.information inf = new DirectionData.information(false, false, DirectionData.Direction.right);
 
-        if (Main_Map.currentMap == null || V.IsFight())
+        if (Main_Map.currentMap == null || V.IsFight() || Map_PossibleToMove.MouseIsOnToolbar)
         {
             return (false, new DirectionData.information(false, false, DirectionData.Direction.right)); //World.InfoGo(false, false);
         }

@@ -48,7 +48,7 @@ public class Action_spell : Action
                     newSpellInfo.forceLaunch = true;
                     newSpellInfo.dontUseCost = true;
                     newSpellInfo.main = false;
-                    newSpellInfo.multiplicator = 1 + ((float)e.Str / 100);
+                    newSpellInfo.multiplicator += ((float)e.Str / 100);
 
                     Add_spell_one(newSpellInfo);
 
@@ -101,6 +101,7 @@ public class Action_spell_info
     private Entity _target;
 
     private List<Entity> _listTarget = new List<Entity>();
+
 
     public List<Entity> listTarget
     {

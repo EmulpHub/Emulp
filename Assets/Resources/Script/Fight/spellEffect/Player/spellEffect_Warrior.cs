@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using static UnityEngine.GraphicsBuffer;
 
 public class warrior_Punch : spellEffect_Player
 {
@@ -8,10 +10,17 @@ public class warrior_Punch : spellEffect_Player
     {
         SetBoolInfo(true, true);
     }
+
+    public static int lastUsedTurn = -1;
+
+    public List<Vector2> listPosMonster = new List<Vector2>();
+
     public override IEnumerator Effect_Target(Entity target, string pos)
     {
         if (TargetForDamage(target))
         {
+            listPosMonster.Add(V.CalcEntityDistanceToBody(target));
+
             Vector2 posToAttack = F.GetPosNearTarget(target, CursorInfo.Instance.positionInWorld);
 
             Sprite sp = F.GetSpellSpriteAtPath_warrior("punch_anim");
@@ -31,6 +40,26 @@ public class warrior_Punch : spellEffect_Player
             {
                 spellHolder.StartCoroutine(spellHolder.Anim_Punch(sp, posToAttack + new Vector2(0.55f, 0), false, 1, 1.4f));
             }
+
+        }
+
+        yield return null;
+    }
+
+    public override IEnumerator Cast_After()
+    {
+        int count = listPosMonster.Count;
+
+        if (EntityOrder.id_turn != lastUsedTurn && count != 0)
+        {
+            lastUsedTurn = EntityOrder.id_turn;
+
+            foreach(var pos in listPosMonster)
+            {
+                warrior_spent.AddAcumulation(pos, calcEFF(1));
+            }
+
+            V.player_entity.InfoPlayer.AddArmor(calcRES(4) * count);
         }
 
         yield return null;
@@ -44,13 +73,11 @@ public class warrior_spent : spellEffect_Player
         SetBoolInfo(false, true);
     }
 
-    public override IEnumerator Effect_Target(Entity target, string pos)
+    public override IEnumerator Cast_After()
     {
-        float accumulation = V.player_entity.CollectStr(Effect.effectType.accumulation);
+        int accumulation = V.player_entity.CollectStr(Effect.effectType.accumulation);
 
-        float div = 10;
-
-        int nbAttack = Mathf.FloorToInt(accumulation / div);
+        int nbAttack = 1 + accumulation;
 
         for (int i = 0; i < nbAttack; i++)
         {
@@ -65,19 +92,43 @@ public class warrior_spent : spellEffect_Player
                     o++;
             }
 
-            if (aliveEntity.Count == 0) break;
+            List<Monster> validEntity  = new List<Monster>();
 
-            Monster monster = aliveEntity[Random.Range(0, aliveEntity.Count)];
+            foreach(Monster m in aliveEntity)
+            {   
+                if(F.DistanceBetweenTwoPos(m, V.player_entity) <= 5)
+                    validEntity.Add(m);
+            }
 
-            float baseDamage = calcDamage(10 + i * calcEFF(4));
+            if (validEntity.Count == 0) break;
 
-            monster.Damage(new InfoDamage(baseDamage, caster));
+            Monster monster = validEntity[Random.Range(0, validEntity.Count)];
+
+            float baseDamage = calcDamage(10);
+
+            List<Monster> listToDamage = new List<Monster>() { monster };
+
+            foreach(var m in validEntity)
+            {
+                if (m != monster && F.DistanceBetweenTwoPos(m, monster) <= 2)
+                    listToDamage.Add(m);
+            }
+
+            foreach(var toDamage in listToDamage)
+            {
+                toDamage.Damage(new InfoDamage(baseDamage, caster));
+            }
 
             SoundManager.PlaySound(SoundManager.list.spell2_warrior_Meteore);
 
-            spellAnimation.anim_simple("Meteore", V.CalcEntityDistanceToBody(monster), 0.2f + i * 0.05f);
+            spellAnimation.anim_simple("Meteore", V.CalcEntityDistanceToBody(monster), 0.5f);
 
-            yield return new WaitForSeconds(0.3f);
+            V.player_info.Heal(new InfoHeal(calcRES(5)));
+
+            if (i != 0)
+                WarriorParticleManagement.PunchID(i - 1);
+
+            yield return new WaitForSeconds(0.4f);
         }
     }
 
@@ -99,12 +150,10 @@ public class warrior_spent : spellEffect_Player
 
     public void DamagingEnnemy(Entity entity, float dmg)
     {
-        AddAcumulation(entity, nbAccumulationGain);
     }
 
     public void KillingEnnemy(Entity entity)
     {
-        AddAcumulation(entity, 5);
     }
 
     public void startCombat()
@@ -115,13 +164,18 @@ public class warrior_spent : spellEffect_Player
 
     public static int nbAccumulationGain;
 
-    public static void AddAcumulation(Entity target, int str)
+    public static void AddAcumulation(Vector2 position, int str)
     {
         if (V.player_entity.ContainEffect_byTitle(SpellGestion.Get_Title(SpellGestion.List.warrior_spent))) { return; }
 
         V.player_entity.AddEffect(Effect.CreateEffect(Effect.effectType.accumulation, str, 3, Resources.Load<Sprite>("Image/Sort/warrior/Accumulation"), Effect.Reduction_mode.never));
-        if (target != null && str > 0)
-            WarriorParticleManagement.CreatePower(V.CalcEntityDistanceToBody(target), str);
+        if (str > 0)
+            WarriorParticleManagement.Add(position, str);
+    }
+
+    public static void AddAcumulation(Entity target, int str)
+    {
+        AddAcumulation(V.CalcEntityDistanceToBody(target), str);
     }
 }
 
@@ -134,64 +188,48 @@ public class warrior_execution : spellEffect_Player
 
     public override IEnumerator Effect_Target(Entity target, string pos)
     {
-        if (TargetForDamage(target))
-        {
-            SoundManager.PlaySound(SoundManager.list.spell2_warrior_Execution);
+        float armor = V.player_entity.InfoPlayer.armor;
 
-            spellAnimation.anim_simple("Execution", V.CalcEntityDistanceToBody(target), 1);
+        V.player_entity.InfoPlayer.RemoveArmor(armor, out float _);
+
+        if (AliveEntity.listMonster.Count != 0)
+        {
+            float damagePerEnnemy = armor / (float)AliveEntity.listMonster.Count;
+
+            foreach (Monster m in AliveEntity.listMonster)
+            {
+                spellAnimation.anim_simple("Execution", V.CalcEntityDistanceToBody(m), 0.5f);
+            }
+
+            SoundManager.PlaySound(SoundManager.list.spell2_warrior_Execution);
 
             yield return new WaitForSeconds(1.3f);
 
-            float percentageMissHealt = ((float)target.Info.Life_max - (float)target.Info.Life) / (float)target.Info.Life_max;
-
-            float amount = Mathf.Clamp((percentageMissHealt / 0.7f) * 25, 5, 25);
-
-            float originalDamage = target.Damage(new InfoDamage(calcDamage(amount), caster));
-
-            bool execute = target.IsDead();
-
-            if (execute)
+            foreach (Monster m in AliveEntity.listMonster)
             {
-                float nextDmg = originalDamage * ((float)calcDEX(50) / 100);
-
-                float scale = nextDmg / originalDamage;
-
-                scale = Mathf.Clamp(scale, 0.6f, 2);
-
-                do
-                {
-                    List<Monster> monsterToDamage = new List<Monster>();
-
-                    foreach (Monster m in AliveEntity.listMonster)
-                    {
-                        if (!m.IsDead())
-                            monsterToDamage.Add(m);
-                    }
-
-                    bool contain = monsterToDamage.Count > 0;
-
-                    foreach (Monster m in monsterToDamage)
-                    {
-                        spellAnimation.anim_simple("Execution", V.CalcEntityDistanceToBody(m), scale);
-                    }
-
-                    if (contain)
-                    {
-                        SoundManager.PlaySound(SoundManager.list.spell2_warrior_Execution);
-
-                        yield return new WaitForSeconds(1.3f);
-                    }
-
-                    execute = false;
-
-                    foreach (Monster m in monsterToDamage)
-                    {
-                        m.Damage(new InfoDamage(nextDmg, caster));
-
-                        if (m.IsDead()) execute = true;
-                    }
-                } while (execute);
+                m.Damage(new InfoDamage(damagePerEnnemy, caster));
             }
+        }
+
+        yield return null;
+    }
+}
+public class warrior_spikeConversion : spellEffect_Player
+{
+    public override void InfoBool()
+    {
+        SetBoolInfo(false, false);
+    }
+
+    public override IEnumerator Effect_Target(Entity target, string pos)
+    {
+        int spike = V.player_entity.InfoPlayer.spike;
+
+        if (spike > 0)
+        {
+            warrior_spent.AddAcumulation(V.player_entity,spike);
+
+            V.player_entity.RemoveEffect(Effect.effectType.spike);
         }
 
         yield return null;
@@ -247,12 +285,18 @@ public class warrior_heal : spellEffect_Player
 
         yield return new WaitForSeconds(0.25f);
 
-        V.player_entity.Heal(new InfoHeal(calcRES(30)));
+        int accumulation = V.player_entity.CollectStr(Effect.effectType.accumulation);
+
+        float ratio = 1 + (calcFDEX(10) * accumulation) / 100;
+
+        WarriorParticleManagement.FastRotateEndless();
+
+        V.player_entity.Heal(new InfoHeal(calcRES(30) * ratio));
 
         int i = 0;
         while (i < ls.Count)
         {
-            ls[i].Heal(new InfoHeal(calcRES(15)));
+            ls[i].Heal(new InfoHeal(calcRES(15) * ratio));
 
             i++;
         }
@@ -277,16 +321,15 @@ public class warrior_os : spellEffect_Player
 
         yield return new WaitForSeconds(0.2f);
 
-        V.player_entity.Damage(new InfoDamage(V.player_info.Life_max * 0.2f, caster));
+        V.player_entity.Damage(new InfoDamage(V.player_info.Life_max * 0.25f, caster));
 
-        int amount = calcDEX(1);
+        int amount = calcDEX(2);
 
         Effect_spike.AddSpike(amount);
 
         yield return null;
     }
 }
-
 
 public class warrior_earthTotem : spellEffect_Player
 {
@@ -359,9 +402,10 @@ public class warrior_spikeAttack : spellEffect_Player
 
         if (TargetForDamage(target) && V.player_info.spike > 0)
         {
-            ratio = calcDEX(100) / 100;
+            int accumulation = V.player_entity.CollectStr(Effect.effectType.accumulation);
 
-            spike.dmgEffect *= ratio;
+            ratio = (100 + (float)calcDEX(10) * accumulation) / 100;
+            WarriorParticleManagement.FastRotateEndless();
 
             Action_spell_info_player info = new Action_spell_info_player();
 
@@ -369,6 +413,7 @@ public class warrior_spikeAttack : spellEffect_Player
             info.caster = caster;
             info.listTarget = new List<Entity>() { target };
             info.targetedSquare = target.CurrentPosition_string;
+            info.multiplicator = ratio;
 
             Action_spell.Add(info);
         }
@@ -378,8 +423,6 @@ public class warrior_spikeAttack : spellEffect_Player
 
     public override IEnumerator Cast_After()
     {
-        spike.dmgEffect /= ratio;
-
         yield return null;
     }
 }
@@ -411,8 +454,6 @@ public class warrior_endurance : spellEffect_Player
         SetBoolInfo(false, true);
     }
 
-    public static int healAmount;
-
     public override IEnumerator Cast_After()
     {
         spellAnimation.anim_simple("Endurance", V.CalcEntityDistanceToBody(caster));
@@ -429,14 +470,6 @@ public class warrior_endurance : spellEffect_Player
         V.player_entity.Add_pa(amount, true);
 
         yield return base.Cast_After();
-    }
-
-    public static void Application()
-    {
-        if (!V.player_entity.ContainEffect_byTitle(SpellGestion.Get_Title(SpellGestion.List.warrior_endurance)))
-            return;
-
-        V.player_entity.Heal(new InfoHeal(healAmount));
     }
 }
 
@@ -551,14 +584,11 @@ public class warrior_divineSword : spellEffect_Player
         foreach (var monster in listTarget)
         {
             spellAnimation.anim_simple("DivineSword", V.CalcEntityDistanceToBody(monster), 0.8f);
-
         }
 
         yield return new WaitForSeconds(0.2f);
 
-        float dmg = calcDamage(8);
-
-        V.player_info.AddArmor(5 * listTarget.Count);
+        float dmg = calcDamage(10);
 
         foreach (var monster in listTarget)
         {
@@ -579,8 +609,10 @@ public class warrior_divineSword : spellEffect_Player
         foreach (var monster in listTarget)
         {
             monster.Damage(new InfoDamage(dmg, caster));
+            warrior_spent.AddAcumulation(monster, calcEFF(1));
 
         }
+
     }
 }
 
@@ -597,7 +629,6 @@ public class warrior_flash : spellEffect_Player
 
         spellHolder.StartCoroutine(spellHolder.Anim_Flash(holderSprite, V.CalcEntityDistanceToBody(caster), 1.5f, !Effect.IsPowerMajoritary()));
 
-        Effect.Warrior_Alternate();
 
         yield return null;
     }
@@ -818,7 +849,7 @@ public class warrior_strength : spellEffect_Player
         Main_UI.Display_movingText_basicValue(SpellGestion.Get_Title(SpellGestion.List.warrior_strength), V.Color.green, caster.transform.position);
 
         caster.AddEffect(
-            Effect.CreateEffect(Effect.effectType.additionalSpellCast, calcDEX(30), 1, V.strength_red, Effect.Reduction_mode.startTurn)
+            Effect.CreateEffect(Effect.effectType.additionalSpellCast, 0, 1, V.strength_red, Effect.Reduction_mode.startTurn)
             );
 
         Vector2 pos = V.CalcEntityDistanceToBody(caster);
@@ -891,7 +922,6 @@ public class warrior_jump : spellEffect_Player
 
     public override IEnumerator Effect_before()
     {
-
         Vector3 rotation = Vector3.zero;
 
         if (!F.IsFaceRight_entity(caster.CurrentPosition_string, targetedSquare))

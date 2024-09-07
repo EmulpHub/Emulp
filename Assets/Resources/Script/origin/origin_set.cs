@@ -39,6 +39,7 @@ public partial class Origin : MonoBehaviour
         o.addInactive(SpellGestion.List.warrior_endurance);
         o.addInactive(SpellGestion.List.warrior_execution);
         o.addInactive(SpellGestion.List.warrior_spikeAttack);
+        o.addInactive(SpellGestion.List.warrior_spikeConversion);
 
         o = add(Value.surface, "Surface", "A la surface, vous avez su utiliser l'espace autour de vous pour ruser et anéantir l'ennemie de loin", SpellGestion.Get_sprite(SpellGestion.List.surface_fieryShot));
 

@@ -33,7 +33,7 @@ public partial class Action : MonoBehaviour
                     if (e == null)
                         continue;
 
-                    e.SetPosition(F.ConvertToStringDependingOfGrid(e.transform.position));
+                    //e.SetPosition(F.ConvertToStringDependingOfGrid(e.transform.position));
                 }
 
                 //Remove it to the actionToDo List and go to next actionToDo

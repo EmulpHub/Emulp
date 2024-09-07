@@ -8,12 +8,23 @@ public class Scene_Main_Administrator : MonoBehaviour
 {
     #region TemporaryTest
 
-    public void TemporaryTest_Start()
-    {
-    }
+    public void TemporaryTest_Start() { }
 
     public void TemporaryTest_Update()
     {
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            warrior_spent.AddAcumulation(V.player_entity,1);
+        }
+
+        if(Input.GetKeyDown(KeyCode.V))
+        {
+            warrior_spent.AddAcumulation(V.player_entity, Random.Range(1,4));
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            WarriorParticleManagement.PunchAll();
+        }
     }
 
     #endregion

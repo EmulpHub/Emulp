@@ -24,6 +24,7 @@ public class DescriptionStatic : MonoBehaviour
                 CurrentDescription_script = value.GetComponent<Description>();
         }
     }
+
     public static Description CurrentDescription_script { get; private set; }   
 
     private static GameObject _descriptionPrefab;
