@@ -5,11 +5,12 @@ using UnityEngine;
 public partial class PlayerInfo : EntityInfo
 {
     public static EventHandlerEntityFloat event_player_doDmg = new EventHandlerEntityFloat(true);
+    public static EventHandlerFloat event_player_xpGain = new EventHandlerFloat(true);
 
     public static EventHandlerNoArg event_calculateValue = new EventHandlerNoArg(true);
 
-    public EventHandlerNoArg event_armor_gain = new EventHandlerNoArg(false);
-    public EventHandlerNoArg event_armor_loose = new EventHandlerNoArg(false);
+    public EventHandlerFloat event_armor_gain = new EventHandlerFloat(false);
+    public EventHandlerFloat event_armor_loose = new EventHandlerFloat(false);
 
     public override void InitInfo(Entity holder)
     {
@@ -49,7 +50,7 @@ public partial class PlayerInfo : EntityInfo
 
         holder.RemoveEffect(Effect.effectType.heal_OneUse);
 
-        event_armor_gain.Call();
+        event_armor_gain.Call(amount);
 
         return val;
     }
@@ -58,12 +59,12 @@ public partial class PlayerInfo : EntityInfo
     {
         infoDamage.damage = RemoveArmor(infoDamage.damage, out float armorTankedAmount);
 
-        if (armorTankedAmount > 0)
-        {
-            Main_UI.MovingStruct n = Main_UI.Display_movingText_basicValue("- " + armorTankedAmount, V.Color.grey, holder.transform.position, V.pix_armor);
+        //if (armorTankedAmount > 0)
+        //{
+        //    Main_UI.MovingStruct n = Main_UI.Display_movingText_basicValue("- " + armorTankedAmount, V.Color.grey, holder.transform.position, V.pix_armor);
 
-            n.size = Mathf.Clamp(infoDamage.damage - 20, 0, 300) / 100 + 1;
-        }
+        //    n.size = Mathf.Clamp(infoDamage.damage - 20, 0, 300) / 100 + 1;
+        //}
 
         base.Damage(infoDamage);
     }
@@ -92,7 +93,7 @@ public partial class PlayerInfo : EntityInfo
 
         armor = Mathf.FloorToInt(Mathf.Clamp(armor - dmg, 0, 99999));
 
-        event_armor_loose.Call();
+        event_armor_loose.Call(armorTankedAmount);
 
         return dmgToReturn;
     }
@@ -130,6 +131,8 @@ public partial class PlayerInfo : EntityInfo
 
             CalculateValue();
         }
+
+        event_player_xpGain.Call(xp_gain);
 
         return levelUp;
     }

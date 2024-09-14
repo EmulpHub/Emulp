@@ -28,11 +28,15 @@ public partial class EntityInfo : MonoBehaviour
             ResetAllStats();
     }
 
+    public int LifeMaxAddDebug;
+
     public float Set_LifeMax()
     {
         float nb = Set_LifeMax_add();
 
         Set_LifeMax_Multiply(ref nb);
+
+        nb += LifeMaxAddDebug;
 
         return nb;
     }

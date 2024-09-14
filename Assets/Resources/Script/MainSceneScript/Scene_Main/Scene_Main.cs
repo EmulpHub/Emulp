@@ -98,12 +98,6 @@ public partial class Scene_Main : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// The cooldown use for passive healing, when we are out of combat and our player all low on earth (simply graphics)
-    /// </summary>
-    [HideInInspector]
-    public float cooldownPassiveHeal = 1, cooldownPassiveHeal_max = 1.5f;
-
     //The button in the bottom right of the toolbar
     //And the sprite that show aside the mouse when a spell is selectionned
     public GameObject button_EndOfturn;

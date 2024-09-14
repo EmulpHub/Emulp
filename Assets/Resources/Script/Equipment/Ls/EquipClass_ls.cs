@@ -221,12 +221,12 @@ public class EquipClass_AccumulationWhenDamage : EquipClass
     int id;
     public override void Add()
     {
-        id = V.player_entity.event_life_dmg.Add(Application);
+        id = V.player_entity.event_dmg.Add(Application);
     }
 
     public override void Remove()
     {
-        V.player_entity.event_life_dmg.Remove(id);
+        V.player_entity.event_dmg.Remove(id);
     }
 
     public void Application(InfoDamage info)
@@ -265,7 +265,7 @@ public class EquipClass_spikeShard : EquipClass
         V.player_info.event_armor_gain.Remove(id);
     }
 
-    public void application()
+    public void application(float armorGain)
     {
         V.player_entity.AddEffect(
             Effect.CreateEffect("", Effect.effectType.spikeShard, 1, 0, null, Effect.Reduction_mode.never)

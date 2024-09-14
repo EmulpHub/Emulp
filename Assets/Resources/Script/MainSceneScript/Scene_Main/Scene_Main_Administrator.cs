@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
+using System;
 
 public class Scene_Main_Administrator : MonoBehaviour
 {
@@ -14,18 +16,49 @@ public class Scene_Main_Administrator : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.H))
         {
-            warrior_spent.AddAcumulation(V.player_entity,1);
+            float damage = 10;
+            if (Input.GetKey(KeyCode.LeftShift))
+                damage = 50;
+
+            V.player_entity.Damage(new InfoDamage(damage, V.player_entity, true));
         }
 
-        if(Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            warrior_spent.AddAcumulation(V.player_entity, Random.Range(1,4));
+            V.player_entity.Info.LifeMaxAddDebug += 10;
+
+            V.player_entity.Info.CalculateValue();
+            V.player_entity.Info.ResetAllStats();
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            V.player_entity.Info.LifeMaxAddDebug -= 10;
+
+            V.player_entity.Info.CalculateValue();
+            V.player_entity.Info.ResetAllStats();
+        }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            V.player_entity.Heal(new InfoHeal(10));
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            WarriorParticleManagement.PunchAll();
+            V.player_entity.InfoPlayer.AddArmor(10);
         }
     }
+
+    public IEnumerator feur ()
+    {
+        V.player_entity.ResetAllStats();
+
+        yield return new WaitForSeconds(1);
+
+        V.player_entity.Damage(new InfoDamage(90, V.player_entity, true));
+    }
+
+    public static int easeId;
 
     #endregion
 

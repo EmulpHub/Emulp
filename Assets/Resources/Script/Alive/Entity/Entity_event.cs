@@ -10,7 +10,8 @@ public abstract partial class Entity : MonoBehaviour
     public static EventHandlerEntityDmg event_allEntity_dmg = new EventHandlerEntityDmg(true);
     public EventHandlerEntity event_turn_start = new EventHandlerEntity(false);
     public EventHandlerEntity event_turn_end = new EventHandlerEntity(false);
+    public EventHandlerInfoDamage event_dmg = new EventHandlerInfoDamage(false);
     public EventHandlerInfoDamage event_life_dmg = new EventHandlerInfoDamage(false);
-    public EventHandlerNoArg event_life_heal = new EventHandlerNoArg(false);
+    public EventHandlerInfoHeal event_life_heal = new EventHandlerInfoHeal(false);
     public EventHandlerEntity event_die = new EventHandlerEntity(false);
 }

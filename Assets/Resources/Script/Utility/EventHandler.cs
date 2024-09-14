@@ -194,6 +194,54 @@ public class EventHandlerInfoDamage : EventHandler
     }
 }
 
+public class EventHandlerInfoHeal : EventHandler
+{
+    public EventHandlerInfoHeal(bool isStatic) : base(isStatic) { }
+
+    public delegate void del(InfoHeal info);
+
+    InfoHeal arg;
+
+    protected override void CallOne(object d)
+    {
+        ((del)d)(arg);
+    }
+
+    public void Call(InfoHeal arg)
+    {
+        this.arg = arg;
+
+        CallAll();
+    }
+
+
+    public int Add(del d)
+    {
+        int id = GetMaxInt();
+
+        dicAction.Add(id, d);
+
+        return id;
+    }
+
+    public int Add_first(del d)
+    {
+        int id = GetMaxInt();
+
+        dicAction_first.Add(id, d);
+
+        return id;
+    }
+    public int Add_last(del d)
+    {
+        int id = GetMaxInt();
+
+        dicAction_last.Add(id, d);
+
+        return id;
+    }
+}
+
 public class EventHandlerEffect : EventHandler
 {
     public EventHandlerEffect(bool isStatic) : base(isStatic) { }

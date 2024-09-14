@@ -1607,7 +1607,7 @@ public class Effect_heal_OneUse : Effect
 
     int idEvent;
 
-    private void effectWhenHeal()
+    private void effectWhenHeal(InfoHeal info)
     {
         Kill(false);
 

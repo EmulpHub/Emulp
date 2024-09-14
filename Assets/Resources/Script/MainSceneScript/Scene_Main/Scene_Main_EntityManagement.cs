@@ -99,7 +99,6 @@ public partial class Scene_Main : MonoBehaviour
         {
             SoundManager.PlaySound(SoundManager.list.player_losing);
 
-
             xp = Mathf.CeilToInt((float)xp * 0.3f);
         }
 
@@ -107,7 +106,6 @@ public partial class Scene_Main : MonoBehaviour
 
         if (!endOfRun && playerWin)
         {
-            toolbar_stats.instance.txt_expUpdate(xp);
             V.player_info.GainXp(xp);
         }
 

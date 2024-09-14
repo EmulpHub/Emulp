@@ -270,7 +270,7 @@ public partial class Entity : MonoBehaviour
 
         Info.Heal(infoHeal);
 
-        event_life_heal.Call();
+        event_life_heal.Call(infoHeal);
     }
 
     public virtual float Damage(InfoDamage infoDamage)
@@ -279,6 +279,8 @@ public partial class Entity : MonoBehaviour
             PlayerInfo.event_player_doDmg.Call(this, infoDamage.damage);
 
         infoDamage.damage = Info.CalculateResistance(infoDamage.damage);
+
+        float lifeBeforeDamage = Info.Life;
 
         Info.Damage(infoDamage);
 
@@ -310,7 +312,10 @@ public partial class Entity : MonoBehaviour
             Renderer_movable.transform.DOPunchScale(new Vector3(0, -0.3f, 1), 0.5f);
         }
 
-        event_life_dmg.Call(infoDamage);
+        event_dmg.Call(infoDamage);
+        
+        if(lifeBeforeDamage - Info.Life != 0)
+            event_life_dmg.Call(infoDamage);
 
         event_allEntity_dmg.Call(this, infoDamage);
 

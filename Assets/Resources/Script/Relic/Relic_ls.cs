@@ -374,9 +374,14 @@ public class relic_endurance : relic
 {
     public int lastTurnApply = -1;
 
-    public void Application_withoutEntity()
+    public void Application_withoutEntity(float gainArmor)
     {
         V.player_entity.Add_pa(2);
+    }
+
+    public void Application_Heal(InfoHeal info)
+    {
+        Application_withoutEntity(0);
     }
 
     int id, id2;
@@ -384,7 +389,7 @@ public class relic_endurance : relic
     public override void Add()
     {
         id = V.player_info.event_armor_gain.Add(Application_withoutEntity);
-        id2 = V.player_entity.event_life_heal.Add(Application_withoutEntity);
+        id2 = V.player_entity.event_life_heal.Add(Application_Heal);
     }
 
     public override void Remove()
