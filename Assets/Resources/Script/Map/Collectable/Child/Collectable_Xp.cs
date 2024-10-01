@@ -71,7 +71,7 @@ public class Collectable_Xp : Collectable, ICollectable
             desc = "+" + CalculateXpGain(level) + " XP";
 
 
-        if (!Scene_Main.aWindowIsUsed)
+        if (!Scene_Main.isMouseOverAWindow)
             Main_UI.Display_Title(desc, transform.position, 1.5f);
     }
 

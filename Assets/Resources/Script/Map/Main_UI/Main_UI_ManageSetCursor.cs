@@ -11,7 +11,7 @@ public partial class Main_UI : MonoBehaviour
         if (dontChangeCursor.Count > 0)
             return;
 
-        var mouseOnTile = CT_Gestion.Instance.MouseOnTile;
+        var mouseOnTile = Tile_Gestion.Instance.MouseOnTile;
 
         if (V.game_state == V.State.fight)
         {
@@ -24,7 +24,7 @@ public partial class Main_UI : MonoBehaviour
                 else if (save == SpellGestion.CursorMode.magical)
                     Window.SetCursorAndOffset(cursor_magical, Window.CursorMode.click_cursor);
             }
-            else if (V.game_state_action == V.State_action.movement && mouseOnTile != null && CTInfo.Instance.ExistType(CT.Type.movement) && EntityOrder.IsTurnOf_Player())
+            else if (V.game_state_action == V.State_action.movement && mouseOnTile != null && TileInfo.Instance.ExistType(Tile.Type.movement) && EntityOrder.IsTurnOf_Player())
             {
                 if (mouseOnTile.pos != V.player_entity.CurrentPosition_string)
                     Window.SetCursorAndOffsetHand();

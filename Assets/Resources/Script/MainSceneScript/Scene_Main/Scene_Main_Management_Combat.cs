@@ -17,7 +17,6 @@ public partial class Scene_Main : MonoBehaviour
             Player_turn_management();
         }
 
-        Action.Management();
     }
 
     #region Player_turn_management
@@ -78,37 +77,37 @@ public partial class Scene_Main : MonoBehaviour
 
     public static void Set_PossibleMovementTile(Entity entity)
     {
-        CTInfo.Instance.ListTile_Clear();
+        TileInfo.Instance.ListTile_Clear();
 
         tilePos.Clear();
         tilePos_withLineOfView.Clear();
 
-        var result = PathFindingName.PathAllAround.Make(entity.CurrentPosition_string, entity.Info.PM);
+        var result = PathFindingName.PossibleWalkingTile.Make(entity.CurrentPosition_string, entity.Info.PM);
 
         bool forPlayer = entity.Info.IsPlayer();
 
         foreach (var info in result)
         {
             string pos = info.Key;
-            var path = info.Value;
+            var distance = info.Value;
 
-            if (path.Count > entity.Info.PM) continue;
+            if (distance > entity.Info.PM) continue;
 
             if (forPlayer)
             {
-                CT_Movement.Add(pos, path, false, false, false, false);
+                CT_Movement.Add(pos, distance, false, false, false, false);
 
                 tilePos.Add(pos);
             }
             else
             {
-                if (info.Value.Count > entity.Info.GetRealPm())
+                if (distance > entity.Info.GetRealPm())
                 {
-                    CT_Graphic.Add(pos, CT_Gestion.Color.red, true, false, false, null, false);
+                    CT_Graphic.Add(pos, Tile_Gestion.Color.red, true, false, false, null, false);
                 }
                 else
                 {
-                    CT_Graphic.Add(pos, CT_Gestion.Color.green, true, false, false, null, false);
+                    CT_Graphic.Add(pos, Tile_Gestion.Color.green, true, false, false, null, false);
                 }
 
             }
@@ -120,7 +119,7 @@ public partial class Scene_Main : MonoBehaviour
 
     public void Set_PossibleSpellTile(Spell.Range_type range_Type)
     {
-        CTInfo.Instance.ListTile_Clear();
+        TileInfo.Instance.ListTile_Clear();
         tilePos.Clear();
         tilePos_withLineOfView.Clear();
 
@@ -175,7 +174,7 @@ public partial class Scene_Main : MonoBehaviour
 
         V.game_state_action = V.State_action.movement;
 
-        if (Action.toDo.Count == 0 && EntityOrder.IsTurnOf_Player())
+        if (!ActionManager.Instance.Running() && EntityOrder.IsTurnOf_Player())
             Set_PossibleMovementTile(V.player_entity);
     }
 
@@ -189,7 +188,7 @@ public partial class Scene_Main : MonoBehaviour
 
         V.game_state_action = V.State_action.Nothing;
 
-        if (Action.toDo.Count == 0)
+        if (!ActionManager.Instance.Running())
             Set_PossibleMovementTile(monster);
     }
 
@@ -197,7 +196,7 @@ public partial class Scene_Main : MonoBehaviour
     {
         V.game_state_action = V.State_action.Nothing;
 
-        CTInfo.Instance.ListTile_Clear();
+        TileInfo.Instance.ListTile_Clear();
     }
 
     #endregion

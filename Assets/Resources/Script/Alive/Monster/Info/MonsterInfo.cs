@@ -44,7 +44,7 @@ public partial class MonsterInfo : EntityInfo
         return Mathf.Clamp(dmg, 0, float.MaxValue);
     }
 
-    public void AddSpellStats(SpellGestion.List sp, bool CheckDistance = false)
+    public void AddSpellStats(SpellGestion.List sp, bool CheckDistance = true)
     {
         holder_monster.allAvailableStats.Add(sp, new SpellStats(holder_monster, sp, CheckDistance));
     }

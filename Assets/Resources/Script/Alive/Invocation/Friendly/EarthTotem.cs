@@ -36,7 +36,7 @@ public class EarthTotem : Invocation
 
     public void DoEffect(Entity caster)
     {
-        foreach (Monster m in AliveEntity.listMonster)
+        void Traveler(Monster m)
         {
             int distance = F.DistanceBetweenTwoPos(m, this);
 
@@ -53,6 +53,8 @@ public class EarthTotem : Invocation
 
             }
         }
+
+        AliveEntity.Instance.TravelMonster(Traveler);
     }
 
 }

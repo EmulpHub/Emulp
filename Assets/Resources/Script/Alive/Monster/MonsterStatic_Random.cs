@@ -8,11 +8,11 @@ namespace MonsterRandom
         static List<TypeCaracteristic> listTypeCarac = new()
         {
             new TypeCaracteristic(0, MonsterInfo.MonsterType.normal, TypeCaracteristic.Condition.normal),
-            new TypeCaracteristic(0, MonsterInfo.MonsterType.grassy, TypeCaracteristic.Condition.support),
-            new TypeCaracteristic(2, MonsterInfo.MonsterType.archer, TypeCaracteristic.Condition.cantBeAlone),
-            new TypeCaracteristic(1, MonsterInfo.MonsterType.funky, TypeCaracteristic.Condition.cantBeAlone),
-            new TypeCaracteristic(2, MonsterInfo.MonsterType.shark, TypeCaracteristic.Condition.normal),
-            new TypeCaracteristic(1, MonsterInfo.MonsterType.magnetic, TypeCaracteristic.Condition.normal),
+            //new TypeCaracteristic(0, MonsterInfo.MonsterType.grassy, TypeCaracteristic.Condition.support),
+            //new TypeCaracteristic(2, MonsterInfo.MonsterType.archer, TypeCaracteristic.Condition.cantBeAlone),
+            //new TypeCaracteristic(1, MonsterInfo.MonsterType.funky, TypeCaracteristic.Condition.cantBeAlone),
+            //new TypeCaracteristic(2, MonsterInfo.MonsterType.shark, TypeCaracteristic.Condition.normal),
+            //new TypeCaracteristic(1, MonsterInfo.MonsterType.magnetic, TypeCaracteristic.Condition.normal),
         };
 
         static int mostExpensiveMonster = 2;

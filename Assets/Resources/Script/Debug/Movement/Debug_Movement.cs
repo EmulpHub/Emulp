@@ -49,7 +49,7 @@ public class Debug_Movement : MonoBehaviour
     {
         stopWatch = Stopwatch.StartNew();
 
-        PathCount = V.player_entity.currentMovement.pathResult.LengthInSquare;
+        PathCount = V.player_entity.runningInfo.path.LengthInSquare;
 
         foreach (GameObject vTile in listVisualTile)
         {
@@ -62,7 +62,7 @@ public class Debug_Movement : MonoBehaviour
 
         int i = 1;
 
-        var path = V.player_entity.currentMovement.pathResult.path;
+        var path = V.player_entity.runningInfo.path.path;
 
         foreach (string p in path)
         {

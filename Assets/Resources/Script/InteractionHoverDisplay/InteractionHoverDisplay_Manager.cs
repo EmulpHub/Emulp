@@ -26,9 +26,9 @@ public class InteractionHoverDisplay_Manager : MonoBehaviour
     {
         bool ItsFight = V.game_state == V.State.fight;
 
-        var mouseOnTile = CT_Gestion.Instance.MouseOnTile;
+        var mouseOnTile = Tile_Gestion.Instance.MouseOnTile;
 
-        if (ItsFight && mouseOnTile != null && mouseOnTile.type == CT.Type.movement)
+        if (ItsFight && mouseOnTile != null && mouseOnTile.type == Tile.Type.movement)
             return Mode.movement;
 
         else if ((ItsFight && V.game_state_action == V.State_action.spell) ||

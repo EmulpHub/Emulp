@@ -15,7 +15,7 @@ public class Combat_EndOfTurn : MonoBehaviour
 
     public void Pressed()
     {
-        if (Scene_Main.aWindowIsUsed || !ClickAutorization.Autorized(this.gameObject))
+        if (Scene_Main.isMouseOverAWindow || !ClickAutorization.Autorized(this.gameObject))
         {
             return;
         }
@@ -60,7 +60,7 @@ public class Combat_EndOfTurn : MonoBehaviour
 
         if (V.game_state == V.State.fight && EntityOrder.IsTurnOf_Player())
         {
-            if ((!SpellGestion.IsASpellLaunchable() && V.player_info.PM <= 0) && !Action.Contain(Action.Type.nextTurn))
+            if ((!SpellGestion.IsASpellLaunchable() && V.player_info.PM <= 0) && !ActionManager.Instance.Contain(Action.Type.nextTurn))
             {
                 if (Delay <= 0)
                 {
@@ -89,7 +89,7 @@ public class Combat_EndOfTurn : MonoBehaviour
             ChangeColor(true);
         }
 
-        bool NextMouseIsOver = DetectMouse.IsMouseOnUI(rectThis) && !Scene_Main.aWindowIsUsed;
+        bool NextMouseIsOver = DetectMouse.IsMouseOnUI(rectThis) && !Scene_Main.isMouseOverAWindow;
 
         if (NextMouseIsOver != MouseIsOver)
         {

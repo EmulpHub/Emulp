@@ -20,6 +20,8 @@ public class monster_normal_attack : spellEffect_Monster
             SoundManager.PlaySound(SoundManager.list.spell_monster_normal_punch);
 
             target.Damage(new InfoDamage(calcDamage(Random.Range(6, 8)), caster));
+
+            yield return new WaitForSeconds(0.3f);
         }
 
         yield return null;

@@ -281,14 +281,16 @@ public partial class F : MonoBehaviour
 
         List<Entity> ls = new List<Entity>();
 
-        foreach (Entity e in AliveEntity.list)
+        void Traveler(Entity e)
         {
             if (target == e || F.DistanceBetweenTwoPos(target, e) > 1 || !c(target, e))
-                continue;
+                return;
 
             nb++;
             ls.Add(e);
         }
+
+        AliveEntity.Instance.TravelEntity(Traveler);
 
         return (nb, ls);
     }

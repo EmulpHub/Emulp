@@ -1,4 +1,5 @@
 using DG.Tweening;
+using LayerMap;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 
 public class toolbar_life : MonoBehaviour
 {
-    private void Start()
+    private void Start() 
     {
         V.player_info.event_armor_gain.Add(event_gainArmor);
         V.player_info.event_armor_loose.Add(event_loosingArmor);

@@ -90,8 +90,6 @@ public class Scene_Main_Administrator : MonoBehaviour
 
     public bool ShowAutorization;
 
-    public bool ShowAWindowISUsed;
-
     public bool ShowAWindowIsMouseOver;
 
     public bool InstaFight;
@@ -146,7 +144,6 @@ public class Scene_Main_Administrator : MonoBehaviour
         ResetStartMap = false;
         activeTutorial = false;
         SaveOnlyForFps = false;
-        ShowAWindowISUsed = false;
         ShowAWindowIsMouseOver = false;
     }
 
@@ -208,9 +205,6 @@ public class Scene_Main_Administrator : MonoBehaviour
 
     public void Option_Update()
     {
-        if (ShowAWindowISUsed)
-            print("WindowIsUsed = " + Scene_Main.aWindowIsUsed);
-
         if (ShowAWindowIsMouseOver)
             print("WindowIsMouseOver = " + Scene_Main.isMouseOverAWindow);
 

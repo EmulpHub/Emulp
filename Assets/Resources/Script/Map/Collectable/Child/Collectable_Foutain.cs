@@ -21,7 +21,7 @@ public class Collectable_Foutain : Collectable, ICollectable
     {
         string desc = V.IsFr() ? "Nouveau talent" : "New talent";
 
-        if (!Scene_Main.aWindowIsUsed)
+        if (!Scene_Main.isMouseOverAWindow)
             Main_UI.Display_Title(desc, transform.position, 1.5f);
     }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CT_Graphic : CT
+public class CT_Graphic : Tile
 {
     private static GameObject _prefab;
 
@@ -17,9 +17,9 @@ public class CT_Graphic : CT
         }
     }
 
-    public static (GameObject tile, CT tileScript) Add(string pos, CT_Gestion.Color color, bool resetNearSprite = true, bool IgnoreAllEntity = false, bool IgnoreMouseOver = false, List<string> customCombatTileList = null, bool startAnimation = true, int layer = 0)
+    public static (GameObject tile, Tile tileScript) Add(string pos, Tile_Gestion.Color color, bool resetNearSprite = true, bool IgnoreAllEntity = false, bool IgnoreMouseOver = false, List<string> customCombatTileList = null, bool startAnimation = true, int layer = 0)
     {
-        CT script = Instantiate(Prefab, parent).GetComponent<CT>();
+        Tile script = Instantiate(Prefab, parent).GetComponent<Tile>();
 
         script.graphic_startAnimation = startAnimation;
 
@@ -32,19 +32,19 @@ public class CT_Graphic : CT
 
         script.customListTile = customCombatTileList;
 
-        CTInfo.Instance.Add(script);
+        TileInfo.Instance.Add(script);
 
         if (resetNearSprite)
         {
             if (customCombatTileList == null)
-                customCombatTileList = new List<string>(CTInfo.Instance.listPosCTKeys);
+                customCombatTileList = new List<string>(TileInfo.Instance.listTilePos);
 
             customCombatTileList = new List<string>(customCombatTileList);
 
             if (!customCombatTileList.Contains(pos))
                 customCombatTileList.Add(pos);
 
-            CTInfo.Instance.ResetNearSprite(pos, IgnoreAllEntity, customCombatTileList);
+            TileInfo.Instance.ResetNearSprite(pos, IgnoreAllEntity, customCombatTileList);
         }
 
         return (script.gameObject, script);

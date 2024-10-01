@@ -16,7 +16,7 @@ public partial class WorldNavigation : MonoBehaviour
     {
         DirectionData.information PlayerDirectionState = NavigationData.CalcCurrentState(V.player_entity.CurrentPosition_string, V.player_entity.transform.position, true).information;
 
-        if (!V.player_entity.runningInfo.isRunning)
+        if (!V.player_entity.runningInfo.running)
         {
             ActionDependingOfCurrentState(PlayerDirectionState);
         }

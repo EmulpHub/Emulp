@@ -15,15 +15,16 @@ public partial class V : MonoBehaviour
         {
             if (V.game_state == V.State.fight)
             {
-                List<Entity> al = new List<Entity>(AliveEntity.list);
-
-                foreach (Entity ent in al)
+                void Traveler(Entity ent)
                 {
                     if (ent.IsMonster())
                     {
                         ent.Damage(new InfoDamage(10000, V.player_entity));
                     }
                 }
+
+                AliveEntity.Instance.TravelEntity(Traveler);
+
             }
             else
             {

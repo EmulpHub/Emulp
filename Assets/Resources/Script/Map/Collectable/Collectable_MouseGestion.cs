@@ -10,7 +10,7 @@ public abstract partial class Collectable : MonoBehaviour
 
     public void Mouse_Management()
     {
-        bool MouseIsOver = DetectMouse.IsMouseOnUI(img.rectTransform) && !Scene_Main.aWindowIsUsed && V.game_state == V.State.passive;
+        bool MouseIsOver = DetectMouse.IsMouseOnUI(img.rectTransform) && !Scene_Main.isMouseOverAWindow && V.game_state == V.State.passive;
 
         if (MouseIsOver && !RememberMouseOver)
         {

@@ -14,7 +14,7 @@ public partial class Entity : MonoBehaviour
 
         ShaderMaterial.SetFloat("_Thicness", CurrentThicness);
 
-        Graphique_SetRotationAndSprite(runningInfo.isRunning);
+        Graphique_SetRotationAndSprite(runningInfo.running);
     }
 
     public virtual void ResetSpriteAndMovement()

@@ -147,7 +147,7 @@ public partial class V : MonoBehaviour
 
         ClickAutorization.Exception_Clear();
 
-        AliveEntity.Clear();
+        AliveEntity.Instance.Clear();
 
         EntityOrder.Clear();
 
@@ -157,7 +157,6 @@ public partial class V : MonoBehaviour
 
         game_state = State.passive;
 
-        Scene_Main.aWindowIsUsed = false;
         Scene_Main.isMouseOverAWindow = false;
         Map_PossibleToMove.MouseIsOnToolbar = false;
 

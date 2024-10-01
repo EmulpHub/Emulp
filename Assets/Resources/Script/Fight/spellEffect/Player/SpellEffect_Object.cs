@@ -87,32 +87,34 @@ public class object_energeticDrink : spellEffect_Player
 
         ShouldWaitAttraction = false;
 
-        foreach (Entity e in AliveEntity.list)
+        void Traveler(Entity e)
         {
             if (e == caster)
-                continue;
-
-            if (F.DistanceBetweenTwoPos(caster.CurrentPosition_string, e.CurrentPosition_string) <= 3 && F.IsInLine(caster.CurrentPosition_string, e.CurrentPosition_string))
             {
-                string pos = e.Attract(3, V.player_entity);
-
-                if (F.DistanceBetweenTwoPos(caster.CurrentPosition_string, pos) <= 1)
+                if (F.DistanceBetweenTwoPos(caster.CurrentPosition_string, e.CurrentPosition_string) <= 3 && F.IsInLine(caster.CurrentPosition_string, e.CurrentPosition_string))
                 {
-                    nb++;
-                }
+                    string pos = e.Attract(3, V.player_entity);
 
-                if (e.CurrentPosition_string != pos)
-                {
-                    ShouldWaitAttraction = true;
+                    if (F.DistanceBetweenTwoPos(caster.CurrentPosition_string, pos) <= 1)
+                    {
+                        nb++;
+                    }
 
-                    Vector3 posV3 = V.CalcEntityDistanceToBody(e.CurrentPosition_string);
+                    if (e.CurrentPosition_string != pos)
+                    {
+                        ShouldWaitAttraction = true;
 
-                    spellHolder.StartCoroutine(spellHolder.Anim_PopUpBig(V.attraction_center, posV3, 1, 0.8f));
+                        Vector3 posV3 = V.CalcEntityDistanceToBody(e.CurrentPosition_string);
 
-                    spellHolder.StartCoroutine(spellHolder.Anim_Projectile_DoMove(e, V.attraction_arrow, V.CalcEntityDistanceToBody(caster)));
+                        spellHolder.StartCoroutine(spellHolder.Anim_PopUpBig(V.attraction_center, posV3, 1, 0.8f));
+
+                        spellHolder.StartCoroutine(spellHolder.Anim_Projectile_DoMove(e, V.attraction_arrow, V.CalcEntityDistanceToBody(caster)));
+                    }
                 }
             }
         }
+
+        AliveEntity.Instance.TravelEntity(Traveler);
 
         if (ShouldWaitAttraction)
             yield return new WaitForSeconds(0.7f);

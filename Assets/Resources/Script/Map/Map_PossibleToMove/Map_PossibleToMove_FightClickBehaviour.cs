@@ -6,7 +6,7 @@ public partial class Map_PossibleToMove : MonoBehaviour
 {
     public static bool CanFightClick()
     {
-        return V.game_state == V.State.fight && !Scene_Main.aWindowIsUsed && !Scene_Main.isMouseOverAWindow;
+        return V.game_state == V.State.fight && !Scene_Main.isMouseOverAWindow && !Scene_Main.isMouseOverAWindow;
     }
 
     public static void FightClick(string position)
@@ -29,13 +29,13 @@ public partial class Map_PossibleToMove : MonoBehaviour
 
     public static bool LaunchMovement_Condition()
     {
-        return EntityOrder.IsTurnOf_Player() && V.game_state_action == V.State_action.movement && CTInfo.Instance.Exist(CursorInfo.Instance.position) &&
+        return EntityOrder.IsTurnOf_Player() && V.game_state_action == V.State_action.movement && TileInfo.Instance.Exist(CursorInfo.Instance.position) &&
             PlayerMoveAutorization.Instance.Can() && CursorInfo.Instance.position != V.player_entity.CurrentPosition_string;
     }
 
     public static void LaunchMovement_Effect()
     {
-        CT tile = CTInfo.Instance.Get(CursorInfo.Instance.position);
+        Tile tile = TileInfo.Instance.Get(CursorInfo.Instance.position);
 
         if (tile is CT_Movement tileMovement)
         {
@@ -45,7 +45,7 @@ public partial class Map_PossibleToMove : MonoBehaviour
             if (!ClickAutorization.Autorized(tile.gameObject))
                 return;
 
-            if (V.player_entity.runningInfo.isRunning)
+            if (V.player_entity.runningInfo.running)
                 return;
 
             tile.AnimationApparition();
@@ -59,7 +59,7 @@ public partial class Map_PossibleToMove : MonoBehaviour
         return V.game_state_action == V.State_action.spell &&
             !MouseIsOnToolbar &&
             EntityOrder.IsTurnOf_Player() &&
-            (CTInfo.Instance.Exist(position) ||
+            (TileInfo.Instance.Exist(position) ||
             (SpellGestion.Get_RangeMax(SpellGestion.selectionnedSpell_list) == 0 &&
             SpellGestion.Get_RangeMin(SpellGestion.selectionnedSpell_list) == 0));
     }
@@ -68,16 +68,16 @@ public partial class Map_PossibleToMove : MonoBehaviour
     {
         bool onPlayer = SpellGestion.Get_RangeMax(SpellGestion.selectionnedSpell_list) == 0 && SpellGestion.Get_RangeMin(SpellGestion.selectionnedSpell_list) == 0;
 
-        if (CTInfo.Instance.Exist(position) || onPlayer)
+        if (TileInfo.Instance.Exist(position) || onPlayer)
         {
             if (onPlayer)
             {
                 position = V.player_entity.CurrentPosition_string;
             }
 
-            CT tile = CTInfo.Instance.Get(position);
+            Tile tile = TileInfo.Instance.Get(position);
 
-            var entity = AliveEntity.GetEntityByPos(position);
+            var entity = EntityByPos.TryGet(position);
 
             if (!ClickAutorization.Autorized(tile.gameObject) && !(entity != null && ClickAutorization.Autorized(entity.gameObject)))
                 return;
@@ -93,12 +93,7 @@ public partial class Map_PossibleToMove : MonoBehaviour
                     spellCastNumber--;
 
 
-                    Action_spell_info_player info = new Action_spell_info_player();
-
-                    info.spell = SpellGestion.selectionnedSpell;
-                    info.caster = V.player_entity;
-                    info.listTarget = new List<Entity>() { entity };
-                    info.targetedSquare = position;
+                    Action_spell_info_player info = new Action_spell_info_player(SpellGestion.selectionnedSpell,entity,position);
 
                     Action_spell.Add(info);
 
@@ -124,7 +119,7 @@ public partial class Map_PossibleToMove : MonoBehaviour
         {
             return true;
         }
-        else if (tm == SpellGestion.TargetMode.entity && AliveEntity.GetEntityByPos(target) != null)
+        else if (tm == SpellGestion.TargetMode.entity && EntityByPos.TryGet(target) != null)
         {
             return true;
 

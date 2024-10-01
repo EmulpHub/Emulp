@@ -234,7 +234,7 @@ public partial class Main_UI : MonoBehaviour
 
     public static MovingStruct Display_movingText_basicValue(string text, V.Color color, Vector3 Position, Sprite icon = null)
     {
-        var entity = AliveEntity.GetEntityByPos(F.ConvertToStringDependingOfGrid(Position));
+        var entity = EntityByPos.TryGet(F.ConvertToStringDependingOfGrid(Position));
 
         Vector3 pos = Position + V.movingText_StartDistance;
 

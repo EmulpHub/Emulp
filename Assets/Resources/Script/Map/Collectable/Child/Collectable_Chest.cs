@@ -87,7 +87,7 @@ public class Collectable_Chest : Collectable, ICollectable
         else
             desc = "Chest";
 
-        if (!Scene_Main.aWindowIsUsed)
+        if (!Scene_Main.isMouseOverAWindow)
             Main_UI.Display_Title(desc, transform.position, 1.5f);
     }
 

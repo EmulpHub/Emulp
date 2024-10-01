@@ -9,9 +9,11 @@ public partial class Character : MonoBehaviour
 
     public static void CalcValueOfEveryone()
     {
-        foreach (Entity e in new List<Entity>(AliveEntity.list))
+        void Traveler(Entity entity)
         {
-            e.Info.CalculateValue();
+            entity.Info.CalculateValue();
         }
+
+        AliveEntity.Instance.TravelEntity(Traveler);
     }
 }

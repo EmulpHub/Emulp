@@ -33,7 +33,7 @@ namespace PathFindingName
             param.start = end;
             param.end = start;
 
-            var entity = AliveEntity.GetEntityByPos(start);
+            var entity = EntityByPos.TryGet(start);
 
             if (entity != null)
                 param.listIgnoreEntity.Add(entity);

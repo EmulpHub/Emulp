@@ -20,10 +20,7 @@ public class Combat_spell_application : Spell
 
     public override IEnumerator CastSpell_effect(Action_spell_info info)
     {
-        Entity target = null;
-        if (info.listTarget.Count > 0 && info.listTarget[0] != null)
-            target = info.listTarget[0];
-
+        
         if (EntityOrder.IsTurnOf_Player())
         {
             Scene_Main.SetNoAction();

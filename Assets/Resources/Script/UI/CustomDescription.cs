@@ -238,7 +238,7 @@ public class CustomDescription : MonoBehaviour,
 
     public void Enter()
     {
-        if (dontShowWithWindow && Scene_Main.aWindowIsUsed)
+        if (dontShowWithWindow && Scene_Main.isMouseOverAWindow)
         {
             return;
         }

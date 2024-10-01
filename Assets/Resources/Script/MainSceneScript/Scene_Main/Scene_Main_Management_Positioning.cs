@@ -68,11 +68,12 @@ public partial class Scene_Main : MonoBehaviour
     /// <param name="Monsters">The list of monster that enter the fight</param>
     public static void LaunchCombat(List<Monster> Monsters)
     {
-        foreach (Entity e in AliveEntity.list)
+        void Traveler(Entity e)
         {
-            e.StopRun();
+            e.ChangeRun();
             e.ResetAllAnimation();
         }
+        AliveEntity.Instance.TravelEntity(Traveler);
 
         Glyphe.MemorieOfGlyphe_clear();
 
@@ -86,15 +87,15 @@ public partial class Scene_Main : MonoBehaviour
         V.game_state = V.State.positionning;
 
         //Remove all existent tile if they exist
-        CTInfo.Instance.ListTile_Clear();
+        TileInfo.Instance.ListTile_Clear();
 
-        Action.Clear();
+        ActionManager.Instance.Clear();
 
         //for all position in ground tilemap
         foreach (string pos in Main_Map.Spawnable_tile_monster)
         {
             //Instantiate the tile for monster
-            GameObject G = Instantiate(V.script_Scene_Main.Positionning_tileG, CT.parent);
+            GameObject G = Instantiate(V.script_Scene_Main.Positionning_tileG, Tile.parent);
 
             //Make the sprite of the tile to be positionning for player
             G.GetComponent<SpriteRenderer>().sprite = V.script_Scene_Main.positionning_tile_monster;
@@ -115,7 +116,7 @@ public partial class Scene_Main : MonoBehaviour
         foreach (string pos in Main_Map.Spawnable_tile_player)
         {
             //Instantiate the tile for player
-            GameObject G = Instantiate(V.script_Scene_Main.Positionning_tileG, CT.parent);
+            GameObject G = Instantiate(V.script_Scene_Main.Positionning_tileG, Tile.parent);
 
             //Make the sprite of the tile to be positionning for player
             G.GetComponent<SpriteRenderer>().sprite = V.script_Scene_Main.Positionning_tile_player;
@@ -135,14 +136,10 @@ public partial class Scene_Main : MonoBehaviour
         //Placing the player in a random tile
         string pos_random = Main_Map.Spawnable_tile_player[Random.Range(0, Main_Map.Spawnable_tile_player.Count)];
 
+        V.player_entity.StopRun();
+
         //Teleport the entity to the wanted pos
         F.TeleportEntity(pos_random, V.player_entity, false, true);
-
-
-        if (pos_random != V.player_entity.CurrentPosition_string)
-        {
-            print("ALERT player: pos = " + pos_random + " current = " + V.player_entity.CurrentPosition_string);
-        }
 
         List<string> tile_monster = new List<string>(Main_Map.Spawnable_tile_monster);
 
@@ -158,13 +155,11 @@ public partial class Scene_Main : MonoBehaviour
             //Remove the monster of the list
             tile_monster.Remove(pos_random);
 
+            monster.StopRun();
+
             //Teleport the monster to the wanted pos
             F.TeleportEntity(pos_random, monster, false, true);
 
-            if (pos_random != monster.CurrentPosition_string)
-            {
-                print("ALERT: pos = " + pos_random + " current = " + monster.CurrentPosition_string);
-            }
         }
 
         V.player_entity.ResetAllStats();

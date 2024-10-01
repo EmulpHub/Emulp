@@ -15,7 +15,7 @@ public partial class Player : Entity
     {
         base.OnMouseIsOver();
 
-        if (V.game_state != V.State.fight && !Scene_Main.aWindowIsUsed)
+        if (V.game_state != V.State.fight && !Scene_Main.isMouseOverAWindow)
         {
             string start = "*" + descColor.AllPossibleColor[indexColor];
 
@@ -77,14 +77,16 @@ public partial class Player : Entity
         runningSoundManagement();
     }
 
-    public override void StartOfRun()
-    {
-        base.StartOfRun();
-    }
-
     public override void StopRun()
     {
         base.StopRun();
+
+        V.map_possibleToMove.DestroyMarker();
+    }
+
+    public override void ChangeRun()
+    {
+        base.ChangeRun();
 
         V.map_possibleToMove.DestroyMarker();
     }
@@ -112,11 +114,10 @@ public partial class Player : Entity
             return false;
 
         SoundManager.PlaySound(SoundManager.list.player_movement_click_grass);
-        V.map_possibleToMove.movingAnimation(F.ConvertToWorldVector2(currentMovement.pathResult.endOfPath));
+        V.map_possibleToMove.movingAnimation(F.ConvertToWorldVector2(runningInfo.path.endOfPath));
 
         return true;
     }
-
 
     private const float timerReset = 0.3f;
     private const float timerReset_walk = 0.35f;
@@ -124,7 +125,7 @@ public partial class Player : Entity
 
     private void runningSoundManagement()
     {
-        if (currentMovement is not null)
+        if (runningInfo.running)
         {
             timer -= Time.deltaTime;
             if (timer <= 0)
@@ -140,7 +141,7 @@ public partial class Player : Entity
             timer = 0;
     }
 
-    public override float calcSpeed(float baseValue, string pos1, string pos2)
+    public override float ChooseMoveSpeed(float baseValue, string pos1, string pos2)
     {
         var pos1Vector2 = F.ConvertToWorldVector2(pos1);
         var pos2Vector2 = F.ConvertToWorldVector2(pos2);

@@ -87,7 +87,7 @@ public class Positionning_tile : MonoBehaviour
     public void Update()
     {
         //check if there is an entity on this tile and keep it in memory
-        Entity entityOnTile = AliveEntity.GetEntityByPos(pos);
+        Entity entityOnTile = EntityByPos.TryGet(pos);
 
         //Set the thicness to have the currentThicness value
         ShaderMaterial.SetFloat("_Thicness", currentThicness);
@@ -123,7 +123,7 @@ public class Positionning_tile : MonoBehaviour
     /// </summary>
     void MouseIsOver()
     {
-        if (Scene_Main.aWindowIsUsed)
+        if (Scene_Main.isMouseOverAWindow)
             return;
 
         if (!PositioningTile_OnMouseOver.Contains(gameObject)) PositioningTile_OnMouseOver.Add(gameObject);

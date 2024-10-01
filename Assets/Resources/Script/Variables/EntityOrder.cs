@@ -5,8 +5,6 @@ using UnityEngine;
 [SerializeField]
 public class EntityOrder : MonoBehaviour
 {
-    #region turn
-
     public static List<Entity> list = new List<Entity>();
 
     public static List<Monster> list_monster = new List<Monster>();
@@ -172,7 +170,7 @@ public class EntityOrder : MonoBehaviour
         //Set the void the entity must start at the end of his turn
         entity.Turn_end();
 
-        CTInfo.Instance.ListTile_Clear();
+        TileInfo.Instance.ListTile_Clear();
 
         //Change index
         index++;
@@ -193,6 +191,4 @@ public class EntityOrder : MonoBehaviour
 
         entity.Turn_start();
     }
-
-    #endregion
 }

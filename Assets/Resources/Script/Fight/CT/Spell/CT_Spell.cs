@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CT_Spell : CT
+public class CT_Spell : Tile
 {
     private static GameObject _prefab;
 
@@ -17,9 +17,9 @@ public class CT_Spell : CT
         }
     }
 
-    public static CT Add(string pos, bool graphic_startAnimation = true)
+    public static Tile Add(string pos, bool graphic_startAnimation = true)
     {
-        CT script = Instantiate(Prefab, parent).GetComponent<CT>();
+        Tile script = Instantiate(Prefab, parent).GetComponent<Tile>();
 
         script.Initialize(Type.spell, 255, 0, false, false, pos);
 
@@ -27,7 +27,7 @@ public class CT_Spell : CT
 
         script.customListTile = null;
 
-        CTInfo.Instance.Add(script);
+        TileInfo.Instance.Add(script);
 
         return script;
     }
@@ -41,8 +41,8 @@ public class CT_Spell : CT
     {
         if (SpellGestion.Get_NeedLineOfView(SpellGestion.selectionnedSpell_list) &&
             !F.IsLineOfView(pos, V.player_entity.CurrentPosition_string))
-            ChangeColor(CT_Gestion.Color.blue_noLine);
+            ChangeColor(Tile_Gestion.Color.blue_noLine);
         else
-            ChangeColor(CT_Gestion.Color.blue);
+            ChangeColor(Tile_Gestion.Color.blue);
     }
 }

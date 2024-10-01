@@ -71,13 +71,18 @@ public partial class Monster : Entity
         event_all_monster_remove_pm.Call(this);
     }
 
+    [HideInInspector]
+    public int lastTurnPlayed = -1;
+
     public override void Turn_start()
     {
         base.Turn_start();
 
-        ResetAllAnimation();
+        ResetUseOfAllAvailableSpell();
 
-        StartCoroutine(Monster_Turn());
+        lastTurnPlayed = EntityOrder.id_turn;
+
+        ResetAllAnimation();
     }
 
     [HideInInspector]
@@ -93,16 +98,15 @@ public partial class Monster : Entity
 
             ChangeEye_Dead();
 
-            bool PlayerWin = true;
-
-            foreach (Entity e in AliveEntity.list)
+            bool TravelerCondition (Entity e)
             {
                 if (e == this || e.Info.dead || !e.IsMonster())
-                    continue;
+                    return false;
 
-                PlayerWin = false;
-                break;
+                return true;
             }
+
+            bool PlayerWin = !AliveEntity.Instance.AnyEntity(TravelerCondition);
 
             if (PlayerWin)
                 SoundManager.PlaySound(SoundManager.list.monster_dead_endCombat);

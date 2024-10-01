@@ -14,13 +14,15 @@ public partial class Scene_Main : MonoBehaviour
     /// </summary>
     public static void KillAllNonPlayerEntity()
     {
-        foreach (Entity e in new List<Entity>(AliveEntity.list))
+        void Traveler(Entity e)
         {
-            if (!e.IsPlayer())
-            {
-                e.Kill(new InfoKill(V.player_entity));
-            }
+            if(e.IsPlayer())
+                return;
+         
+            e.Kill(new InfoKill(V.player_entity));
         }
+
+        AliveEntity.Instance.TravelEntity(Traveler);
     }
 
     public static MonsterInfo.MonsterType focus;
@@ -110,8 +112,8 @@ public partial class Scene_Main : MonoBehaviour
         }
 
         //Clear all action and all tile
-        Action.Clear();
-        CTInfo.Instance.ListTile_Clear();
+        ActionManager.Instance.Clear();
+        TileInfo.Instance.ListTile_Clear();
 
         V.player_entity.Info.dead = false;
 

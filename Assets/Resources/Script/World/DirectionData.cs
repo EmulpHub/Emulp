@@ -5,7 +5,7 @@ using System.Linq;
 
 public class DirectionData : MonoBehaviour
 {
-    public enum Direction { right, left, up, down, empty };
+    public enum Direction { empty, right, left, up, down };
 
     public class information
     {

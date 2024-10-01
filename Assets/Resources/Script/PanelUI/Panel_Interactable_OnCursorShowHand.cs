@@ -59,9 +59,9 @@ public class Panel_Interactable_OnCursorShowHand : MonoBehaviour
     public void Update()
     {
         if (Debug_show)
-            Debug.Log("Mouse on ui = " + DetectMouse.IsMouseOnUI(referenceRect) + " Window = " + (!Scene_Main.aWindowIsUsed || IgnoreWindow) + " autorization = " + (ClickAutorization.Autorized(this.gameObject) || IgnoreAutorization));
+            Debug.Log("Mouse on ui = " + DetectMouse.IsMouseOnUI(referenceRect) + " Window = " + (!Scene_Main.isMouseOverAWindow || IgnoreWindow) + " autorization = " + (ClickAutorization.Autorized(this.gameObject) || IgnoreAutorization));
 
-        bool MouseOver = DetectMouse.IsMouseOnUI(referenceRect) && (IgnoreWindow || !Scene_Main.aWindowIsUsed) &&
+        bool MouseOver = DetectMouse.IsMouseOnUI(referenceRect) && (IgnoreWindow || !Scene_Main.isMouseOverAWindow) &&
             (IgnoreAutorization || ClickAutorization.Autorized(this.gameObject)) &&
             (OnlyWithThisGameState == V.game_state || OnlyWithThisGameState == V.State.None) && (NotInThisGameState != V.game_state || NotInThisGameState == V.State.None);
 

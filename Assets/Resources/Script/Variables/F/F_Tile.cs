@@ -418,7 +418,7 @@ public partial class F : MonoBehaviour
     {
         Vector2Int pos_grid = ConvertToVector2Int(pos);
 
-        var entity = AliveEntity.GetEntityByPos(pos);
+        var entity = EntityByPos.TryGet(pos);
 
         if (entity != null && !Ignorate_entity.Contains(entity))
             return false;
@@ -522,7 +522,7 @@ public partial class F : MonoBehaviour
 
     public static bool IsTileFree(string pos, bool ignoreAllEntity = false)
     {
-        return AliveEntity.GetEntityByPos(pos) == null || ignoreAllEntity;
+        return EntityByPos.TryGet(pos) == null || ignoreAllEntity;
     }
 
     /// <summary>
@@ -544,7 +544,7 @@ public partial class F : MonoBehaviour
     /// <returns></returns>
     public static bool IsTileFree(List<Entity> ignore_entity, string pos)
     {
-        var entity = AliveEntity.GetEntityByPos(pos);
+        var entity = EntityByPos.TryGet(pos);
 
         return entity == null || ignore_entity.Contains(entity);
     }
@@ -662,11 +662,13 @@ public partial class F : MonoBehaviour
     {
         List<Entity> listEntity = new List<Entity>();
 
-        foreach(Entity e in AliveEntity.list)
+        void Traveler(Entity entity)
         {
-            if (F.DistanceBetweenTwoPos(e.CurrentPosition_string, tile) <= distance)
-                listEntity.Add(e);
+            if (F.DistanceBetweenTwoPos(entity.CurrentPosition_string, tile) <= distance)
+                listEntity.Add(entity);
         }
+
+        AliveEntity.Instance.TravelEntity(Traveler);
 
         return listEntity;
     }
@@ -676,10 +678,12 @@ public partial class F : MonoBehaviour
     {
         List<Monster> listMonster = new List<Monster>();
 
-        foreach (Monster e in AliveEntity.listMonster)
+        bool Condition(Monster e)
         {
             if (F.DistanceBetweenTwoPos(e.CurrentPosition_string, tile) <= distance)
-                listMonster.Add(e);
+                return true;
+
+            return false;
         }
 
         return listMonster;

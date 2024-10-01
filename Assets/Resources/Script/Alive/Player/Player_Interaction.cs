@@ -27,12 +27,7 @@ public partial class Player : Entity
         {
             Action_wait.Add(spike.delay / 2);
 
-            Action_spell_info_player info = new Action_spell_info_player();
-
-            info.spell = Spell.Create(SpellGestion.List.spike);
-            info.caster = this;
-            info.listTarget = new List<Entity>() { infoDamage.caster };
-            info.targetedSquare = infoDamage.caster.CurrentPosition_string;
+            Action_spell_info_player info = new Action_spell_info_player(Spell.Create(SpellGestion.List.spike),infoDamage.caster, infoDamage.caster.CurrentPosition_string);
 
             Action_spell.Add(info);
         }

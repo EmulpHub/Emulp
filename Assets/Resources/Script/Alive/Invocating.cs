@@ -8,7 +8,7 @@ public class Invocating : MonoBehaviour
     {
         Entity entity = Instantiate(createrInfo.getPrefab()).GetComponent<Entity>();
 
-        createrInfo.position = F.NearTileWalkable(createrInfo.position, AliveEntity.ListPosition());
+        createrInfo.position = F.NearTileWalkable(createrInfo.position, AliveEntity.Instance.GetListPosition());
 
         entity.SetPosition(createrInfo.position);
 

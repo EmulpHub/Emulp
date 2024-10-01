@@ -3,10 +3,72 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using System.Linq;
+using PathFindingName;
 
-public class CT_Movement : CT
+public class CT_Movement : Tile
 {
-    static GameObject _prefab;
+    public int distance;
+
+    private List<string> _path;
+
+    [HideInInspector]
+    public List<string> path
+    {
+        get
+        {
+            if(_path == null)
+            {
+                _path = Path.Find(new PathParam(V.player_entity.CurrentPosition_string,pos)).path;
+            }
+
+            return _path;
+        }
+    }
+
+    public override void SetNormalColor()
+    {
+        if (IsWalkableByTheplayer(distance))
+            ChangeColor(Tile_Gestion.Color.green);
+        else
+            ChangeColor(Tile_Gestion.Color.red);
+    }
+
+    public override void WhenTheMouseEnter()
+    {
+        base.WhenTheMouseEnter();
+
+        if (!IsWalkableByTheplayer(distance)) return;
+
+        SelectionnedPath_clear();
+
+        string lastpos = V.player_entity.CurrentPosition_string;
+
+        foreach (string move in path)
+        {
+            Tile tile = TileInfo.Instance.Get(move);
+
+            if (tile != null) tile.HighlightOn();
+
+
+            selectionnedPath.Add(move);
+
+            if (move != lastpos && move != pos) lastpos = move;
+        }
+
+        if (pos != lastpos)
+            Tile_Gestion.Instance.Add_IconMovement(this, lastpos);
+    }
+
+    public override void WhenTheMouseExit()
+    {
+        base.WhenTheMouseExit();
+
+        SelectionnedPath_clear();
+    }
+
+    #region static
+
+    private static GameObject _prefab;
 
     private static GameObject Prefab
     {
@@ -19,53 +81,13 @@ public class CT_Movement : CT
         }
     }
 
-    public static void Add(string pos, List<string> path, bool resetNearSprite = true, bool IgnoreAllEntity = false, bool IgnoreMouseOver = false, bool startAnimation = true)
-    {
-        CT_Movement script = Instantiate(Prefab, parent).GetComponent<CT_Movement>();
-
-        script.Initialize(Type.movement, 255, 0, IgnoreAllEntity, IgnoreMouseOver, pos);
-
-        script.path = path;
-
-        script.graphic_startAnimation = startAnimation;
-
-        script.customListTile = null;
-
-        if (IsWalkableByTheplayer(path.Count))
-            script.ChangeColor(CT_Gestion.Color.green);
-        else
-            script.ChangeColor(CT_Gestion.Color.red);
-
-        CTInfo.Instance.Add(script);
-
-        if (resetNearSprite)
-            CTInfo.Instance.ResetNearSprite(pos, IgnoreAllEntity, CTInfo.Instance.listPosCTKeys);
-    }
-
-    public static bool IsWalkableByTheplayer(int distance)
-    {
-        return distance <= V.player_info.GetRealPm();
-    }
-
-    [HideInInspector]
-    public List<string> path;
-
-    public override void SetNormalColor()
-    {
-        if (IsWalkableByTheplayer(path.Count))
-            ChangeColor(CT_Gestion.Color.green);
-        else
-            ChangeColor(CT_Gestion.Color.red);
-    }
-
-
     public static List<string> selectionnedPath = new List<string>();
 
     public static void SelectionnedPath_clear()
     {
         foreach (string p in selectionnedPath)
         {
-            CT tile = CTInfo.Instance.Get(p);
+            Tile tile = TileInfo.Instance.Get(p);
 
             if (tile == null) continue;
 
@@ -75,37 +97,34 @@ public class CT_Movement : CT
         selectionnedPath.Clear();
     }
 
-
-    public override void WhenTheMouseEnter()
+    public static void Add(string pos, int distance, bool resetNearSprite = true, bool IgnoreAllEntity = false, bool IgnoreMouseOver = false, bool startAnimation = true)
     {
-        base.WhenTheMouseEnter();
+        CT_Movement script = Instantiate(Prefab, parent).GetComponent<CT_Movement>();
 
-        if (!IsWalkableByTheplayer(path.Count)) return;
+        script.Initialize(Type.movement, 255, 0, IgnoreAllEntity, IgnoreMouseOver, pos);
 
-        SelectionnedPath_clear();
+        script.distance = distance;
 
-        string lastpos = V.player_entity.CurrentPosition_string;
+        script.graphic_startAnimation = startAnimation;
 
-        foreach (string move in path)
-        {
-            CT tile = CTInfo.Instance.Get(move);
+        script.customListTile = null;
 
-            if (tile != null) tile.HighlightOn();
+        if (IsWalkableByTheplayer(distance))
+            script.ChangeColor(Tile_Gestion.Color.green);
+        else
+            script.ChangeColor(Tile_Gestion.Color.red);
 
+        TileInfo.Instance.Add(script);
 
-            selectionnedPath.Add(move);
-
-            if (move != lastpos && move != pos) lastpos = move;
-        }
-
-        if (pos != lastpos)
-            CT_Gestion.Instance.Add_IconMovement(this, lastpos);
+        if (resetNearSprite)
+            TileInfo.Instance.ResetNearSprite(pos, IgnoreAllEntity, TileInfo.Instance.listTilePos);
     }
 
-    public override void WhenTheMouseExit()
+    public static bool IsWalkableByTheplayer(int distance)
     {
-        base.WhenTheMouseExit();
-
-        SelectionnedPath_clear();
+        return distance <= V.player_info.GetRealPm();
     }
+
+
+    #endregion
 }

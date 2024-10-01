@@ -97,8 +97,7 @@ public class SpellStats
 
     public bool Launchable_cooldownAndPa()
     {
-        return IsLaunchable_Cooldown() &&
-            (holder.Info.PA >= pa_cost);
+        return IsLaunchable_Cooldown() && (holder.Info.PA >= pa_cost);
     }
 
     public bool IsLaunchable_Cooldown()

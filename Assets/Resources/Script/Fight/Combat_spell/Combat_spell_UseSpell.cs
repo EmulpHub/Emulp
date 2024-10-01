@@ -45,9 +45,7 @@ public partial class Spell : MonoBehaviour
         if (info.forceLaunch)
             return StateBeforeLaunch.Ready;
 
-        Entity target = null;
-        if (info.listTarget.Count > 0 && info.listTarget[0] != null)
-            target = info.listTarget[0];
+        Entity target = info.target;
 
         string targetPos = info.targetedSquare;
 

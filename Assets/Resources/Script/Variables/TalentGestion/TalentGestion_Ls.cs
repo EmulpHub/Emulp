@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class talent_empty : talentInfo { }
 
@@ -202,16 +203,18 @@ public class talent_Optimisation : talentInfo
 
         if (Effect.IsPowerMajoritary())
         {
-            foreach (Entity a in AliveEntity.list)
+            void Traveler(Entity entity)
             {
-                if (a == e)
-                    continue;
+                if (entity == e)
+                    return;
 
-                if (F.DistanceBetweenTwoPos(a, e) <= 2)
+                if (F.DistanceBetweenTwoPos(entity, e) <= 2)
                 {
-                    a.Damage(new InfoDamage(power * 0.2f, V.player_entity));
+                    entity.Damage(new InfoDamage(power * 0.2f, V.player_entity));
                 }
             }
+
+            AliveEntity.Instance.TravelEntity(Traveler);
         }
         else if (Effect.IsDefenseMajoritary())
         {

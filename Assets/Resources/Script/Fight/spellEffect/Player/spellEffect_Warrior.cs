@@ -81,24 +81,12 @@ public class warrior_spent : spellEffect_Player
 
         for (int i = 0; i < nbAttack; i++)
         {
-            List<Monster> aliveEntity = new List<Monster>(AliveEntity.listMonster);
-
-            int o = 0;
-            while (o < aliveEntity.Count)
+            bool condition(Monster m)
             {
-                if (aliveEntity[o].IsDead())
-                    aliveEntity.RemoveAt(o);
-                else
-                    o++;
+                return F.DistanceBetweenTwoPos(m, V.player_entity) <= 5;
             }
 
-            List<Monster> validEntity  = new List<Monster>();
-
-            foreach(Monster m in aliveEntity)
-            {   
-                if(F.DistanceBetweenTwoPos(m, V.player_entity) <= 5)
-                    validEntity.Add(m);
-            }
+            List<Monster> validEntity = AliveEntity.Instance.WhereMonster(condition);
 
             if (validEntity.Count == 0) break;
 
@@ -192,23 +180,27 @@ public class warrior_execution : spellEffect_Player
 
         V.player_entity.InfoPlayer.RemoveArmor(armor, out float _);
 
-        if (AliveEntity.listMonster.Count != 0)
+        if (AliveEntity.Instance.ContainAliveMonster(out int nbMonster))
         {
-            float damagePerEnnemy = armor / (float)AliveEntity.listMonster.Count;
+            float damagePerEnnemy = armor / (float)nbMonster;
 
-            foreach (Monster m in AliveEntity.listMonster)
+            void Traveler(Monster m)
             {
                 spellAnimation.anim_simple("Execution", V.CalcEntityDistanceToBody(m), 0.5f);
             }
+
+            AliveEntity.Instance.TravelMonster(Traveler);
 
             SoundManager.PlaySound(SoundManager.list.spell2_warrior_Execution);
 
             yield return new WaitForSeconds(1.3f);
 
-            foreach (Monster m in AliveEntity.listMonster)
+            void Traveler2(Monster m)
             {
                 m.Damage(new InfoDamage(damagePerEnnemy, caster));
             }
+
+            AliveEntity.Instance.TravelMonster(Traveler2);
         }
 
         yield return null;
@@ -272,7 +264,7 @@ public class warrior_heal : spellEffect_Player
 
         List<Invocation> ls = new List<Invocation>();
 
-        foreach (Entity e in AliveEntity.list)
+        void Traveler(Entity e)
         {
             if (e is Invocation invoc)
             {
@@ -282,6 +274,8 @@ public class warrior_heal : spellEffect_Player
                 }
             }
         }
+
+        AliveEntity.Instance.TravelEntity(Traveler);
 
         yield return new WaitForSeconds(0.25f);
 
@@ -407,13 +401,8 @@ public class warrior_spikeAttack : spellEffect_Player
             ratio = (100 + (float)calcDEX(10) * accumulation) / 100;
             WarriorParticleManagement.FastRotateEndless();
 
-            Action_spell_info_player info = new Action_spell_info_player();
-
-            info.spell = Spell.Create(SpellGestion.List.spike);
-            info.caster = caster;
-            info.listTarget = new List<Entity>() { target };
-            info.targetedSquare = target.CurrentPosition_string;
-            info.multiplicator = ratio;
+            Action_spell_info_player info = new Action_spell_info_player(Spell.Create(SpellGestion.List.spike),target,target.CurrentPosition_string);
+            info.SetMultiplicator(ratio);
 
             Action_spell.Add(info);
         }
@@ -1055,7 +1044,7 @@ public class warrior_spikyPosture : spellEffect_Player
 
     public static void ApplySpikyPosture(int dmg)
     {
-        foreach (Entity e in AliveEntity.list)
+        void Traveler(Entity e)
         {
             if (F.DistanceBetweenTwoPos(V.player_entity, e) <= range && e != V.player_entity)
             {
@@ -1064,6 +1053,8 @@ public class warrior_spikyPosture : spellEffect_Player
                 e.Damage(new InfoDamage(dmg * damageEpineReduction, V.player_entity));
             }
         }
+        AliveEntity.Instance.TravelEntity(Traveler);
+
     }
 }
 

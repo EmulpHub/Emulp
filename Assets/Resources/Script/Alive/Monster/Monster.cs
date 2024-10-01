@@ -1,9 +1,10 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System;
+using static V;
 
 public partial class Monster : Entity
 {
@@ -21,6 +22,9 @@ public partial class Monster : Entity
 
     [HideInInspector]
     public Effect Passive_Effect;
+
+    [HideInInspector]
+    public MonsterBehavior CombatBehavior;
 
     public static MonsterInfo GetNewInfoFromType(MonsterInfo.MonsterType monsterType)
     {
@@ -56,6 +60,11 @@ public partial class Monster : Entity
         monsterInfo.ResetAllStats();
 
         monsterInfo.CreateLifeBar(this);
+
+        CombatBehavior = (MonsterBehavior)this.gameObject.AddComponent(Type.GetType("MonsterBehavior_" + monsterType.ToString()));
+
+        CombatBehavior.Info = new Monster_Behavior_Info(this);
+        CombatBehavior.SetMonsterAction();
     }
 
     public override bool ShouldShowLifeBar()
@@ -70,6 +79,7 @@ public partial class Monster : Entity
         cooldownPeriodicMove = Entity.Animation_Apparition_Speed + 0.2f + UnityEngine.Random.Range(0, 2);
 
         Eye_Init();
+
     }
 
     bool outside = false;
@@ -92,7 +102,7 @@ public partial class Monster : Entity
 
             ResetSpriteAndMovement();
 
-            AliveEntity.Remove(this);
+            AliveEntity.Instance.Remove(this);
         }
         else
         {
@@ -102,7 +112,7 @@ public partial class Monster : Entity
                 MemoryPosition = Vector3.zero;
             }
 
-            AliveEntity.Add(this);
+            AliveEntity.Instance.Add(this);
         }
 
         Eye_management();

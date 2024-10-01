@@ -289,7 +289,7 @@ public class spellEffect : MonoBehaviour
 
         foreach (string pos in getAreaEffect)
         {
-            Entity e = AliveEntity.GetEntityByPos(pos);
+            Entity e = EntityByPos.TryGet(pos);
 
             Effect_Target_Before(e, pos);
 

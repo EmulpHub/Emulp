@@ -22,7 +22,7 @@ public partial class Entity : MonoBehaviour
 
     public virtual void OnMouseIsOver()
     {
-        if (Scene_Main.aWindowIsUsed || Scene_Main.isMouseOverAWindow || !ClickAutorization.Autorized(this.gameObject))
+        if (Scene_Main.isMouseOverAWindow || !ClickAutorization.Autorized(this.gameObject))
             return;
 
         IsMouseOnEntity = true;
@@ -62,7 +62,7 @@ public partial class Entity : MonoBehaviour
     {
         if (V.game_state == V.State.fight)
         {
-            var CTTile = CTInfo.Instance.Get(CurrentPosition_string);
+            var CTTile = TileInfo.Instance.Get(CurrentPosition_string);
 
             if (EntityOrder.IsTurnOf_Player() && V.game_state_action == V.State_action.spell && CTTile != null)
                 CTTile.WhenTheMouseExit();

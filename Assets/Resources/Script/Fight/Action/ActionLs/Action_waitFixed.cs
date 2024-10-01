@@ -6,46 +6,48 @@ public class Action_waitFixed : Action
 {
     public Action_waitFixed (float timeInSec) : base()
     {
-
         type = Type.wait_fixed;
 
         StartTimeCode = Time.time;
         Cooldown = timeInSec;
     }
 
-    public float Cooldown;
+    private float Cooldown;
 
-    public float StartTimeCode;
+    private float StartTimeCode;
 
-    internal override void Execute_main()
+    public float GetRemainingTime ()
     {
-        //On ne fait rien
+        return (Time.time - StartTimeCode) - Cooldown;
     }
 
-    public override bool Finished()
+    internal override IEnumerator Execute_main()
     {
-        if (base.Finished()) return true;
+        yield return null;
+    }
 
-        return Time.time - StartTimeCode >= Cooldown;
+    public override bool IsFinished()
+    {
+        return GetRemainingTime() <= 0 && base.IsFinished();
+    }
+
+    public override string debug()
+    {
+        return descColor.convert("Wait fixed *spe" + F.ShowXdecimal(Cooldown, 1) + "*end");
     }
 
     public static void Add(float timeInSec)
     {
         Action_waitFixed actionToAdd = new Action_waitFixed(timeInSec);
 
-        toDo.Add(actionToAdd);
+        ActionManager.Instance.AddToDo(actionToAdd);
     }
 
-    public static void Add_wait_prioritary(float timeInSec)
+    public static void Add_prioritary(float timeInSec)
     {
         Action_waitFixed actionToAdd = new Action_waitFixed(timeInSec);
 
-        ActionRunning.Insert(0, actionToAdd);
+        ActionManager.Instance.AddToDo_prioritary(actionToAdd);
     }
 
-
-    public override string debug()
-    {
-        return descColor.convert("Wait fixed *spe" + F.ShowXdecimal(Cooldown, 1) +"*end");
-    }
 }

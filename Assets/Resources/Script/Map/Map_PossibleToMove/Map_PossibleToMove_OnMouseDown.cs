@@ -9,7 +9,7 @@ public partial class Map_PossibleToMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Scene_Main.aWindowIsUsed || Scene_Main.isMouseOverAWindow || MouseIsOnToolbar ||
+        if (Scene_Main.isMouseOverAWindow || Scene_Main.isMouseOverAWindow || MouseIsOnToolbar ||
             !ClickAutorization.Autorized(this.gameObject))
             return;
 

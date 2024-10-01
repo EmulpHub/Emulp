@@ -91,13 +91,14 @@ public class step_startAfight : step
             Window_Txt_line.create_txt(V.IsFr() ? "Un monstre est ici, Vous devez le tuer ! Commencer un combat contre lui !" : "A monster is here, You must kill him ! Start a fight with him !"),
             });
 
-        foreach (Entity e in AliveEntity.list)
+        void Traveler(Entity e)
         {
             if (e.IsMonster())
             {
                 tuto.m = (Monster)e;
             }
         }
+        AliveEntity.Instance.TravelEntity(Traveler);
 
         ClickAutorization.Exception_Add(tuto.m.gameObject);
 

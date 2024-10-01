@@ -23,7 +23,7 @@ public partial class WorldNavigation : MonoBehaviour
 
             event_MoveToNextArea.Call();
 
-            if (runningInfo.directionTowardNewArea == areaDirection)
+            if (runningInfo.directionToArea == areaDirection)
             {
                 SoundManager.PlaySound(SoundManager.list.environment_movingToSameArea);
             }
@@ -32,7 +32,7 @@ public partial class WorldNavigation : MonoBehaviour
                 SoundManager.PlaySound(SoundManager.list.environment_movingToNewArea);
             }
 
-            V.player_entity.runningInfo.directionTowardNewArea = curstate_mouse.directionInformation.direction;
+            V.player_entity.runningInfo.SetDirectionToArea(curstate_mouse.directionInformation.direction);
 
         }
     }
@@ -41,7 +41,7 @@ public partial class WorldNavigation : MonoBehaviour
 
     public bool ShowLock()
     {
-        return curstate_mouse.find && curstate_mouse.directionInformation.IsLocked && !Scene_Main.aWindowIsUsed;
+        return curstate_mouse.find && curstate_mouse.directionInformation.IsLocked && !Scene_Main.isMouseOverAWindow;
     }
 
     public Vector2 LockPosition_down, LockPosition_up, LockPosition_right, LockPosition_left;

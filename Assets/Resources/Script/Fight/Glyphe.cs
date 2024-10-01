@@ -7,11 +7,11 @@ public class Glyphe : MonoBehaviour
 {
     public static Dictionary<List<string>, Glyphe> allActiveGlyphe = new Dictionary<List<string>, Glyphe>();
 
-    public Dictionary<string, CT> glyphe_list = new Dictionary<string, CT>();
+    public Dictionary<string, Tile> glyphe_list = new Dictionary<string, Tile>();
 
     public SpellGestion.List effect;
 
-    public CT_Gestion.Color tile_color;
+    public Tile_Gestion.Color tile_color;
 
     public Image render;
 
@@ -19,7 +19,7 @@ public class Glyphe : MonoBehaviour
 
     public Transform tile_parent;
 
-    public static GameObject CreateGlyphe(SpellGestion.List effect, List<string> rangeEffect, CT_Gestion.Color tile_color, Sprite img, string originPos)
+    public static GameObject CreateGlyphe(SpellGestion.List effect, List<string> rangeEffect, Tile_Gestion.Color tile_color, Sprite img, string originPos)
     {
         GameObject g = Instantiate(Resources.Load<GameObject>("Prefab/Glyphe"));
 
@@ -45,7 +45,7 @@ public class Glyphe : MonoBehaviour
                 effectiveRange.Add(pos);
             }
 
-            Entity entity = AliveEntity.GetEntityByPos(pos);
+            Entity entity = EntityByPos.TryGet(pos);
 
             if (entity)
             {
@@ -132,12 +132,7 @@ public class Glyphe : MonoBehaviour
         if (!force)
             MemorieOfGlyphe_add(Target);
 
-        Action_spell_info_player info = new Action_spell_info_player();
-
-        info.spell = Spell.Create(effect);
-        info.caster = V.player_entity;
-        info.listTarget = new List<Entity>() { Target };
-        info.targetedSquare = Target.CurrentPosition_string;
+        Action_spell_info_player info = new Action_spell_info_player(Spell.Create(effect),Target,Target.CurrentPosition_string);
 
         Action_spell.Add(info);
 

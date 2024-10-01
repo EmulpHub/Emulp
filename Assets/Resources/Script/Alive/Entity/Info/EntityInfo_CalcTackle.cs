@@ -27,7 +27,7 @@ public partial class EntityInfo : MonoBehaviour
 
             foreach (string pos in neighbour)
             {
-                var entity = AliveEntity.GetEntityByPos(pos);
+                var entity = EntityByPos.TryGet(pos);
 
                 if (entity != null)
                     effect += CalcTackleEffect(holder, entity);

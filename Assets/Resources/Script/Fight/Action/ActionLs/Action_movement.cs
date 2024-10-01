@@ -16,59 +16,54 @@ public class Action_movement : Action
     public PathParam pathParam;
     public Entity entity;
 
-    internal override void Execute_main()
+    internal override IEnumerator Execute_main()
     {
-
-
         entity.MoveTo(pathParam);
+        yield return null;
     }
 
-    public override bool Finished()
+    public override bool IsFinished()
     {
-        if (base.Finished()) return true;
-
-        return !entity.runningInfo.isRunning && Executed;
+        return !entity.runningInfo.running && base.IsFinished();
     }
 
-    public static List<Action_movement> getToDoMovement()
+    public static void Add(PathParam pathParam, Entity entity)
+    {
+        Action_movement actionToAdd = new Action_movement(pathParam, entity);
+
+        ActionManager.Instance.AddToDo(actionToAdd);
+    }
+
+    public override string debug()
+    {
+        return descColor.convert("move for "+entity.Info.EntityName);
+    }
+}
+
+/*
+ * 
+        foreach (Action_movement action in GetListOfToDoMovement(entity))
+        {
+            if (ActionManager.Instance.listOfToDoAction.IndexOf(action) == 0)
+                //A movement is already execute so don't add another
+                return;
+            else
+                //Remove the supposed movement the entity should have done
+                ActionManager.Instance.listOfToDoAction.Remove(action);
+        }
+
+
+    public static List<Action_movement> GetListOfToDoMovement(Entity target)
     {
         List<Action_movement> ls = new List<Action_movement>();
 
-        foreach (Action action in toDo)
+        foreach (Action action in ActionManager.Instance.listOfToDoAction)
         {
-            if (action.type == Type.movement)
+            if (action.type == Type.movement && ((Action_movement)action).entity == target)
                 ls.Add((Action_movement)action);
         }
 
         return ls;
     }
 
-    public static void Add(PathParam pathParam, Entity entity)
-    {
-        foreach (Action_movement action in getToDoMovement())
-        {
-            if (action.entity == entity)
-            {
-                if (toDo.IndexOf(action) == 0)
-                    //A movement is already execute so don't add another
-                    return;
-                else
-                    //Remove the supposed movement the entity should have done
-                    toDo.Remove(action);
-            }
-        }
-;
-
-        //The new actionToAdd to the list
-        Action_movement actionToAdd = new Action_movement(pathParam, entity);
-
-        //Add it to the list
-        toDo.Add(actionToAdd);
-    }
-
-    public override string debug()
-    {
-
-        return descColor.convert("move for entity.Info.EntityName");
-    }
-}
+ */

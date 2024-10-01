@@ -52,7 +52,7 @@ public class Collectable_Chest_Choice : Collectable, ICollectable
         else
             desc = "Equipment";
 
-        if (!Scene_Main.aWindowIsUsed)
+        if (!Scene_Main.isMouseOverAWindow)
             Main_UI.Display_Title(desc, transform.position, 1.5f);
     }
 

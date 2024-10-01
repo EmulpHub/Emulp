@@ -38,7 +38,7 @@ public partial class Monster : Entity
                     GoRightWhenMoving = true;
                 }
 
-                if (runningInfo.TowardRight)
+                if (runningInfo.towardRight)
                 {
                     Renderer_movable.transform.DOKill();
                     Renderer_movable.transform.DORotate(new Vector3(0, 0, -zRotation_max_combat), animationCombat_moveSpeed);

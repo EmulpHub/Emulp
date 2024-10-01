@@ -93,16 +93,11 @@ public partial class Scene_Main : MonoBehaviour
 
         //Activate / Dectivate gameobject
         Main_Map.ground_positionning.gameObject.SetActive(false);
-
-
-
     }
 
     //The button in the bottom right of the toolbar
     //And the sprite that show aside the mouse when a spell is selectionned
     public GameObject button_EndOfturn;
-
-    public static bool aWindowIsUsed;
 
     public static bool isMouseOverAWindow;
 
@@ -111,8 +106,6 @@ public partial class Scene_Main : MonoBehaviour
     private void Update()
     {
         V.Administrator_update();
-
-        aWindowIsUsed = WindowInfo.Instance.IsMouseOverAreaOfAWindow();
 
         isMouseOverAWindow = WindowInfo.Instance.IsMouseOverAreaOfAWindow();
 

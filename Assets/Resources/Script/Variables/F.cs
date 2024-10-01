@@ -30,10 +30,10 @@ public partial class F : MonoBehaviour
 
         Entity e = null;
 
-        foreach (Entity a in AliveEntity.list)
+        void Traveler(Entity a)
         {
             if (a == caster && !IsEnnemy(caster, a))
-                continue;
+                return;
 
             int distance = F.DistanceBetweenTwoPos(caster.CurrentPosition_string, a.CurrentPosition_string);
 
@@ -43,6 +43,7 @@ public partial class F : MonoBehaviour
                 e = a;
             }
         }
+        AliveEntity.Instance.TravelEntity(Traveler);
 
         return (e, closestDistance);
     }
@@ -53,10 +54,10 @@ public partial class F : MonoBehaviour
 
         Entity e = null;
 
-        foreach (Entity a in AliveEntity.list)
+        void Traveler(Entity a)
         {
             if (a == target)
-                continue;
+                return;
 
             int distance = F.DistanceBetweenTwoPos(target.CurrentPosition_string, a.CurrentPosition_string);
 

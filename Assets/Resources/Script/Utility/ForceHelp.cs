@@ -139,7 +139,7 @@ public class ForceHelp : MonoBehaviour
 
     public void NextAction()
     {
-        if (!EntityOrder.IsTurnOf_Player() || Action.toDo.Count > 0)
+        if (!EntityOrder.IsTurnOf_Player() || ActionManager.Instance.Running())
         {
             if (CurrentState == State.none)
                 return;
@@ -246,7 +246,7 @@ public class ForceHelp : MonoBehaviour
         {
             ForceHelp_Arrow f = ForceHelp_Arrow.Instantiate_Arrow(F.ConvertToWorldVector2(pos), delegate
            {
-               return V.player_entity.CurrentPosition_string == pos && Action.toDo.Count == 0;
+               return V.player_entity.CurrentPosition_string == pos && !ActionManager.Instance.Running();
            });
 
             AllArrow.Add(f.gameObject);

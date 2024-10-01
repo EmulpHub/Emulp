@@ -43,7 +43,7 @@ public partial class Player : Entity
             else
                 s = player_walking;
 
-            if (runningInfo.TowardRight)
+            if (runningInfo.towardRight)
                 rotation = new Vector3(0, 0, 0);
             else
                 rotation = new Vector3(0, 180, 0);

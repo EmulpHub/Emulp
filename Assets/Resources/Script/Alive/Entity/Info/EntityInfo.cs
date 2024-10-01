@@ -18,7 +18,7 @@ public partial class EntityInfo : MonoBehaviour
         ID = IDMax;
         IDMax++;
 
-        AliveEntity.Add(holder);
+        AliveEntity.Instance.Add(holder);
 
         holder.event_turn_start.Add_last(CalculateValueEntity);
         holder.event_turn_end.Add_last(TurnEndEffect);
@@ -120,7 +120,7 @@ public partial class EntityInfo : MonoBehaviour
         if (dead) return;
 
         dead = true;
-        AliveEntity.Remove(holder);
+        AliveEntity.Instance.Remove(holder);
     }
 
     public void TurnEndEffect(Entity e = null)

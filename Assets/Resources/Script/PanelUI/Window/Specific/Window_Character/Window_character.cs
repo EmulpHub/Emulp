@@ -17,6 +17,7 @@ public partial class Window_character : Window
 
     public void Start()
     {
+
         ItsPlayer = entity.IsPlayer();
 
         effects = entity.listEffect;

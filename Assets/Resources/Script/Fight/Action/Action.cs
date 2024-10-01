@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//All the value for one specific Action
-public partial class Action : MonoBehaviour
+public class Action : MonoBehaviour
 {
-    public int id = 0;
+    private static int nextId = 0;
 
-    static int idMax = 0;
+    private int _id = -1;
 
-    public Action()
+    public int Id
     {
-        id = idMax;
-        idMax++;
+        get
+        {
+            if(_id == -1)
+            {
+                _id = nextId;
+                nextId++;
+            }
+            return _id;
+        }
     }
 
     public bool CanBeErased = true, Executed = false;
@@ -23,34 +29,19 @@ public partial class Action : MonoBehaviour
 
     public void Execute()
     {
-        V.player_info.CalculateValue();
-
         Executed = true;
 
-        Execute_main();
-
-        List<Type> EachFrameTypeCalculate = new List<Type>
-        { Type.spell, Type.movement,  Type.kill };
-
-        if (EachFrameTypeCalculate.Contains(type))
-        {
-            Character.CalcValueOfEveryone();
-        }
+        ActionManager.Instance.StartCoroutine(Execute_main());
     }
 
-    internal virtual void Execute_main() { }
+    internal virtual IEnumerator Execute_main() {
 
-    public virtual bool Finished()
-    {
-        return Force_Stop;
+        yield return new WaitForEndOfFrame();
     }
 
-    [HideInInspector]
-    public bool Force_Stop = false;
-
-    public void Stop()
+    public virtual bool IsFinished()
     {
-        Force_Stop = true;
+        return Executed;
     }
 
     public virtual string debug()

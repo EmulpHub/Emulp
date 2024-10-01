@@ -12,55 +12,25 @@ public class Action_nextTurn : Action
 
     public Entity entity;
 
-    internal override void Execute_main()
+    internal override IEnumerator Execute_main()
     {
-
         SpellGestion.ResetSelectionnedSpell();
 
         V.script_Scene_Main.EnregistredPath_clear();
 
-        //Get to the next turn
         EntityOrder.PassTurn();
+        yield return null;
     }
-    public override bool Finished()
+    public override bool IsFinished()
     {
-        if (base.Finished()) return true;
-
-        return Executed;
+        return base.IsFinished();
     }
 
-    public static List<Action_nextTurn> getToDoNextTurn()
-    {
-        List<Action_nextTurn> ls = new List<Action_nextTurn>();
-
-        foreach (Action action in toDo)
-        {
-            if (action.type == Type.nextTurn)
-                ls.Add((Action_nextTurn)action);
-        }
-
-        return ls;
-    }
-
-    /// <summary>
-    /// Add a passTurn action
-    /// </summary>
-    /// <param name="entity">The entity that passTurn (for avoid double pass)</param>
     public static void Add(Entity entity)
     {
-        //Check if the same entity doesn't ask to pass turn if so don't add more new turn and stop this void
-        foreach (Action_nextTurn action in getToDoNextTurn())
-        {
-            if (action.entity == entity)
-                return;
-
-        }
-
-        //The next action To Add
         Action_nextTurn actionToAdd = new Action_nextTurn(entity);
 
-        //Add the action to the list
-        toDo.Add(actionToAdd);
+        ActionManager.Instance.AddToDo(actionToAdd);
     }
 
     public override string debug()
@@ -68,3 +38,36 @@ public class Action_nextTurn : Action
         return descColor.convert("pass turn for *RES" + entity.Info.EntityName + "*end");
     }
 }
+
+
+//public static List<Action_nextTurn> getToDoNextTurn()
+//{
+//    List<Action_nextTurn> ls = new List<Action_nextTurn>();
+
+//    foreach (Action action in ActionManager.Instance.listOfToDoAction)
+//    {
+//        if (action.type == Type.nextTurn)
+//            ls.Add((Action_nextTurn)action);
+//    }
+
+//    return ls;
+//}
+
+///// <summary>
+///// Add a passTurn action
+///// </summary>
+///// <param name="entity">The entity that passTurn (for avoid double pass)</param>
+//public static void Add(Entity entity)
+//{
+//    //Check if the same entity doesn't ask to pass turn if so don't add more new turn and stop this void
+//    foreach (Action_nextTurn action in getToDoNextTurn())
+//    {
+//        if (action.entity == entity)
+//            return;
+
+//    }
+
+//    Action_nextTurn actionToAdd = new Action_nextTurn(entity);
+
+//    ActionManager.Instance.AddToDo(actionToAdd);
+//}

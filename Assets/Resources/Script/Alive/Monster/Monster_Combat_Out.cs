@@ -39,7 +39,7 @@ public partial class Monster : Entity
             SetRandomCooldownPeriodicMove();
         }
 
-        if (!runningInfo.isRunning && !Main_Map.currentMap.MonsterMovementNotAllowed)
+        if (!runningInfo.running && !Main_Map.currentMap.MonsterMovementNotAllowed)
         {
             cooldownPeriodicMove -= 1 * Time.deltaTime;
         }
@@ -58,12 +58,14 @@ public partial class Monster : Entity
 
         if ((distance <= 0.5f || V.script_Scene_Main_Administrator.InstaFight) && !outside)
         {
-            foreach (Monster m in AliveEntity.listMonster)
+            void Traveler(Monster m)
             {
                 m.ResetSpriteAndMovement();
 
                 m.cooldownPeriodicMove = 1;
             }
+
+            AliveEntity.Instance.TravelMonster(Traveler);
 
             V.player_entity.ResetSpriteAndMovement();
 

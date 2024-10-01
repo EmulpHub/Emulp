@@ -5,7 +5,7 @@ using UnityEngine;
 public class Action_kill : Action
 {
     public Entity target, caster;
-    string saveName;
+    private string target_name;
 
     public Action_kill(Entity target, Entity caster) : base()
     {
@@ -13,37 +13,32 @@ public class Action_kill : Action
         CanBeErased = false;
         this.target = target;
         this.caster = caster;
-        saveName = target.Info.EntityName;
+        target_name = target.Info.EntityName;
     }
 
-    internal override void Execute_main()
+    internal override IEnumerator Execute_main()
     {
         target.Kill(new InfoKill(caster));
-    }
 
-    public override bool Finished()
-    {
-        if (base.Finished()) return true;
-
-        return Executed;
+        yield return null;
     }
 
     public static void Add(Entity target, Entity caster)
     {
         Action_kill actionToAdd = new Action_kill(target, caster);
+        ActionManager.Instance.AddToDo(actionToAdd);
 
-        toDo.Add(actionToAdd);
     }
 
-    public static void Add_Kill_prioritary(Entity target, Entity caster)
+    public static void Add_prioritary(Entity target, Entity caster)
     {
         Action_kill actionToAdd = new Action_kill(target, caster);
+        ActionManager.Instance.AddToDo_prioritary(actionToAdd);
 
-        toDo.Insert(0, actionToAdd);
     }
 
     public override string debug()
     {
-        return descColor.convert("*dmgkill*end " + saveName);
+        return descColor.convert("*dmgkill*end " + target_name);
     }
 }

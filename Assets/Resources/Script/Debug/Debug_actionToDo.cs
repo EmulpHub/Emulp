@@ -15,43 +15,36 @@ public class Debug_actionToDo : MonoBehaviour
 
     public List<int> RemovedElement = new List<int>();
 
+    public void Start()
+    {
+        title.text = "Action to do";
+    }
+
     private void Update()
     {
-        List<Action> a = new List<Action>(Action.ActionRunning);
+        Action running = ActionManager.Instance.currentRunningAction;
 
-        title.text = "Action to do (" + a.Count + " element)";
-
-        int i = 0;
-        while (i < a.Count)
+        if (ActionManager.Instance.Running() && !AllElement.ContainsKey(running.Id))
         {
-            Action cibled = a[i];
+            Text newText = Instantiate(Element.gameObject, ElementHolder).GetComponent<Text>();
 
-            int cibled_num = cibled.id;
+            newText.text = running.debug();
 
-            if (!AllElement.ContainsKey(cibled_num))
-            {
-               Text newText = Instantiate(Element.gameObject, ElementHolder).GetComponent<Text>();
-
-                newText.text = cibled.debug();
-
-                AllElement.Add(cibled_num, (newText, cibled));
-            }
-
-            i++;
+            AllElement.Add(running.Id, (newText, running));
         }
 
         List<int> AllElement_Keys = new List<int>(AllElement.Keys);
 
         AllElement_Keys.Sort();
 
-        i = 0;
+        int i = 0;
         while (i < AllElement_Keys.Count)
         {
             int num = AllElement_Keys[i];
 
             var info = AllElement[num];
 
-            if (info.action.Finished() && !RemovedElement.Contains(num))
+            if (info.action.IsFinished() && !RemovedElement.Contains(num))
             {
                 RemovedElement.Add(num);
 

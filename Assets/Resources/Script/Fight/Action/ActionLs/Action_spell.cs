@@ -6,25 +6,23 @@ public class Action_spell : Action
 {
     public Action_spell_info info;
 
-    public Spell info_spell { get { return info.spell; } }
-
     public Action_spell() : base()
     {
         type = Type.spell;
     }
 
-    internal override void Execute_main()
+    internal override IEnumerator Execute_main()
     {
         V.script_Scene_Main.EnregistredPath_clear();
 
-        info_spell.CastSpell(info); //Must be same param than mainIsLaunchable
+        info.spell.CastSpell(info);
+
+        yield return null;
     }
 
-    public override bool Finished()
+    public override bool IsFinished()
     {
-        if (base.Finished()) return true;
-
-        return (info_spell == null || info_spell.IsFinish()) && Executed;
+        return (info.spell == null || info.spell.IsFinish()) && base.IsFinished();
     }
 
     public static void Add(Action_spell_info info)
@@ -39,31 +37,18 @@ public class Action_spell : Action
             {
                 if (info.caster == V.player_entity)
                 {
-                    Action_spell_info_player newSpellInfo = new Action_spell_info_player();
-
-                    newSpellInfo.spell = Spell.Create(info.spell.spell);
-                    newSpellInfo.caster = info.caster;
-                    newSpellInfo.listTarget = new List<Entity>(info.listTarget);
-                    newSpellInfo.targetedSquare = info.targetedSquare;
-                    newSpellInfo.forceLaunch = true;
-                    newSpellInfo.dontUseCost = true;
-                    newSpellInfo.main = false;
-                    newSpellInfo.multiplicator += ((float)e.Str / 100);
+                    Action_spell_info_player newSpellInfo = new Action_spell_info_player(Spell.Create(info.spell.spell), info.target, info.targetedSquare);
+                    newSpellInfo.SetLaunchValue(false, true, true)
+                        .AddMultiplicator((float)e.Str / 100);
 
                     Add_spell_one(newSpellInfo);
 
                 }
                 else
                 {
-                    Action_spell_info newSpellInfo = new Action_spell_info();
-
-                    newSpellInfo.spell = Spell.Create(info.spell.spell);
-                    newSpellInfo.caster = info.caster;
-                    newSpellInfo.listTarget = new List<Entity>(info.listTarget);
-                    newSpellInfo.targetedSquare = info.targetedSquare;
-                    newSpellInfo.forceLaunch = true;
-                    newSpellInfo.dontUseCost = true;
-                    newSpellInfo.main = false;
+                    Action_spell_info newSpellInfo = new Action_spell_info(Spell.Create(info.spell.spell),info.caster, info.target, info.targetedSquare);
+                    newSpellInfo.SetLaunchValue(false, true, true)
+                        .AddMultiplicator((float)e.Str / 100);
 
                     Add_spell_one(newSpellInfo);
                 }
@@ -79,7 +64,7 @@ public class Action_spell : Action
 
         actionToAdd.info = info;
 
-        toDo.Add(actionToAdd);
+        ActionManager.Instance.AddToDo(actionToAdd);
     }
 
     public override string debug()
@@ -88,56 +73,3 @@ public class Action_spell : Action
     }
 }
 
-public class Action_spell_info
-{
-    public bool main = true;
-    public bool forceLaunch = false;
-    public bool dontUseCost = false;
-
-    public string targetedSquare = "erreur";
-
-    public Spell spell;
-    public Entity caster;
-    private Entity _target;
-
-    private List<Entity> _listTarget = new List<Entity>();
-
-
-    public List<Entity> listTarget
-    {
-        get
-        {
-            return _listTarget;
-        }
-        set
-        {
-            _listTarget = value;
-            _target = value[0];
-        }
-    }
-
-    public Entity target
-    {
-        get
-        {
-            return _target;
-        }
-    }
-
-}
-
-public class Action_spell_info_player : Action_spell_info
-{
-    public float str, dex, res;
-    public int eff;
-
-    public float multiplicator = 1;
-
-    public Action_spell_info_player()
-    {
-        str = V.player_info.str;
-        dex = V.player_info.dex;
-        res = V.player_info.res;
-        eff = V.player_info.eff;
-    }
-}

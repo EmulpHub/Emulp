@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using static CT;
+using static Tile;
 using System;
 
 public class SquareToNextArea : MonoBehaviour

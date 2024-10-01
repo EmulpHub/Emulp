@@ -12,30 +12,33 @@ public class Action_wait : Action
 
     public float Cooldown;
 
-    internal override void Execute_main()
+    internal override IEnumerator Execute_main()
     {
-        Cooldown -= 1 * Time.deltaTime;
+        while (Cooldown > 0)
+        {
+            Cooldown -= Time.deltaTime;
+
+            yield return new WaitForEndOfFrame();
+        }
     }
 
-    public override bool Finished()
+    public override bool IsFinished()
     {
-        if (base.Finished()) return true;
-
-        return Cooldown <= 0;
+        return Cooldown <= 0 && base.IsFinished();
     }
 
     public static void Add(float timeInSec)
     {
         Action_wait actionToAdd = new Action_wait(timeInSec);
 
-        toDo.Add(actionToAdd);
+        ActionManager.Instance.AddToDo(actionToAdd);
     }
 
     public static void Add_prioritary(float timeInSec)
     {
         Action_wait actionToAdd = new Action_wait(timeInSec);
 
-        ActionRunning.Insert(0, actionToAdd);
+        ActionManager.Instance.AddToDo_prioritary(actionToAdd);
     }
 
     public override string debug()
