@@ -18,7 +18,7 @@ public class MonsterAction_Spell : MonsterAction
     {
         target = monsterBehavior.DecideWhoToAttack();
 
-        if(target != null)
+        if (target != null)
             targetPosition = target.CurrentPosition_string;
     }
 
@@ -26,15 +26,17 @@ public class MonsterAction_Spell : MonsterAction
     {
         SetTarget();
 
-        if(target == null) return false;
+        if (target == null) return false;
 
         bool spellLaunchable = spell.Launchable(target);
 
         return spellLaunchable;
     }
 
-    public override IEnumerator Execution()
+    protected override IEnumerator Execution(MonsterBehaviorResult result)
     {
+        result.SetMultiAction(false);
+
         if (targetPosition == "")
             targetPosition = target.CurrentPosition_string;
 
@@ -42,24 +44,16 @@ public class MonsterAction_Spell : MonsterAction
 
         bool spellLaunchable = spell.Launchable(target);
 
-        Spell CurrentSpell = Spell.Create(spell.spell_type);
-
-        while (spellLaunchable)
+        if (spellLaunchable)
         {
-            Action_waitFixed.Add(0.4f);
+            Spell CurrentSpell = Spell.Create(spell.spell_type);
 
             Action_spell_info spellInfo = new Action_spell_info(CurrentSpell, info.monster, target, targetPosition);
 
-            Action_spell.Add(spellInfo);
+            result.SetAction(Action_spell.Create(spellInfo));
 
             spell.SetUse();
-
-            spellLaunchable = spell.Launchable(target);
-
-            yield return new WaitUntil(() => !ActionManager.Instance.Running());
         }
-
-        Destroy(CurrentSpell.gameObject, 2);
 
         yield break;
     }

@@ -102,12 +102,12 @@ public class SpellStats
 
     public bool IsLaunchable_Cooldown()
     {
-        return cooldown <= EntityOrder.id_turn || (nbUse < nbUseMax && nbUseMax != 0);
+        return cooldown <= EntityOrder.Instance.id_turn || (nbUse < nbUseMax && nbUseMax != 0);
     }
 
     public void SetCooldown()
     {
-        cooldown = cooldown_max + EntityOrder.id_turn;
+        cooldown = cooldown_max + EntityOrder.Instance.id_turn;
     }
 
     public void SetUse()

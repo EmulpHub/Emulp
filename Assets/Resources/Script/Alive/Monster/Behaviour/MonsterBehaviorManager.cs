@@ -15,20 +15,57 @@ public class MonsterBehaviorManager : MonoBehaviour
         }
     }
 
-    public void Start()
+    public void StartToBehave()
     {
         StartCoroutine(Manage());
     }
 
-    public IEnumerator Manage ()
+    private IEnumerator Manage()
     {
-        while (true)
+        while (V.IsFight() && !EntityOrder.Instance.IsTurnOf_Player())
         {
-            yield return new WaitUntil(() => V.IsFight() && !EntityOrder.IsTurnOf_Player());
+            var listMonster = new List<Monster>(EntityOrder.InstanceEnnemy.list);
 
-            Monster monster = (Monster)EntityOrder.entity;
+            List<Action> listAction = new List<Action>();
 
-            monster.CombatBehavior.Behave();
+            Action firstActionToDo = null;
+
+            bool PassTurn = true;
+
+            foreach (Monster m in listMonster)
+            {
+                var behaviorResult = m.CombatBehavior.Behave();
+
+                if (!behaviorResult.passTurn)
+                {
+                    if (behaviorResult.action is null)
+                        throw new System.Exception("mais bref");
+
+                    if (behaviorResult.allowMultiAction)
+                    {
+                        listAction.Add(behaviorResult.action);
+                    }
+                    else if (firstActionToDo is null)
+                    {
+                        firstActionToDo = behaviorResult.action;
+                    }
+
+                    PassTurn = false;
+                }
+            }
+
+            if (PassTurn)
+            {
+                Action_nextTurn.Add();
+            }
+            else if (listAction.Count > 0)
+            {
+                Action_multi.Add(listAction);
+            }
+            else if (firstActionToDo is not null)
+            {
+                ActionManager.Instance.AddToDo(firstActionToDo);
+            }
 
             yield return new WaitUntil(() => !ActionManager.Instance.Running());
         }

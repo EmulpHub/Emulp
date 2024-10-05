@@ -77,7 +77,7 @@ public class Glyphe : MonoBehaviour
                 if (v.g == this)
                 {
                     find = true;
-                    memorieOfGlyphe[e][i] = (EntityOrder.id_turn, this);
+                    memorieOfGlyphe[e][i] = (EntityOrder.Instance.id_turn, this);
                 }
 
                 i++;
@@ -85,12 +85,12 @@ public class Glyphe : MonoBehaviour
 
             if (!find)
             {
-                memorieOfGlyphe[e].Add((EntityOrder.id_turn, this));
+                memorieOfGlyphe[e].Add((EntityOrder.Instance.id_turn, this));
             }
         }
         else
         {
-            memorieOfGlyphe.Add(e, new List<(int idTurn, Glyphe g)> { (EntityOrder.id_turn, this) });
+            memorieOfGlyphe.Add(e, new List<(int idTurn, Glyphe g)> { (EntityOrder.Instance.id_turn, this) });
         }
     }
 
@@ -104,7 +104,7 @@ public class Glyphe : MonoBehaviour
             {
                 if (v.g == this)
                 {
-                    return v.idTurn != EntityOrder.id_turn;
+                    return v.idTurn != EntityOrder.Instance.id_turn;
                 }
             }
 

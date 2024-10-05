@@ -50,9 +50,9 @@ public class warrior_Punch : spellEffect_Player
     {
         int count = listPosMonster.Count;
 
-        if (EntityOrder.id_turn != lastUsedTurn && count != 0)
+        if (EntityOrder.Instance.id_turn != lastUsedTurn && count != 0)
         {
-            lastUsedTurn = EntityOrder.id_turn;
+            lastUsedTurn = EntityOrder.Instance.id_turn;
 
             foreach(var pos in listPosMonster)
             {

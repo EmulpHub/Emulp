@@ -1,6 +1,7 @@
 using PathFindingName;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public partial class MonsterBehavior : MonoBehaviour
@@ -12,10 +13,17 @@ public partial class MonsterBehavior : MonoBehaviour
         (bool find, Entity closest) v = (false, null);
 
         int closestPath = int.MaxValue;
+        
+        List<Entity> list = new List<Entity>();
 
-        foreach (Entity target in EntityOrder.list)
+        if (origin is Monster)
+            list = EntityOrder.InstanceEnnemy.listToEntity;
+        else
+            list = EntityOrder.InstanceAlly.list;
+
+        foreach (Entity target in list)
         {
-            if (target == origin || target.IsMonster() != origin.IsMonster() || !Condition(target, origin))
+            if (target == origin || !Condition(target, origin))
                 continue;
 
             var pathParam = new PathParam(origin.CurrentPosition_string, target.CurrentPosition_string).AddListIgnoreEntity(target);

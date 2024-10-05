@@ -115,7 +115,7 @@ public class CustomDescription : MonoBehaviour,
                     }
                     else if (V.game_state == V.State.fight)
                     {
-                        if (EntityOrder.IsTurnOf_Player())
+                        if (EntityOrder.Instance.IsTurnOf_Player())
                         {
                             titre = "FINIR SON TOUR";
                             description = descColor.convert("Cliquez ou appuyez sur *bonEspace*end pour finir votre tour");
@@ -179,7 +179,7 @@ public class CustomDescription : MonoBehaviour,
                     }
                     else if (V.game_state == V.State.fight)
                     {
-                        if (EntityOrder.IsTurnOf_Player())
+                        if (EntityOrder.Instance.IsTurnOf_Player())
                         {
                             titre = "END TURN";
                             description = descColor.convert("Click or press *bonSpace*end to end your turn");

@@ -42,7 +42,7 @@ public class Invocating : MonoBehaviour
 
         caster.invoke_list.Add(m);
 
-        EntityOrder.Add(m);
+        EntityOrder.InstanceEnnemy.Add(m);
     }
 
 }

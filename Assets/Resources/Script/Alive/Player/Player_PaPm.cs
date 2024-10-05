@@ -50,7 +50,7 @@ public partial class Player : Entity
 
             SoundManager.PlaySound(SoundManager.list.object_Rush_Second);
 
-            Effect.Reduction_mode reduc = EntityOrder.IsTurnOf_Player() ? Effect.Reduction_mode.startTurn : Effect.Reduction_mode.endTurn;
+            Effect.Reduction_mode reduc = EntityOrder.Instance.IsTurnOf_Player() ? Effect.Reduction_mode.startTurn : Effect.Reduction_mode.endTurn;
 
             Effect g = AddEffect(
                 Effect.CreateEffect("Rush", Effect.effectType.power, Mathf.CeilToInt(TotalPower), 1, SpellGestion.Get_sprite(SpellGestion.List.object_rush), reduc)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,8 +25,17 @@ public class MonsterAction : MonoBehaviour
         return false;
     }
 
-    public virtual IEnumerator Execution ()
+    protected virtual IEnumerator Execution (MonsterBehaviorResult result)
     {
-        yield break;
+        throw new System.Exception("Not normal monster Action");
+    }
+
+    public MonsterBehaviorResult CallExecution ()
+    {
+        var result = new MonsterBehaviorResult();
+
+        MonsterBehaviorManager.Instance.StartCoroutine(Execution(result));
+    
+        return result;
     }
 }

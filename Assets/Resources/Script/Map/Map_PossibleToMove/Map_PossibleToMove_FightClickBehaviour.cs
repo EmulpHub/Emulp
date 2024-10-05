@@ -29,7 +29,8 @@ public partial class Map_PossibleToMove : MonoBehaviour
 
     public static bool LaunchMovement_Condition()
     {
-        return EntityOrder.IsTurnOf_Player() && V.game_state_action == V.State_action.movement && TileInfo.Instance.Exist(CursorInfo.Instance.position) &&
+
+        return EntityOrder.Instance.IsTurnOf_Player() && V.game_state_action == V.State_action.movement && TileInfo.Instance.Exist(CursorInfo.Instance.position) &&
             PlayerMoveAutorization.Instance.Can() && CursorInfo.Instance.position != V.player_entity.CurrentPosition_string;
     }
 
@@ -58,7 +59,7 @@ public partial class Map_PossibleToMove : MonoBehaviour
     {
         return V.game_state_action == V.State_action.spell &&
             !MouseIsOnToolbar &&
-            EntityOrder.IsTurnOf_Player() &&
+            EntityOrder.Instance.IsTurnOf_Player() &&
             (TileInfo.Instance.Exist(position) ||
             (SpellGestion.Get_RangeMax(SpellGestion.selectionnedSpell_list) == 0 &&
             SpellGestion.Get_RangeMin(SpellGestion.selectionnedSpell_list) == 0));

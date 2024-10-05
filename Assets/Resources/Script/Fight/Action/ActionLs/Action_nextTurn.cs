@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class Action_nextTurn : Action
 {
-    public Action_nextTurn(Entity entity) : base()
+    public Action_nextTurn() : base()
     {
         type = Type.nextTurn;
-        this.entity = entity;
     }
 
-    public Entity entity;
-
-    internal override IEnumerator Execute_main()
+    protected override IEnumerator Execute_main()
     {
         SpellGestion.ResetSelectionnedSpell();
 
         V.script_Scene_Main.EnregistredPath_clear();
 
-        EntityOrder.PassTurn();
+        EntityOrder.Instance.PassTurn();
+
         yield return null;
     }
     public override bool IsFinished()
@@ -26,16 +24,19 @@ public class Action_nextTurn : Action
         return base.IsFinished();
     }
 
-    public static void Add(Entity entity)
+    public static void Add()
     {
-        Action_nextTurn actionToAdd = new Action_nextTurn(entity);
+        ActionManager.Instance.AddToDo(Create());
+    }
 
-        ActionManager.Instance.AddToDo(actionToAdd);
+    public static Action_nextTurn Create ()
+    {
+        return new Action_nextTurn();
     }
 
     public override string debug()
     {
-        return descColor.convert("pass turn for *RES" + entity.Info.EntityName + "*end");
+        return descColor.convert("pass turn");
     }
 }
 

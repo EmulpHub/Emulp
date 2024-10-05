@@ -40,16 +40,18 @@ public partial class Player : Entity
 
     public void StartCombat()
     {
-        EntityOrder.nbTurnSinceStartCombat = 0;
+        EntityOrder.Instance.nbTurnSinceStartCombat = 0;
         spellEffect.nbPaUsedThisCombat = 0;
 
-        EntityOrder.id_turn_startCombat = EntityOrder.id_turn;
+        EntityOrder.Instance.id_turn_startCombat = EntityOrder.Instance.id_turn;
 
         V.player_entity.ResetAllStats();
 
         event_startCombat.Call();
 
         V.player_info.CalculateValue();
+
+        EntityOrder.Instance.StartCombat();
     }
 
 }
