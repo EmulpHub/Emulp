@@ -11,7 +11,7 @@ public class Action_spell : Action
         type = Type.spell;
     }
 
-    internal override IEnumerator Execute_main()
+    protected override IEnumerator Execute_main()
     {
         V.script_Scene_Main.EnregistredPath_clear();
 
@@ -60,11 +60,16 @@ public class Action_spell : Action
 
     private static void Add_spell_one(Action_spell_info info)
     {
+        ActionManager.Instance.AddToDo(Create(info));
+    }
+
+    public static Action_spell Create (Action_spell_info info)
+    {
         Action_spell actionToAdd = new Action_spell();
 
         actionToAdd.info = info;
 
-        ActionManager.Instance.AddToDo(actionToAdd);
+        return actionToAdd;
     }
 
     public override string debug()

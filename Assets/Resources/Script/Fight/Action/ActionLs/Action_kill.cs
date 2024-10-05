@@ -16,7 +16,7 @@ public class Action_kill : Action
         target_name = target.Info.EntityName;
     }
 
-    internal override IEnumerator Execute_main()
+    protected override IEnumerator Execute_main()
     {
         target.Kill(new InfoKill(caster));
 

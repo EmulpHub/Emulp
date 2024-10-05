@@ -12,7 +12,7 @@ public class Action_wait : Action
 
     public float Cooldown;
 
-    internal override IEnumerator Execute_main()
+    protected override IEnumerator Execute_main()
     {
         while (Cooldown > 0)
         {

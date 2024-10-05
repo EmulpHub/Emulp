@@ -243,11 +243,11 @@ public partial class Spell : MonoBehaviour
             pa_txt.color = new Color32(224, 58, 62, 255);
         }
 
-        float Value = (float)(id_nextPossibleReUse - EntityOrder.id_turn) / (float)id_nextPossibleReUse_max; ;
+        float Value = (float)(id_nextPossibleReUse - EntityOrder.Instance.id_turn) / (float)id_nextPossibleReUse_max; ;
 
-        if (id_nextPossibleReUse > EntityOrder.id_turn && !IsEmpty())
+        if (id_nextPossibleReUse > EntityOrder.Instance.id_turn && !IsEmpty())
         {
-            cooldown_text.text = "" + (id_nextPossibleReUse - EntityOrder.id_turn);
+            cooldown_text.text = "" + (id_nextPossibleReUse - EntityOrder.Instance.id_turn);
         }
         else if (!IsEnoughRessourceForLaunch() && !IsEmpty())
         {

@@ -21,7 +21,7 @@ public class Action_waitFixed : Action
         return (Time.time - StartTimeCode) - Cooldown;
     }
 
-    internal override IEnumerator Execute_main()
+    protected override IEnumerator Execute_main()
     {
         yield return null;
     }

@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
-using static UnityEngine.GraphicsBuffer;
 
 public class MonsterAction_Movement : MonsterAction
 {
@@ -41,8 +39,10 @@ public class MonsterAction_Movement : MonsterAction
         return true;
     }
 
-    public override IEnumerator Execution()
+    protected override IEnumerator Execution(MonsterBehaviorResult result)
     {
+        result.SetMultiAction(true);
+
         string targetPos = moveInfo.target.CurrentPosition_string;
 
         bool selection(string posSelection)
@@ -59,7 +59,7 @@ public class MonsterAction_Movement : MonsterAction
         if (targetSquare == "")
             throw new System.Exception("Not good pos with pos = " + targetSquare);
 
-        Action_movement.Add(new PathParam(info.monster.CurrentPosition_string, targetSquare), info.monster);
+        result.SetAction(Action_movement.Create(new PathParam(info.monster.CurrentPosition_string, targetSquare), info.monster));
 
         yield return new WaitForSeconds(1);
     }

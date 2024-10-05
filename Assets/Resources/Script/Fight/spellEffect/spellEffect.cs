@@ -50,9 +50,9 @@ public class spellEffect : MonoBehaviour
 
     public static int GetNbPaUsed_ThisTurn()
     {
-        if (lastTurnId != EntityOrder.id_turn)
+        if (lastTurnId != EntityOrder.Instance.id_turn)
         {
-            lastTurnId = EntityOrder.id_turn;
+            lastTurnId = EntityOrder.Instance.id_turn;
             nbPaUsedThisTurn = 0;
         }
 
@@ -61,9 +61,9 @@ public class spellEffect : MonoBehaviour
 
     public static void AddNbPaUsed(int nb)
     {
-        if (lastTurnId != EntityOrder.id_turn)
+        if (lastTurnId != EntityOrder.Instance.id_turn)
         {
-            lastTurnId = EntityOrder.id_turn;
+            lastTurnId = EntityOrder.Instance.id_turn;
             nbPaUsedThisTurn = 0;
         }
 

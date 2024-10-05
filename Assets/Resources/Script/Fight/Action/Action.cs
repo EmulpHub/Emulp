@@ -23,7 +23,7 @@ public class Action : MonoBehaviour
 
     public bool CanBeErased = true, Executed = false;
 
-    public enum Type { movement, nextTurn, wait, wait_fixed, spell, kill }
+    public enum Type { movement, nextTurn, wait, wait_fixed, spell, kill,multi }
 
     public Type type;
 
@@ -34,7 +34,7 @@ public class Action : MonoBehaviour
         ActionManager.Instance.StartCoroutine(Execute_main());
     }
 
-    internal virtual IEnumerator Execute_main() {
+    protected virtual IEnumerator Execute_main() {
 
         yield return new WaitForEndOfFrame();
     }

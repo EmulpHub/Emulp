@@ -32,6 +32,6 @@ public class Monster_Behavior_Info : MonoBehaviour
 
     public bool ShouldStopToBehave()
     {
-        return !EntityOrder.IsTurnOf(monster) || V.game_state != V.State.fight || monster.IsDead();
+        return !EntityOrder.InstanceEnnemy.IsTurnOfMonster() || V.game_state != V.State.fight || monster.IsDead();
     }
 }

@@ -253,7 +253,7 @@ public class talent_Cycle : talentInfo
 
     public static void StartTurn(Entity e)
     {
-        bool GoodTurn = EntityOrder.id_turn == EntityOrder.id_turn_startCombat || (EntityOrder.id_turn - EntityOrder.id_turn_startCombat) % 2 == 0;
+        bool GoodTurn = EntityOrder.Instance.id_turn == EntityOrder.Instance.id_turn_startCombat || (EntityOrder.Instance.id_turn - EntityOrder.Instance.id_turn_startCombat) % 2 == 0;
 
         if (GoodTurn)
         {
@@ -713,9 +713,9 @@ public class talent_TirAuCoeur : talentInfo
 
     public void application(Entity e, float dmg)
     {
-        if (lastTurnId != EntityOrder.id_turn)
+        if (lastTurnId != EntityOrder.Instance.id_turn)
         {
-            lastTurnId = EntityOrder.id_turn;
+            lastTurnId = EntityOrder.Instance.id_turn;
             ls.Clear();
         }
 
@@ -749,7 +749,7 @@ public class talent_distance : talentInfo
 
     public void application(Entity e)
     {
-        foreach (Monster m in EntityOrder.list_monster)
+        foreach (Monster m in EntityOrder.InstanceEnnemy.list)
         {
             if (F.IsInLine(m.CurrentPosition_string, V.player_entity.CurrentPosition_string))
             {
@@ -836,7 +836,7 @@ public class talent_Evolution_mage : talentInfo
 
         bool find = false;
 
-        if (EntityOrder.nbTurnSinceStartCombat >= 5)
+        if (EntityOrder.Instance.nbTurnSinceStartCombat >= 5)
         {
             V.player_entity.GetEffect_byTitle(title + " pm", ref find);
 
@@ -850,7 +850,7 @@ public class talent_Evolution_mage : talentInfo
             }
         }
 
-        if (EntityOrder.nbTurnSinceStartCombat >= 10)
+        if (EntityOrder.Instance.nbTurnSinceStartCombat >= 10)
         {
             V.player_entity.GetEffect_byTitle(title + " pa", ref find);
 

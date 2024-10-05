@@ -22,11 +22,11 @@ public class Combat_EndOfTurn : MonoBehaviour
 
         SoundManager.PlaySound(SoundManager.list.ui_buttonPressed);
 
-        if (EntityOrder.IsTurnOf_Player() && V.game_state == V.State.fight)
+        if (EntityOrder.Instance.IsTurnOf_Player() && V.game_state == V.State.fight)
         {
             MouseClick();
 
-            Action_nextTurn.Add(V.player_entity);
+            Action_nextTurn.Add();
         }
         else if (V.game_state == V.State.positionning)
         {
@@ -58,7 +58,7 @@ public class Combat_EndOfTurn : MonoBehaviour
     {
         Update_ui();
 
-        if (V.game_state == V.State.fight && EntityOrder.IsTurnOf_Player())
+        if (V.game_state == V.State.fight && EntityOrder.Instance.IsTurnOf_Player())
         {
             if ((!SpellGestion.IsASpellLaunchable() && V.player_info.PM <= 0) && !ActionManager.Instance.Contain(Action.Type.nextTurn))
             {
@@ -105,7 +105,7 @@ public class Combat_EndOfTurn : MonoBehaviour
 
         MouseIsOver = NextMouseIsOver;
 
-        bool ShowHand = MouseIsOver && (EntityOrder.IsTurnOf_Player() || V.game_state == V.State.positionning);
+        bool ShowHand = MouseIsOver && (EntityOrder.Instance.IsTurnOf_Player() || V.game_state == V.State.positionning);
 
         Main_UI.ManageDontMoveCursor(gameObject, ShowHand);
 

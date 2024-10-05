@@ -80,7 +80,7 @@ public partial class Monster : Entity
 
         ResetUseOfAllAvailableSpell();
 
-        lastTurnPlayed = EntityOrder.id_turn;
+        lastTurnPlayed = EntityOrder.Instance.id_turn;
 
         ResetAllAnimation();
     }
@@ -127,13 +127,13 @@ public partial class Monster : Entity
 
         if (V.game_state == V.State.fight)
         {
-            EntityOrder.Remove(this);
+            EntityOrder.InstanceEnnemy.Remove(this);
 
             Scene_Main.MonsterKilled.Add(new Scene_Main.KilledMonsterInfo(monsterInfo.level, monsterInfo.monster_type));
 
             Nortice_GainSystem.AddNotricePoint_monster_death(this);
 
-            if (!EntityOrder.ContainMonster())
+            if (!EntityOrder.Instance.ContainMonster())
             {
                 if (EndOfGame)
                 {

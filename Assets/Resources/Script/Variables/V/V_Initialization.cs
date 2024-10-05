@@ -149,7 +149,7 @@ public partial class V : MonoBehaviour
 
         AliveEntity.Instance.Clear();
 
-        EntityOrder.Clear();
+        EntityOrder.Instance.Clear();
 
         primaryStatsSetter.ClearCurrentStats();
 

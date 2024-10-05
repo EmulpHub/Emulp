@@ -50,8 +50,6 @@ public partial class Scene_Main : MonoBehaviour
         V.main_ui.Display_StartOfTurnArrow(V.player_entity, V.player_entity.startOfTurn_Arrow_Distance);
         V.main_ui.Display_startOfTurn();
 
-        EntityOrder.list[0].Turn_start();
-
         SetGameAction_movement();
     }
 
@@ -164,19 +162,16 @@ public partial class Scene_Main : MonoBehaviour
 
         V.player_entity.ResetAllStats();
 
-        EntityOrder.Clear();
+        EntityOrder.Instance.Clear();
 
         //add the player to the turn list
-        EntityOrder.Add(V.player_entity);
+        EntityOrder.InstanceAlly.Add(V.player_entity);
 
         //Add all monster to the turn list 
-        foreach (Entity ent in Monsters)
+        foreach (Monster ent in Monsters)
         {
-            EntityOrder.Add(ent);
+            EntityOrder.InstanceEnnemy.Add(ent);
         }
-
-        //Set the turn to be the turn of the player
-        EntityOrder.SetTurn(V.player_entity);
 
         Positionning_tile.PositioningTile_OnMouseOver.Clear();
 

@@ -139,7 +139,7 @@ public class ForceHelp : MonoBehaviour
 
     public void NextAction()
     {
-        if (!EntityOrder.IsTurnOf_Player() || ActionManager.Instance.Running())
+        if (!EntityOrder.Instance.IsTurnOf_Player() || ActionManager.Instance.Running())
         {
             if (CurrentState == State.none)
                 return;
@@ -257,13 +257,13 @@ public class ForceHelp : MonoBehaviour
     {
         ClickAutorization.Exception_Add(Main_Object.Get(Main_Object.objects.button_endOfTurn));
 
-        int saveId = EntityOrder.id_turn;
+        int saveId = EntityOrder.Instance.id_turn;
 
         if (visible)
         {
             ForceHelp_Arrow f = ForceHelp_Arrow.Instantiate_Arrow_EndOfTurn(delegate
         {
-            return !EntityOrder.IsTurnOf_Player();
+            return !EntityOrder.Instance.IsTurnOf_Player();
         });
 
             AllArrow.Add(f.gameObject);

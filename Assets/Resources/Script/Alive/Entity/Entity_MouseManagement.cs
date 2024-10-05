@@ -64,7 +64,7 @@ public partial class Entity : MonoBehaviour
         {
             var CTTile = TileInfo.Instance.Get(CurrentPosition_string);
 
-            if (EntityOrder.IsTurnOf_Player() && V.game_state_action == V.State_action.spell && CTTile != null)
+            if (EntityOrder.Instance.IsTurnOf_Player() && V.game_state_action == V.State_action.spell && CTTile != null)
                 CTTile.WhenTheMouseExit();
 
             EntityOnMouseOver = null;

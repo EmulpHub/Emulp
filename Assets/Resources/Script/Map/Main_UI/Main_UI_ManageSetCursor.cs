@@ -15,7 +15,7 @@ public partial class Main_UI : MonoBehaviour
 
         if (V.game_state == V.State.fight)
         {
-            if (V.game_state_action == V.State_action.spell && EntityOrder.IsTurnOf_Player())
+            if (V.game_state_action == V.State_action.spell && EntityOrder.Instance.IsTurnOf_Player())
             {
                 SpellGestion.CursorMode save = SpellGestion.Get_cursorMode(SpellGestion.selectionnedSpell_list);
 
@@ -24,7 +24,7 @@ public partial class Main_UI : MonoBehaviour
                 else if (save == SpellGestion.CursorMode.magical)
                     Window.SetCursorAndOffset(cursor_magical, Window.CursorMode.click_cursor);
             }
-            else if (V.game_state_action == V.State_action.movement && mouseOnTile != null && TileInfo.Instance.ExistType(Tile.Type.movement) && EntityOrder.IsTurnOf_Player())
+            else if (V.game_state_action == V.State_action.movement && mouseOnTile != null && TileInfo.Instance.ExistType(Tile.Type.movement) && EntityOrder.Instance.IsTurnOf_Player())
             {
                 if (mouseOnTile.pos != V.player_entity.CurrentPosition_string)
                     Window.SetCursorAndOffsetHand();

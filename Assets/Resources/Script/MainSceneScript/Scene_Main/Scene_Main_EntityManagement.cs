@@ -62,7 +62,7 @@ public partial class Scene_Main : MonoBehaviour
         V.player_entity.ClearEffect(false);
 
         //Raise turn id so that all cooldown are reset
-        EntityOrder.id_turn += 100;
+        EntityOrder.Instance.id_turn += 100;
 
         int xp = 0;
 

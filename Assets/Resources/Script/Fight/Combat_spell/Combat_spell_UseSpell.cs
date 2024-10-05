@@ -83,7 +83,7 @@ public partial class Spell : MonoBehaviour
     /// <returns></returns>
     public bool IsOffCooldown()
     {
-        return EntityOrder.id_turn >= id_nextPossibleReUse || ignoreCD;
+        return EntityOrder.Instance.id_turn >= id_nextPossibleReUse || ignoreCD;
     }
 
     /// <summary>
@@ -112,7 +112,7 @@ public partial class Spell : MonoBehaviour
         if (currentUse >= Mathf.Abs(cd))
         {
             id_nextPossibleReUse_max = 1;
-            id_nextPossibleReUse = EntityOrder.id_turn + 1;
+            id_nextPossibleReUse = EntityOrder.Instance.id_turn + 1;
         }
     }
 
@@ -123,7 +123,7 @@ public partial class Spell : MonoBehaviour
     public void SetCooldown(int cd)
     {
         id_nextPossibleReUse_max = cd;
-        id_nextPossibleReUse = EntityOrder.id_turn + cd;
+        id_nextPossibleReUse = EntityOrder.Instance.id_turn + cd;
 
         if (cd == 0)
             Turn_reset();
@@ -192,13 +192,13 @@ public partial class Spell : MonoBehaviour
 
     public void AddFreePaUse(int nb)
     {
-        FreePaUse_Turn_Id = EntityOrder.id_turn;
+        FreePaUse_Turn_Id = EntityOrder.Instance.id_turn;
         FreePaUse = nb;
     }
 
     public void UpdateFreePaUse()
     {
-        if (FreePaUse_Turn_Id != EntityOrder.id_turn)
+        if (FreePaUse_Turn_Id != EntityOrder.Instance.id_turn)
             FreePaUse = 0;
     }
 
@@ -235,7 +235,7 @@ public partial class Spell : MonoBehaviour
             return;
         }
 
-        if (!EntityOrder.IsTurnOf_Player())
+        if (!EntityOrder.Instance.IsTurnOf_Player())
         {
             //Not player turn
             ErrorTxt.DisplayError(

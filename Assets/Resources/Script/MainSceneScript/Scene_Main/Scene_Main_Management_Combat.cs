@@ -12,7 +12,7 @@ public partial class Scene_Main : MonoBehaviour
 
     public void Combat_management()
     {
-        if (EntityOrder.IsTurnOf_Player())
+        if (EntityOrder.Instance.IsTurnOf_Player())
         {
             Player_turn_management();
         }
@@ -25,7 +25,7 @@ public partial class Scene_Main : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && ClickAutorization.Autorized(Main_Object.Get(Main_Object.objects.button_endOfTurn)))
         {
-            Action_nextTurn.Add(V.player_entity);
+            Action_nextTurn.Add();
         }
     }
 
@@ -174,7 +174,7 @@ public partial class Scene_Main : MonoBehaviour
 
         V.game_state_action = V.State_action.movement;
 
-        if (!ActionManager.Instance.Running() && EntityOrder.IsTurnOf_Player())
+        if (!ActionManager.Instance.Running() && EntityOrder.Instance.IsTurnOf_Player())
             Set_PossibleMovementTile(V.player_entity);
     }
 

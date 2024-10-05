@@ -21,7 +21,7 @@ public class Combat_spell_application : Spell
     public override IEnumerator CastSpell_effect(Action_spell_info info)
     {
         
-        if (EntityOrder.IsTurnOf_Player())
+        if (EntityOrder.Instance.IsTurnOf_Player())
         {
             Scene_Main.SetNoAction();
 
@@ -39,7 +39,7 @@ public class Combat_spell_application : Spell
 
         if (info.main)
         {
-            if (EntityOrder.IsTurnOf_Player())
+            if (EntityOrder.Instance.IsTurnOf_Player())
             {
                 event_spell_afterCasting_turnOfPlayer.Call();
             }
@@ -48,7 +48,7 @@ public class Combat_spell_application : Spell
         EndOfCast = true;
         lastSpellLaunch = this;
 
-        if (EntityOrder.IsTurnOf_Player() && V.game_state_action == V.State_action.Nothing)
+        if (EntityOrder.Instance.IsTurnOf_Player() && V.game_state_action == V.State_action.Nothing)
             Scene_Main.SetGameAction_movement();
     }
 }

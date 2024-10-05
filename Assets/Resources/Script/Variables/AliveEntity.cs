@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
 
-
 public class AliveEntity : MonoBehaviour
 {
     private static readonly Lazy<AliveEntity> lazy = new(() => new AliveEntity());

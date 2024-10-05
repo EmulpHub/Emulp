@@ -16,7 +16,7 @@ public class Action_movement : Action
     public PathParam pathParam;
     public Entity entity;
 
-    internal override IEnumerator Execute_main()
+    protected override IEnumerator Execute_main()
     {
         entity.MoveTo(pathParam);
         yield return null;
@@ -29,9 +29,12 @@ public class Action_movement : Action
 
     public static void Add(PathParam pathParam, Entity entity)
     {
-        Action_movement actionToAdd = new Action_movement(pathParam, entity);
+        ActionManager.Instance.AddToDo(Create(pathParam, entity));
+    }
 
-        ActionManager.Instance.AddToDo(actionToAdd);
+    public static Action_movement Create (PathParam pathParam,Entity entity)
+    {
+        return new Action_movement(pathParam, entity);
     }
 
     public override string debug()

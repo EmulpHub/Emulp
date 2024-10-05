@@ -115,7 +115,7 @@ public class passive_melee : passiveInfo
     {
         int nb = 0;
 
-        foreach (Monster m in EntityOrder.list_monster)
+        foreach (Monster m in EntityOrder.InstanceEnnemy.list)
         {
             if (F.DistanceBetweenTwoPos(m, e) <= 3)
             {
@@ -222,7 +222,7 @@ public class passive_control : passiveInfo
     {
         int nb = 0;
 
-        foreach (Monster m in EntityOrder.list_monster)
+        foreach (Monster m in EntityOrder.InstanceEnnemy.list)
         {
             if (F.IsInLine(m.CurrentPosition_string, V.player_entity.CurrentPosition_string) || F.IsInDiagonal(m.CurrentPosition_string, V.player_entity.CurrentPosition_string))
                 nb++;
@@ -264,7 +264,7 @@ public class passive_isolation : passiveInfo
 
         int nb = 0;
 
-        foreach (Monster m in EntityOrder.list_monster)
+        foreach (Monster m in EntityOrder.InstanceEnnemy.list)
         {
             if (F.DistanceBetweenTwoPos(m, e) <= 3)
             {

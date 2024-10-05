@@ -233,7 +233,7 @@ public class step_useYourSpell : step
 
     public override bool finished()
     {
-        return !EntityOrder.IsTurnOf_Player();
+        return !EntityOrder.Instance.IsTurnOf_Player();
     }
 }
 
@@ -254,7 +254,7 @@ public class step_monsterTurn : step
 
     public override bool finished()
     {
-        return EntityOrder.IsTurnOf_Player();
+        return EntityOrder.Instance.IsTurnOf_Player();
     }
 }
 

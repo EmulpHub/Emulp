@@ -70,7 +70,7 @@ public partial class Player : Entity
     {
         base.OnUpdate();
 
-        bool enableCollider = (V.game_state != V.State.fight || (SpellGestion.selectionnedSpell_list != SpellGestion.List.empty && SpellGestion.Get_RangeMin(SpellGestion.selectionnedSpell_list) == 0 && EntityOrder.IsTurnOf_Player()));
+        bool enableCollider = (V.game_state != V.State.fight || (SpellGestion.selectionnedSpell_list != SpellGestion.List.empty && SpellGestion.Get_RangeMin(SpellGestion.selectionnedSpell_list) == 0 && EntityOrder.Instance.IsTurnOf_Player()));
 
         Collider_SetActive(enableCollider);
 

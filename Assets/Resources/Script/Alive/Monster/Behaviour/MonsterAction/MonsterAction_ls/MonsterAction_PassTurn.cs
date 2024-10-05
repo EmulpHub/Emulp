@@ -14,9 +14,10 @@ public class MonsterAction_PassTurn : MonsterAction
         return true;
     }
 
-    public override IEnumerator Execution()
+    protected override IEnumerator Execution(MonsterBehaviorResult result)
     {
-        Action_nextTurn.Add(info.monster);
+        result.SetMultiAction(false);
+        result.SetPassTurn(true);
 
         yield break;
     }
