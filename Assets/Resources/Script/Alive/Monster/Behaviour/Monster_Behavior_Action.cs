@@ -7,7 +7,7 @@ public partial class MonsterBehavior : MonoBehaviour
 {
     internal List<MonsterAction> listMonsterAction = new List<MonsterAction>();
 
-    public MonsterAction ChooseAction()
+    private MonsterAction chooseAction_private()
     {
         List<MonsterAction> ListPossibleAction = new List<MonsterAction>();
 

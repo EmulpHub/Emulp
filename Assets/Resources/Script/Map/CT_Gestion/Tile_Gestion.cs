@@ -11,11 +11,17 @@ public partial class Tile_Gestion : MonoBehaviour
         get
         {
             if (_instance == null)
-                _instance = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Tile_Gestion>();
+                _instance = GameObject.Find("TileGestion").GetComponent<Tile_Gestion>();
 
             return _instance;
         }
     }
+
+    public Transform parent;
+
+    public GameObject prefab_Tile_Graphic, prefab_Tile_Movement, prefab_Tile_Spell;
+
+    public List<string> selectionnedPath = new List<string>();
 
     public void Update()
     {
@@ -24,11 +30,27 @@ public partial class Tile_Gestion : MonoBehaviour
 
     public void Add_IconSpell(Tile tile)
     {
-        CT_TileIcon.Instance.Add(tile, iconSpell, colorSpell, 0.035f, true);
+        TileIconManager.Instance.Add(tile, iconSpell, colorSpell, 0.035f, true);
     }
 
     public void Add_IconMovement(Tile tile, string lastPrecedent)
     {
-        CT_TileIcon.Instance.Add_Movement(tile, lastPrecedent, iconMovement, colorMovement, 0.02f, false);
+        TileIconManager.Instance.Add_Movement(tile, lastPrecedent, iconMovement, colorMovement, 0.02f, false);
+    }
+
+    public void UpdateAllTileColor ()
+    {
+        foreach (Tile tile in TileInfo.Instance.GetListTile())
+        {
+            tile.UpdateColor();
+        }
+    }
+
+    public void UpdateAllTileSprite ()
+    {
+        foreach(Tile tile in TileInfo.Instance.GetListTile())
+        {
+            tile.SetSprite();
+        }
     }
 }

@@ -13,7 +13,7 @@ public partial class MonsterBehavior : MonoBehaviour
         (bool find, Entity closest) v = (false, null);
 
         int closestPath = int.MaxValue;
-        
+
         List<Entity> list = new List<Entity>();
 
         if (origin is Monster)
@@ -26,7 +26,9 @@ public partial class MonsterBehavior : MonoBehaviour
             if (target == origin || !Condition(target, origin))
                 continue;
 
-            var pathParam = new PathParam(origin.CurrentPosition_string, target.CurrentPosition_string).AddListIgnoreEntity(target);
+            var pathParam = new PathParam(origin.CurrentPosition_string, target.CurrentPosition_string);
+
+            pathParam.walkableParam.RemoveToForbideenPos(target.CurrentPosition_string);
 
             List<string> path = Path.Find(pathParam).path;
 

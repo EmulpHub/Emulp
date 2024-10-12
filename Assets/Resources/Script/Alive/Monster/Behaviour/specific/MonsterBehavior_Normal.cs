@@ -16,7 +16,7 @@ public class MonsterBehavior_normal : MonsterBehavior
         //Spell
         SpellStats spellStats = Info.monster.GetSpellStats(SpellGestion.List.monster_normal_attack);
 
-        MonsterAction_Spell actionSpell = new MonsterAction_Spell(spellStats, MonsterAction.PriorityLayer.Attack, 0);
+        MonsterAction_Spell actionSpell = new MonsterAction_Spell(spellStats, MonsterAction.PriorityLayer.Spell, 0);
         
         AddAction(actionMovement);
         AddAction(actionSpell);

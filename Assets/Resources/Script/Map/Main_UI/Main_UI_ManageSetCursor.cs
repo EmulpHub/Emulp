@@ -24,9 +24,9 @@ public partial class Main_UI : MonoBehaviour
                 else if (save == SpellGestion.CursorMode.magical)
                     Window.SetCursorAndOffset(cursor_magical, Window.CursorMode.click_cursor);
             }
-            else if (V.game_state_action == V.State_action.movement && mouseOnTile != null && TileInfo.Instance.ExistType(Tile.Type.movement) && EntityOrder.Instance.IsTurnOf_Player())
+            else if (V.game_state_action == V.State_action.movement && mouseOnTile != null && EntityOrder.Instance.IsTurnOf_Player())
             {
-                if (mouseOnTile.pos != V.player_entity.CurrentPosition_string)
+                if (mouseOnTile.data.pos != V.player_entity.CurrentPosition_string)
                     Window.SetCursorAndOffsetHand();
                 else
                     Window.SetCursorAndOffset(cursor_normal, Window.CursorMode.click_cursor);

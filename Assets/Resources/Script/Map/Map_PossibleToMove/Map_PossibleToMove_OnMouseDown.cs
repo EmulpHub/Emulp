@@ -62,12 +62,11 @@ public partial class Map_PossibleToMove : MonoBehaviour
                 }
             }
 
-            var PathParam = new PathParam(V.player_entity.CurrentPosition_string, position);
+            var PathParam = new PathParam(V.player_entity.CurrentPosition_string, position, new WalkableParam(Walkable.GetCommonForbideenPos(), false));
 
             V.player_entity.MoveTo(PathParam);
 
             Event_playerMove.Call(position);
-
         }
     }
 

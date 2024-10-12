@@ -38,9 +38,9 @@ public partial class Map_PossibleToMove : MonoBehaviour
     {
         Tile tile = TileInfo.Instance.Get(CursorInfo.Instance.position);
 
-        if (tile is CT_Movement tileMovement)
+        if (tile is Tile_Movement tileMovement)
         {
-            if (!CT_Movement.IsWalkableByTheplayer(tileMovement.path.Count))
+            if (!V.player_entity.IsReachable(tileMovement.dataMovement.path.Count))
                 return;
 
             if (!ClickAutorization.Autorized(tile.gameObject))

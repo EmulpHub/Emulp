@@ -39,6 +39,16 @@ public class Action : MonoBehaviour
         yield return new WaitForEndOfFrame();
     }
 
+    public void Finish ()
+    {
+        ActionManager.Instance.StartCoroutine(Finish_main());
+    }
+
+    protected virtual IEnumerator Finish_main()
+    {
+        yield return new WaitForEndOfFrame();
+    }
+
     public virtual bool IsFinished()
     {
         return Executed;

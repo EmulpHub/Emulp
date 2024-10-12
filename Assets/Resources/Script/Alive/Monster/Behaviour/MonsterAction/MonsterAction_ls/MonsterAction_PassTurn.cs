@@ -16,9 +16,7 @@ public class MonsterAction_PassTurn : MonsterAction
 
     protected override IEnumerator Execution(MonsterBehaviorResult result)
     {
-        result.SetMultiAction(false);
-        result.SetPassTurn(true);
+        throw new System.Exception("This must be manager in monster Behavior Manager");
 
-        yield break;
     }
 }

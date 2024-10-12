@@ -36,23 +36,44 @@ public partial class Entity : MonoBehaviour
 
             float speedThis = ChooseMoveSpeed(speed, CurrentPosition_string, nextPos);
 
-            GoHere(nextPos, speedThis);
+            if (CanGoToNextPos(pathResult,nextPos))
+            {
+                runningInfo.SetNextPos(nextPos);
 
-            runningInfo.SetNextPos(nextPos);
+                GoHere(nextPos, speedThis);
 
+                if (i % 2 == 0 && !V.IsFight())
+                    Spell.Reference.CreateParticle_Leaf(transform.position, 0.6f);
 
-            if (i % 2 == 0 && !V.IsFight())
-                Spell.Reference.CreateParticle_Leaf(transform.position, 0.6f);
+                i++;
 
-            i++;
-
-            MoveOne();
+                MoveOne();
+            }
 
             yield return new WaitForSeconds(speedThis);
         }
 
         if (endOfRun && runningInfo.CanStillRun(saveRunId))
             EndOfRun(mode);
+    }
+
+    private bool CanGoToNextPos(PathResult pathResult, string nextPos)
+    {
+        if (!Walkable.Check(nextPos, pathResult.walkableParam))
+            return false;
+
+        bool Condition (Entity e)
+        {
+            if (e != this && e.runningInfo.NextPos == nextPos)
+                return true;
+
+            return false;
+        }
+
+        if (AliveEntity.Instance.AnyEntity(Condition))
+            return false;
+
+        return true;
     }
 
     public virtual bool CanMoveOne()

@@ -20,17 +20,24 @@ namespace PathFindingName
 
             prePath.Treat_param(param);
 
+            var listForbideenPos = param.walkableParam.listForbideenPos;
+
+            if (listForbideenPos.Contains(param.start))
+                listForbideenPos.Remove(param.start);
+            if (listForbideenPos.Contains(param.end))
+                listForbideenPos.Remove(param.end);
+
             var path = MakePath(param);
 
             prePath.Treat_path(path, param);
 
-            return new PathResult(path, param.start);
+            return new PathResult(path, param.start,param.walkableParam);
         }
 
         private static List<string> MakePath(PathParam param)
         {
             //create grid
-            var info = new PathInfo(param);
+            var info = new PathInfo(param,param.walkableParam);
 
             var listOpen = info.listOpen;
             var listClose = info.listClose;
@@ -109,7 +116,6 @@ namespace PathFindingName
 
             path.RemoveAt(0);
 
-
             return path;
         }
 
@@ -117,6 +123,8 @@ namespace PathFindingName
 
     public class PathResult
     {
+        public WalkableParam walkableParam;
+
         public string start;
 
         public string endOfPath
@@ -174,22 +182,26 @@ namespace PathFindingName
             }
         }
 
-        public PathResult(List<string> path, string start)
+        public PathResult(List<string> path, string start, WalkableParam walkableParam)
         {
             this.path = path;
             this.start = start;
+            this.walkableParam = walkableParam;
+
         }
     }
 
     public class PathInfo
     {
+        public WalkableParam walkableParam;
         public PathParam param;
         public Dictionary<string, squareInfo> listOpen;
         public Dictionary<string, squareInfo> listClose;
 
-        public PathInfo(PathParam param)
+        public PathInfo(PathParam param,WalkableParam walkableParam)
         {
             this.param = param;
+            this.walkableParam = walkableParam;
 
             listOpen = new Dictionary<string, squareInfo>();
             listClose = new Dictionary<string, squareInfo>();
@@ -238,7 +250,8 @@ namespace PathFindingName
         {
             string newPos = F.AdditionPos(posToManage, pos);
 
-            if (!info.param.listForcePos.Contains(newPos) && !F.IsTileWalkable(newPos, info.param.listIgnoreEntity)) return false;
+            if (!Walkable.Check(newPos, info.walkableParam))
+                return false;
 
             if (F.DistanceBetweenTwoPos(newPos, pos) == 2 && !F.IsTileCrossable(newPos, pos))
                 return false;
@@ -247,14 +260,13 @@ namespace PathFindingName
             {
                 int newG = g + addG;
 
-                if (square.g > newG) // ICI
+                if (square.g > newG)
                 {
                     square.g = newG;
                 }
             }
             else
             {
-                //ICI
                 var newSquare = new squareInfo(newPos, g + addG, Path.CalcH(newPos, info.param));
 
                 if (info.param.end == newPos)

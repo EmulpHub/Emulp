@@ -6,19 +6,26 @@ namespace PathFindingName
 {
     public class PathParam : MonoBehaviour
     {
-        public List<string> listForcePos = new List<string>();
-        public List<Entity> listIgnoreEntity = new List<Entity>();
-        public string start, end;
+        public WalkableParam walkableParam { get; private set; }
 
-        public bool shortPath = false;
-        public int shortPathPower = 2;
+        public string start;
+        public string end;
 
-        public bool DiagonalSearch = false;
+        public bool shortPath { get; private set; } = false;
+        
+        public int shortPathPower { get; private set; } = 2;
 
-        public PathParam(string start, string end)
+        public bool DiagonalSearch { get; private set; } = false;
+
+        public PathParam(string start, string end, WalkableParam walkableParam = null)
         {
             this.start = start;
             this.end = end;
+
+            if (walkableParam is null)
+                this.walkableParam = WalkableParam.GetCommonParam();
+            else
+                this.walkableParam = walkableParam;
         }
 
         public PathParam SetDiagonalSearch()
@@ -27,28 +34,5 @@ namespace PathFindingName
             return this;
         }
 
-
-        public PathParam AddListIgnoreEntity(Entity entity)
-        {
-            this.listIgnoreEntity.Add(entity);
-            return this;
-        }
-
-        public PathParam AddListIgnoreEntity(List<Entity> listIgnoreEntity)
-        {
-            this.listIgnoreEntity.AddRange(listIgnoreEntity);
-            return this;
-        }
-
-        public PathParam AddListForcePos(string forcePos)
-        {
-            this.listForcePos.Add(forcePos);
-            return this;
-        }
-        public PathParam AddListForcePos(List<string> listForcePos)
-        {
-            this.listForcePos.AddRange(listForcePos);
-            return this;
-        }
     }
 }

@@ -39,29 +39,25 @@ public class MonsterAction_Movement : MonsterAction
         return true;
     }
 
-    protected override IEnumerator Execution(MonsterBehaviorResult result)
+    public bool ConditionPos(string posSelection)
     {
-        result.SetMultiAction(true);
-
         string targetPos = moveInfo.target.CurrentPosition_string;
 
-        bool selection(string posSelection)
-        {
-            if(posSelection == targetPos || posSelection == info.monster.CurrentPosition_string) return false;
+        if (posSelection == targetPos || posSelection == info.monster.CurrentPosition_string) return false;
 
-            int distance = F.DistanceBetweenTwoPos(posSelection, targetPos);
+        int distance = F.DistanceBetweenTwoPos(posSelection, targetPos);
 
-            return ValidPosToGo(posSelection, targetPos, distance);
-        }
+        return ValidPosToGo(posSelection, targetPos, distance);
+    }
 
-        string targetSquare = PosToFirstConditionTile.Take(info.monster.CurrentPosition_string, selection);
+    public override MonsterBehaviorResult CallExecution()
+    {
+        throw new System.Exception("This must be manager in monster Behavior Manager");
+    }
 
-        if (targetSquare == "")
-            throw new System.Exception("Not good pos with pos = " + targetSquare);
-
-        result.SetAction(Action_movement.Create(new PathParam(info.monster.CurrentPosition_string, targetSquare), info.monster));
-
-        yield return new WaitForSeconds(1);
+    protected override IEnumerator Execution(MonsterBehaviorResult result)
+    {
+        throw new System.Exception("This must be manager in monster Behavior Manager");
     }
 }
 

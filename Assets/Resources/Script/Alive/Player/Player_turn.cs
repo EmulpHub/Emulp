@@ -6,7 +6,6 @@ public partial class Player : Entity
 {
     public override void Turn_start()
     {
-        Scene_Main.SetGameAction_movement();
 
         string floor = SpellGestion.Get_Title(SpellGestion.List.object_floor);
 

@@ -50,47 +50,47 @@ public class Testing : MonoBehaviour
 
     public static void ReadStringTest()
     {
-        int iteration = 30000;
+        //int iteration = 30000;
 
-        List<string> allPos = new List<string>();
+        //List<string> allPos = new List<string>();
 
-        for (int i = 0; i < iteration; i++)
-        {
-            string final = Random.Range(-10000, 10000 + 1) + "_" + Random.Range(-10000, 10000 + 1);
+        //for (int i = 0; i < iteration; i++)
+        //{
+        //    string final = Random.Range(-10000, 10000 + 1) + "_" + Random.Range(-10000, 10000 + 1);
 
-            while (allPos.Contains(final))
-            {
-                final = Random.Range(-10000, 10000 + 1) + "_" + Random.Range(-10000, 10000 + 1);
-            }
+        //    while (allPos.Contains(final))
+        //    {
+        //        final = Random.Range(-10000, 10000 + 1) + "_" + Random.Range(-10000, 10000 + 1);
+        //    }
 
-            allPos.Add(final);
-        }
+        //    allPos.Add(final);
+        //}
 
-        Stopwatch ms = new Stopwatch();
+        //Stopwatch ms = new Stopwatch();
 
-        ms.Start();
+        //ms.Start();
 
-        for (int i = 0; i < iteration; i++)
-        {
-            F.ReadString_NotOptimized(allPos[i]);
-        }
+        //for (int i = 0; i < iteration; i++)
+        //{
+        //    F.ReadString_NotOptimized(allPos[i]);
+        //}
 
-        ms.Stop();
+        //ms.Stop();
 
-        print("ReadString non optimized = " + ms.ElapsedMilliseconds + " for " + iteration + " number of iteration");
+        //print("ReadString non optimized = " + ms.ElapsedMilliseconds + " for " + iteration + " number of iteration");
 
-        Stopwatch ms_2 = new Stopwatch();
+        //Stopwatch ms_2 = new Stopwatch();
 
-        ms_2.Start();
+        //ms_2.Start();
 
-        for (int i = 0; i < iteration; i++)
-        {
-            F.ReadString(allPos[i]);
-        }
+        //for (int i = 0; i < iteration; i++)
+        //{
+        //    F.ReadString(allPos[i]);
+        //}
 
-        ms_2.Stop();
+        //ms_2.Stop();
 
-        print("ReadString V1 = " + ms_2.ElapsedMilliseconds + " for " + iteration + " number of iteration");
+        //print("ReadString V1 = " + ms_2.ElapsedMilliseconds + " for " + iteration + " number of iteration");
     }
 
     #endregion

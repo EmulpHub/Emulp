@@ -4,29 +4,21 @@ using UnityEngine;
 
 public partial class Tile_Gestion : MonoBehaviour
 {
-    private List<string> ListAOE = new List<string>();
+    private List<Tile> ListAOE = new List<Tile>();
 
-    /// <summary>
-    /// The tile that have been erased to show AOE
-    /// </summary>
-    private List<string> ListErasedTile = new List<string>();
-
-    public void SetListAOE(string targetedSqaure, bool NoLineOfView = false)
+    public void AOE_Create(string targetedSqaure, Color color)
     {
         AOE_EraseAll();
 
-        ListAOE = SpellInfo.GetStringEffectList(SpellGestion.selectionnedSpell_list, targetedSqaure, V.player_entity.CurrentPosition_string);
+        List<string> listeAOEPos = SpellInfo.GetStringEffectList(SpellGestion.selectionnedSpell_list, targetedSqaure, V.player_entity.CurrentPosition_string);
 
-        foreach (string pos in ListAOE)
+        foreach (string pos in listeAOEPos)
         {
-            if (TileInfo.Instance.Get(pos) != null)
-            {
-                ListErasedTile.Add(pos);
+            var data = new TileData_graphic(pos, color, TileData.Layer.spell);
 
-                Erase(pos, Tile.AnimationErase_type.none);
-            }
+            data.SetListTileDependancy(listeAOEPos);
 
-            CT_Graphic.Add(pos, NoLineOfView ? Color.blue_over_noLine : Color.blue_over, false, true, true, ListAOE, false, 1);
+            ListAOE.Add(Tile_Graphic.Add(data));
         }
 
         MouseOnTile = TileInfo.Instance.Get(targetedSqaure);
@@ -36,23 +28,14 @@ public partial class Tile_Gestion : MonoBehaviour
 
     public void AOE_EraseAll()
     {
-        foreach (string p in ListAOE)
+        foreach (Tile tile in new List<Tile>(ListAOE))
         {
-            Tile tile = TileInfo.Instance.Get(p);
+            TileInfo.Instance.Remove(tile);
 
-            if (tile != null && tile.type == Tile.Type.graphic)
-            {
-                Erase(p, Tile.AnimationErase_type.none);
-
-                if (ListErasedTile.Contains(p))
-                    CT_Spell.Add(p, false);
-            }
+            if (tile != null)
+                tile.Erase(Tile.AnimationErase_type.instant);
         }
 
         ListAOE.Clear();
-
-        ListErasedTile.Clear();
-
-        TileInfo.Instance.ResetSpriteOfAllActiveTile();
     }
 }

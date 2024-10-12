@@ -87,7 +87,12 @@ public partial class F : MonoBehaviour
 
         return new Vector2Int(p1.x, p1.y);
     }
+    public static Vector3Int ConvertToVector3Int(string pos)
+    {
+        (int x, int y) p1 = ReadString(pos);
 
+        return new Vector3Int(p1.x, p1.y,0);
+    }
     /// <summary>
     /// Convert Vector2 into Vector2Int
     /// </summary>

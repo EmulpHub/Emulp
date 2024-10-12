@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MonsterAction : MonoBehaviour
 {
-    public enum PriorityLayer { Turn,Other,Movement,Boost,Attack }
+    public enum PriorityLayer { Turn, Movement, Spell }
 
     public PriorityLayer priorityLayer;
 
@@ -14,7 +14,7 @@ public class MonsterAction : MonoBehaviour
     public Monster_Behavior_Info info;
     public MonsterBehavior monsterBehavior;
 
-    public MonsterAction (PriorityLayer layer,int priority)
+    public MonsterAction(PriorityLayer layer, int priority)
     {
         priorityLayer = layer;
         Priority = priority;
@@ -25,17 +25,17 @@ public class MonsterAction : MonoBehaviour
         return false;
     }
 
-    protected virtual IEnumerator Execution (MonsterBehaviorResult result)
+    protected virtual IEnumerator Execution(MonsterBehaviorResult result)
     {
         throw new System.Exception("Not normal monster Action");
     }
 
-    public MonsterBehaviorResult CallExecution ()
+    public virtual MonsterBehaviorResult CallExecution()
     {
         var result = new MonsterBehaviorResult();
 
         MonsterBehaviorManager.Instance.StartCoroutine(Execution(result));
-    
+
         return result;
     }
 }

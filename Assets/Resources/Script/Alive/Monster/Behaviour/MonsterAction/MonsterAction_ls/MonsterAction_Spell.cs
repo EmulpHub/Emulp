@@ -35,8 +35,6 @@ public class MonsterAction_Spell : MonsterAction
 
     protected override IEnumerator Execution(MonsterBehaviorResult result)
     {
-        result.SetMultiAction(false);
-
         if (targetPosition == "")
             targetPosition = target.CurrentPosition_string;
 

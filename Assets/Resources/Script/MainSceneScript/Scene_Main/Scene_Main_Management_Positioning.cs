@@ -93,7 +93,7 @@ public partial class Scene_Main : MonoBehaviour
         foreach (string pos in Main_Map.Spawnable_tile_monster)
         {
             //Instantiate the tile for monster
-            GameObject G = Instantiate(V.script_Scene_Main.Positionning_tileG, Tile.parent);
+            GameObject G = Instantiate(V.script_Scene_Main.Positionning_tileG, Tile_Gestion.Instance.parent);
 
             //Make the sprite of the tile to be positionning for player
             G.GetComponent<SpriteRenderer>().sprite = V.script_Scene_Main.positionning_tile_monster;
@@ -114,7 +114,7 @@ public partial class Scene_Main : MonoBehaviour
         foreach (string pos in Main_Map.Spawnable_tile_player)
         {
             //Instantiate the tile for player
-            GameObject G = Instantiate(V.script_Scene_Main.Positionning_tileG, Tile.parent);
+            GameObject G = Instantiate(V.script_Scene_Main.Positionning_tileG, Tile_Gestion.Instance.parent);
 
             //Make the sprite of the tile to be positionning for player
             G.GetComponent<SpriteRenderer>().sprite = V.script_Scene_Main.Positionning_tile_player;

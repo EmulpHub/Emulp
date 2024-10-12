@@ -23,8 +23,12 @@ public partial class Entity : MonoBehaviour
 
             for (int i = 0; i < Info.GetRealPm() && i < path.Count; i++)
             {
-                CT_Graphic.Add(path[i], Tile_Gestion.Color.green_light, true, true, true);
+                var data = new TileData_graphic(path[i],Tile_Gestion.Color.green_light);
+
+                Tile_Graphic.Add(data);
             }
+
+            Tile_Gestion.Instance.UpdateAllTileSprite();
         }
 
         return Run(pathResult);

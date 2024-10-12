@@ -79,9 +79,6 @@ public partial class Scene_Main : MonoBehaviour
     {
         TileInfo.Instance.ListTile_Clear();
 
-        tilePos.Clear();
-        tilePos_withLineOfView.Clear();
-
         var result = PathFindingName.PossibleWalkingTile.Make(entity.CurrentPosition_string, entity.Info.PM);
 
         bool forPlayer = entity.Info.IsPlayer();
@@ -91,37 +88,29 @@ public partial class Scene_Main : MonoBehaviour
             string pos = info.Key;
             var distance = info.Value;
 
-            if (distance > entity.Info.PM) continue;
+            if (!entity.IsReachable(distance)) continue;
 
             if (forPlayer)
             {
-                CT_Movement.Add(pos, distance, false, false, false, false);
-
-                tilePos.Add(pos);
+                var data = new TileData_movement(pos, distance);
+                
+                Tile_Movement.Add(data);
             }
             else
             {
-                if (distance > entity.Info.GetRealPm())
-                {
-                    CT_Graphic.Add(pos, Tile_Gestion.Color.red, true, false, false, null, false);
-                }
-                else
-                {
-                    CT_Graphic.Add(pos, Tile_Gestion.Color.green, true, false, false, null, false);
-                }
+                var data = new TileData_graphic(pos, Tile_Gestion.Color.green);
 
+                Tile_Graphic.Add(data);
             }
         }
+
+        Tile_Gestion.Instance.UpdateAllTileSprite();
     }
 
-    public static List<string> tilePos = new List<string>();
-    public static List<string> tilePos_withLineOfView = new List<string>();
 
     public void Set_PossibleSpellTile(Spell.Range_type range_Type)
     {
         TileInfo.Instance.ListTile_Clear();
-        tilePos.Clear();
-        tilePos_withLineOfView.Clear();
 
         string startPosition = V.player_entity.CurrentPosition_string;
 
@@ -143,25 +132,17 @@ public partial class Scene_Main : MonoBehaviour
                 }
             }
         }
+
+        Tile_Gestion.Instance.UpdateAllTileSprite();
     }
 
     public void AddSpellAtPos(string pos, Spell.Range_type range_type)
     {
-        CT_Spell.Add(pos, false);
+        bool lineOfView = F.IsLineOfView(pos, V.player_entity.CurrentPosition_string);
 
-        tilePos.Add(pos);
+        var data = new TileData_spell(pos, lineOfView);
 
-        if (range_type != Spell.Range_type.noNeedOfLineOfView)
-        {
-            if (F.IsLineOfView(pos, V.player_entity.CurrentPosition_string))
-            {
-                tilePos_withLineOfView.Add(pos);
-            }
-        }
-        else
-        {
-            tilePos_withLineOfView.Add(pos);
-        }
+        Tile_Spell.Add(data);
     }
 
     public static void SetGameAction_movement()

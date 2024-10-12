@@ -37,6 +37,8 @@ public class EntityOrder_Ally : MonoBehaviour
             list.Insert(0, V.player_entity);
             index = 0;
         }
+
+        entity.Turn_start();
     }
 
     public void Clear()

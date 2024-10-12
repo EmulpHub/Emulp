@@ -5,19 +5,19 @@ using DG.Tweening;
 
 public partial class Tile : MonoBehaviour
 {
-    public static float mouseOver_scale_start = 0.65f, mouseOver_scale_speed = 0.2f;
+    private float mouseOver_scale_start = 0.65f, mouseOver_scale_speed = 0.2f;
 
-    void Scale_raise(float delayInSec, float speedInSec, float start, float endValue)
+    void Scale_raise(float delayBetweenStartAndEndInSec, float scaleSpeedInSec, float startScale, float endScale)
     {
         StopAllCoroutines();
-        StartCoroutine(Scale_raise_Enumerator(delayInSec, speedInSec, start, endValue));
+        StartCoroutine(Scale_raise_Enumerator(delayBetweenStartAndEndInSec, scaleSpeedInSec, startScale, endScale));
     }
 
-    IEnumerator Scale_raise_Enumerator(float delayInSec, float speedInSec, float start, float endValue)
+    IEnumerator Scale_raise_Enumerator(float delayBetweenStartAndEndInSec, float scaleSpeedInSec, float startScale, float endScale)
     {
-        transform.DOScale(start, 0);
-        yield return new WaitForSeconds(delayInSec);
-        transform.DOScale(endValue, speedInSec);
+        transform.DOScale(startScale, 0);
+        yield return new WaitForSeconds(delayBetweenStartAndEndInSec);
+        transform.DOScale(endScale, scaleSpeedInSec);
     }
 
     public void AnimationApparition(bool instant = false)
@@ -28,13 +28,25 @@ public partial class Tile : MonoBehaviour
             Scale_raise(0, mouseOver_scale_speed, mouseOver_scale_start, 1);
     }
 
-    public void AnimationApparition_fast()
-    {
-        Scale_raise(0, mouseOver_scale_speed * 0.6f, mouseOver_scale_start - 0.2f, 1);
-    }
+    public enum AnimationErase_type { normal, instant, fade }
 
-    public void AnimationErase()
+    public void Erase(AnimationErase_type animation)
     {
-        Scale_raise(0, DeathSpeed, 1, 0);
+        if (animation == AnimationErase_type.normal)
+        {
+            Scale_raise(0, data.DeathSpeed, 1, 0);
+
+            Destroy(this.gameObject, data.DeathSpeed + 0.2f);
+        }
+        else if (animation == AnimationErase_type.fade)
+        {
+            render.DOFade(0, data.DeathSpeed);
+
+            Destroy(this.gameObject, data.DeathSpeed + 0.2f);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

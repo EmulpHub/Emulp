@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TileInfo : MonoBehaviour
@@ -9,37 +10,64 @@ public class TileInfo : MonoBehaviour
 
     public static TileInfo Instance { get { return lazy.Value; } }
 
-    private Dictionary<string, Tile> dictionaryPosTile = new Dictionary<string, Tile>();
+    private Dictionary<string, List<Tile>> dictionaryPosTile = new Dictionary<string, List<Tile>>();
 
-    private Dictionary<Tile.Type, int> dictionaryNbTilePerType = new Dictionary<Tile.Type, int>();
+    private List<string> listPos = new List<string>();
 
-    public List<Tile> listTile = new List<Tile>();
-    public List<string> listTilePos = new List<string>();
+    private List<Tile> listTile = new List<Tile>();
 
-    public TileInfo()
+    public List<string> GetListPos ()
     {
-        dictionaryNbTilePerType.Add(Tile.Type.graphic, 0);
-        dictionaryNbTilePerType.Add(Tile.Type.movement, 0);
-        dictionaryNbTilePerType.Add(Tile.Type.spell, 0);
+        return listPos;
+    }
+
+    public List<Tile> GetListTile()
+    {
+        return listTile;
     }
 
     public void Add(Tile tile)
     {
-        dictionaryPosTile.Add(tile.pos, tile);
-        listTilePos.Add(tile.pos);
+        if (dictionaryPosTile.ContainsKey(tile.data.pos)) {
+            dictionaryPosTile[tile.data.pos].Add(tile);
+        }
+        else
+        {
+            dictionaryPosTile.Add(tile.data.pos, new List<Tile>() { tile});
+        }
+
+        listPos.Add(tile.data.pos);
         listTile.Add(tile);
-        dictionaryNbTilePerType[tile.type]++;
     }
 
     public void Remove(Tile tile)
     {
-        dictionaryPosTile.Remove(tile.pos);
-        listTilePos.Remove(tile.pos);
+        if (dictionaryPosTile.ContainsKey(tile.data.pos))
+        {
+            dictionaryPosTile[tile.data.pos].Remove(tile);
+            if (dictionaryPosTile[tile.data.pos].Count == 0) 
+                dictionaryPosTile.Remove(tile.data.pos);
+        }
+
+        listPos.Remove(tile.data.pos);
         listTile.Remove(tile);
-        dictionaryNbTilePerType[tile.type]--;
     }
 
-    public Tile Get(string pos)
+    public Tile Get(string pos,TileData.Layer layer = TileData.Layer.normal)
+    {
+        if (!dictionaryPosTile.ContainsKey(pos)) return null;
+
+        return dictionaryPosTile[pos].FirstOrDefault(a => a.data.layer == layer);
+    }
+
+    public Tile GetHigherLayer(string pos)
+    {
+        if (!dictionaryPosTile.ContainsKey(pos)) return null;
+
+        return dictionaryPosTile[pos].OrderByDescending(a => (int)(a.data.layer)).First();
+    }
+
+    public List<Tile> GetAll(string pos)
     {
         if (!dictionaryPosTile.ContainsKey(pos)) return null;
 
@@ -51,44 +79,12 @@ public class TileInfo : MonoBehaviour
         return dictionaryPosTile.ContainsKey(pos);
     }
 
-    public bool ExistType(Tile.Type type)
-    {
-        return dictionaryNbTilePerType[type] > 0;
-    }
-
-    public void ResetNearSprite(string pos, bool ignoreEntity = false, List<string> CombatTileList = null)
-    {
-        if (CombatTileList == null) CombatTileList = listTilePos;
-
-        void SetSprite(string pos, string toAdd = "0_0")
-        {
-            string posToCheck = F.AdditionPos(pos, toAdd);
-
-            if (Exist(posToCheck)) dictionaryPosTile[posToCheck].SetSprite(ignoreEntity, CombatTileList);
-        }
-
-        SetSprite(pos);
-
-        SetSprite(pos, "1_0");
-        SetSprite(pos, "-1_0");
-        SetSprite(pos, "0_1");
-        SetSprite(pos, "0_-1");
-    }
-
-    public void ResetSpriteOfAllActiveTile()
-    {
-        foreach (string pos in listTilePos)
-        {
-            ResetNearSprite(pos);
-        }
-    }
-
     public void ListTile_Clear()
     {
         foreach (Tile tile in new List<Tile>(listTile))
         {
             Remove(tile);
-            tile.Erase(Tile.AnimationErase_type.none);
+            tile.Erase(Tile.AnimationErase_type.instant);
         }
     }
 
@@ -96,10 +92,10 @@ public class TileInfo : MonoBehaviour
     {
         foreach (Tile tile in new List<Tile>(listTile))
         {
-            if (PosToIgnore.Contains(tile.pos)) continue;
+            if (PosToIgnore.Contains(tile.data.pos)) continue;
 
             Remove(tile);
-            tile.Erase(Tile.AnimationErase_type.none);
+            tile.Erase(Tile.AnimationErase_type.instant);
         }
     }
 }

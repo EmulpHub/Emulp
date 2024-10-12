@@ -19,6 +19,15 @@ public class Action_nextTurn : Action
 
         yield return null;
     }
+
+    protected override IEnumerator Finish_main()
+    {
+        if(EntityOrder.Instance.IsTurnOf_Player())
+            Scene_Main.SetGameAction_movement();
+
+        yield return null;
+    }
+
     public override bool IsFinished()
     {
         return base.IsFinished();

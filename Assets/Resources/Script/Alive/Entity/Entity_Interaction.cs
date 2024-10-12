@@ -322,4 +322,8 @@ public partial class Entity : MonoBehaviour
         return infoDamage.damage;
     }
 
+    public virtual bool IsReachable (int distance)
+    {
+        return distance <= Info.GetRealPm();
+    }
 }

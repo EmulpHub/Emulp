@@ -23,15 +23,12 @@ public class RunningInfo
 
     public DirectionData.Direction directionToArea { get; private set; }
 
-    private string _nextPos = "";
+    private string _nextPos = "999_999";
 
     public string NextPos
     {
         get
         {
-            if (_nextPos == "")
-                _nextPos = holder.CurrentPosition_string;
-
             return _nextPos;
         }
         private set

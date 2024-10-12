@@ -61,8 +61,8 @@ Material:
     - _NoiseScale: 15
     - _Offset: 1.5171802
     - _Speed: 0.01
-    - _bright: 0.7
-    - _noiseScale: 16.1
+    - _bright: 0.767364
+    - _noiseScale: 16.279638
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}

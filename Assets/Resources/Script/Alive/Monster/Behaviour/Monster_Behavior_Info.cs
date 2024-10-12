@@ -7,12 +7,9 @@ public class Monster_Behavior_Info : MonoBehaviour
 {
     public Monster monster { get; private set; }
 
-    public string coroutineName { get; private set; }
-
     public Monster_Behavior_Info(Monster monster)
     {
         this.monster = monster;
-        coroutineName = "Behavior_" + monster.monsterInfo.monster_type.ToString();
     }
 
     public int RealPm
@@ -28,10 +25,5 @@ public class Monster_Behavior_Info : MonoBehaviour
     public bool CanMove()
     {
         return RealPm > 0;
-    }
-
-    public bool ShouldStopToBehave()
-    {
-        return !EntityOrder.InstanceEnnemy.IsTurnOfMonster() || V.game_state != V.State.fight || monster.IsDead();
     }
 }

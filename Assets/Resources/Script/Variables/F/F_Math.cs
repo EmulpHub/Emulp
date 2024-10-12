@@ -363,13 +363,6 @@ public partial class F : MonoBehaviour
         return CalculateRealScale(target, target.transform.localScale.x);
     }
 
-    /// <summary>
-    /// Limit is not accepted
-    /// </summary>
-    /// <param name="value"></param>
-    /// <param name="min"></param>
-    /// <param name="max"></param>
-    /// <returns></returns>
     public static bool IsBetweenTwoValues(float value, float min, float max)
     {
         return (value - min) * (max - value) >= 0;

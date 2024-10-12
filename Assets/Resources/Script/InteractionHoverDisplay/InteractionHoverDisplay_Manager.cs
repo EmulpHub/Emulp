@@ -28,7 +28,7 @@ public class InteractionHoverDisplay_Manager : MonoBehaviour
 
         var mouseOnTile = Tile_Gestion.Instance.MouseOnTile;
 
-        if (ItsFight && mouseOnTile != null && mouseOnTile.type == Tile.Type.movement)
+        if (ItsFight && mouseOnTile != null && mouseOnTile.data.type == TileData.Type.movement)
             return Mode.movement;
 
         else if ((ItsFight && V.game_state_action == V.State_action.spell) ||

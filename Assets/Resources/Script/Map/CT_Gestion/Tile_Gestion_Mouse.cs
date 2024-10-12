@@ -7,9 +7,9 @@ public partial class Tile_Gestion : MonoBehaviour
 {
     public Tile MouseOnTile = null;
 
-    public void Mouse_Detection()
+    public string GetMousePos ()
     {
-        bool Condition (Entity entity)
+        bool Condition(Entity entity)
         {
             return entity.IsMouseOnEntity;
         }
@@ -18,40 +18,73 @@ public partial class Tile_Gestion : MonoBehaviour
 
         if (mousePos == null) mousePos = CursorInfo.Instance.position;
 
-        if (!Scene_Main.tilePos.Contains(mousePos) || Scene_Main.isMouseOverAWindow) //In case this pos doesn't exist, the mouse is not on a tile
+        return mousePos;
+
+    }
+
+    public void Mouse_Detection()
+    {
+        string mousePos = GetMousePos();
+
+        if (TileInfo.Instance.Get(mousePos) == null || Scene_Main.isMouseOverAWindow) //In case this pos doesn't exist, the mouse is not on a tile
         {
             Mouse_Reset();
             return;
         }
 
-        Tile mouseTile = TileInfo.Instance.Get(mousePos);
+        Tile newMouseTile = TileInfo.Instance.GetHigherLayer(mousePos);
 
-        if (mouseTile != null && !ClickAutorization.Autorized(mouseTile.gameObject)) mouseTile = null;
+        if (newMouseTile != null && !ClickAutorization.Autorized(newMouseTile.gameObject)) 
+            newMouseTile = null;
 
-        if (MouseOnTile != mouseTile || MouseOnTile == null || mouseTile == null)
+        if (newMouseTile == null)
+        {
+            if(MouseOnTile != null)
+            {
+                Mouse_exit(MouseOnTile);
+                MouseOnTile = null;
+            }
+
+            return;
+        }
+
+        if (MouseOnTile != newMouseTile || MouseOnTile == null)
         {
             if (MouseOnTile != null)
                 Mouse_exit(MouseOnTile);
 
-            if (mouseTile != null)
+            if (newMouseTile != null)
             {
-                MouseOnTile = mouseTile;
+                MouseOnTile = newMouseTile;
 
                 Mouse_enter(MouseOnTile);
             }
         }
-        else if (MouseOnTile == mouseTile)
+        else if (MouseOnTile == newMouseTile)
         {
             Mouse_over(MouseOnTile);
         }
     }
 
-    public void Mouse_enter(Tile theTile)
+    public void Mouse_enter(Tile tile)
     {
-        theTile.WhenTheMouseEnter();
+        tile.WhenTheMouseEnter();
 
         if (V.game_state_action == V.State_action.spell)
-            SetListAOE(theTile.pos, !Scene_Main.tilePos_withLineOfView.Contains(theTile.pos));
+        {
+            bool lineOfView = false;
+
+            if (tile.data.type == TileData.Type.spell)
+            {
+                lineOfView = ((TileData_spell)tile.data).lineOfView;
+            }
+
+            var color = lineOfView ? Color.blue_over : Color.blue_over_noLine;
+
+            AOE_Create(tile.data.pos, color);
+        }
+        else
+            MouseOnTile = tile;
     }
 
     public void Mouse_over(Tile theTile)
@@ -63,9 +96,7 @@ public partial class Tile_Gestion : MonoBehaviour
     {
         theTile.WhenTheMouseExit();
 
-        CT_TileIcon.Instance.Remove(theTile.pos);
-
-
+        TileIconManager.Instance.Remove(theTile.data.pos);
     }
 
     public void Mouse_Reset()
@@ -73,7 +104,7 @@ public partial class Tile_Gestion : MonoBehaviour
         if (ListAOE.Count > 0 && V.game_state_action == V.State_action.spell)
             AOE_EraseAll();
 
-        CT_TileIcon.Instance.RemoveAll();
+        TileIconManager.Instance.RemoveAll();
 
         if (MouseOnTile != null)
         {
@@ -81,5 +112,4 @@ public partial class Tile_Gestion : MonoBehaviour
             MouseOnTile = null;
         }
     }
-
 }

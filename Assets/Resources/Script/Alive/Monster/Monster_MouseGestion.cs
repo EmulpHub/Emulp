@@ -22,13 +22,18 @@ public partial class Monster : Entity
 
                 SetRandomCooldownPeriodicMove();
 
-                string posToGo = runningInfo.NextPos;
+                string posToGo = CurrentPosition_string;
+
+                if (runningInfo.running && runningInfo.NextPos != "999_999")
+                    posToGo = runningInfo.NextPos;
 
                 saveEntityPosition.Clear();
 
                 saveEntityPosition.Add(this, posToGo);
 
-                var pathParam = new PathParam(V.player_entity.CurrentPosition_string, posToGo).AddListIgnoreEntity(this);
+                var pathParam = new PathParam(V.player_entity.CurrentPosition_string, posToGo, new WalkableParam(Walkable.GetCommonForbideenPos(),false));
+
+                pathParam.walkableParam.RemoveToForbideenPos(this.CurrentPosition_string);
 
                 V.player_entity.MoveTo(pathParam);
             }

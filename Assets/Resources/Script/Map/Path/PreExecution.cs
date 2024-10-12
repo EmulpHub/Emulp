@@ -33,10 +33,10 @@ namespace PathFindingName
             param.start = end;
             param.end = start;
 
-            var entity = EntityByPos.TryGet(start);
+            //var entity = EntityByPos.TryGet(start);
 
-            if (entity != null)
-                param.listIgnoreEntity.Add(entity);
+            //if (entity != null)
+            //    param.AddToForbideenPos(entity.CurrentPosition_string);
         }
 
         public void Treat_path(List<string> path, PathParam param)

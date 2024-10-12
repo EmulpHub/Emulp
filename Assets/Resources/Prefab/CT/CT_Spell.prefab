@@ -70,7 +70,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2475580019182544897, guid: c8ff5246c3545499dbc27f0d485b1b6c,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2459760136462659060}
+      addedObject: {fileID: 1389182094318593590}
   m_SourcePrefab: {fileID: 100100000, guid: c8ff5246c3545499dbc27f0d485b1b6c, type: 3}
 --- !u!1 &7328204205671608176 stripped
 GameObject:
@@ -78,7 +78,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5181395834850920305}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2459760136462659060
+--- !u!114 &1389182094318593590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,23 +87,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7328204205671608176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03efbe3a8a4f74c5dadbe19f6c5202a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 56799cbfcd453ca47b7f988e1722956d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graphic_startAnimation: 0
-  customListTile: []
-  delay: 0.2
-  speed: 0.2
-  pos: 
   render: {fileID: 7328204205671608177}
-  type: 2
-  ignoreAllEntity: 0
-  recentCombatTileMouseOver_save: 
-  isMouseOnThisTile: 0
-  ignoreMouseOver: 0
-  DeathSpeed: 0.2
-  color_a: 0
-  CurrentColor: 0
 --- !u!212 &7328204205671608177 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2475580019182544896, guid: c8ff5246c3545499dbc27f0d485b1b6c,

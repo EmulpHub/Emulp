@@ -45,7 +45,9 @@ public class ActionManager : MonoBehaviour
     {
         if (Running() && currentRunningAction.IsFinished())
         {
+            var doneAction = currentRunningAction;
             currentRunningAction = null;
+            doneAction.Finish();
             CheckNextActionToDo();
         }
     }

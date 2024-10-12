@@ -12,7 +12,9 @@ public abstract partial class Collectable : MonoBehaviour
     {
         Clicked = true;
 
-        var PathParam = new PathParam(V.player_entity.CurrentPosition_string, position).AddListForcePos(new List<string>() { position });
+        var PathParam = new PathParam(V.player_entity.CurrentPosition_string, position);
+
+        PathParam.walkableParam.RemoveToForbideenPos(position);
 
         V.player_entity.MoveTo(PathParam);
     }
