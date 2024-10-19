@@ -49,6 +49,9 @@ public class ActionManager : MonoBehaviour
             currentRunningAction = null;
             doneAction.Finish();
             CheckNextActionToDo();
+
+            if (currentRunningAction is null && EntityOrder.Instance.IsTurnOf_Player() && V.game_state == V.State.fight)
+                Scene_Main.SetGameAction_movement();
         }
     }
 

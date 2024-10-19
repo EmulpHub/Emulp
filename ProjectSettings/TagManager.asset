@@ -47,14 +47,14 @@ TagManager:
   - name: Map_Ground
     uniqueID: 3103517361
     locked: 0
+  - name: Combat_tile
+    uniqueID: 2994887305
+    locked: 0
   - name: Map
     uniqueID: 2922492621
     locked: 0
   - name: Map_positionning
     uniqueID: 23129209
-    locked: 0
-  - name: Combat_tile
-    uniqueID: 2994887305
     locked: 0
   - name: Default
     uniqueID: 0

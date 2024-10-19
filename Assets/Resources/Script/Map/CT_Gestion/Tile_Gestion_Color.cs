@@ -4,9 +4,9 @@ using UnityEngine;
 
 public partial class Tile_Gestion : MonoBehaviour
 {
-    public enum Color { green, green_light, blue, blue_over, blue_noLine, blue_over_noLine, red }
+    public enum Color { green, green_light, blue, blue_over, blue_noLine, blue_over_noLine, red,pink }
 
-    public Color32 green, green_light, blue, blue_over, blue_over_noLine, blue_noLine, red;
+    public Color32 green, green_light, blue, blue_over, blue_over_noLine, blue_noLine, red,pink;
 
     public Color32 colorMovement, colorSpell;
 
@@ -24,6 +24,8 @@ public partial class Tile_Gestion : MonoBehaviour
             return blue_over_noLine;
         else if (color == Color.red)
             return red;
+        else if (color == Color.pink)
+            return pink;
         else //green light
             return green_light;
     }

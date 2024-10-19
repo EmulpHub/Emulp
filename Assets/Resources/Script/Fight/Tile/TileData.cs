@@ -5,14 +5,15 @@ using UnityEngine;
 
 public abstract class TileData : MonoBehaviour
 {
-    public enum Layer { normal, spell }
+    public enum Layer { low, normal, spell }
 
     public Layer layer { get; private set; } = Layer.normal;
+
+    public int additionalSortingOrder { get; private set; }
 
     public enum Type { movement, graphic, spell }
 
     public Type type { get; private set; }
-
 
     private string _pos;
 
@@ -33,8 +34,6 @@ public abstract class TileData : MonoBehaviour
     public Vector2 posVector2 { get; private set; }
 
     public bool DoScaleApparition { get; private set; } = false;
-
-    public float DeathSpeed { get; private set; } = 0.2f;
 
     private List<string> _listTileDependancy;
 
@@ -80,20 +79,45 @@ public abstract class TileData : MonoBehaviour
         return this;
     }
 
+    public TileData SetAdditionalSortingOrder (int additionalSortingOrder)
+    {
+        this.additionalSortingOrder = additionalSortingOrder;
+        return this;
+    }
 }
 
 public class TileData_graphic : TileData
 {
-    public TileData_graphic(string pos,Tile_Gestion.Color color, Layer layer = Layer.normal) : base(pos, Type.graphic, layer) {
+    public TileData_graphic(string pos, Tile_Gestion.Color color = Tile_Gestion.Color.pink, Layer layer = Layer.normal) : base(pos, Type.graphic, layer)
+    {
         this.color = color;
     }
-    
+
+    private bool ContainOverrideColor = false;
+    public Color32 overrideColor { get; private set; }
+
+    public TileData_graphic SetOverrideColor(Color32 color)
+    {
+        ContainOverrideColor = true;
+        overrideColor = color;
+        return this;
+    }
+
     public Tile_Gestion.Color color { get; private set; }
+
+    public Color32 ChooseColor()
+    {
+        if (ContainOverrideColor)
+            return overrideColor;
+        else
+            return Tile_Gestion.Instance.ConvertEnumColorIntoColor32(color);
+    }
 }
 
 public class TileData_spell : TileData
 {
-    public TileData_spell(string pos,bool lineOfView, Layer layer = Layer.normal) : base(pos, Type.spell, layer) {
+    public TileData_spell(string pos, bool lineOfView, Layer layer = Layer.normal) : base(pos, Type.spell, layer)
+    {
         this.lineOfView = lineOfView;
     }
 

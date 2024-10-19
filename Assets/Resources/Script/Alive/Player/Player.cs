@@ -114,7 +114,7 @@ public partial class Player : Entity
             return false;
 
         SoundManager.PlaySound(SoundManager.list.player_movement_click_grass);
-        V.map_possibleToMove.movingAnimation(F.ConvertToWorldVector2(runningInfo.path.endOfPath));
+        V.map_possibleToMove.movingAnimation(F.ConvertToWorldVector2(runningInfo.pathResult.endOfPath));
 
         return true;
     }

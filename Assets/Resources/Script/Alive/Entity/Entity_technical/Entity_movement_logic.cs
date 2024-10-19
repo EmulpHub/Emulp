@@ -5,7 +5,6 @@ using UnityEngine;
 
 public partial class Entity : MonoBehaviour
 {
-
     private IEnumerator RunEnumerator(PathResult pathResult)
     {
         runningInfo.Run();
@@ -15,6 +14,8 @@ public partial class Entity : MonoBehaviour
         RunningInfo.Mode mode = runningInfo.mode;
 
         float speed = ChooseRunSpeed();
+
+        runningInfo.SetSpeed(speed);
 
         int i = 0;
 

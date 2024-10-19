@@ -8,6 +8,8 @@ public class MonsterAction_Movement : MonsterAction
 {
     MonsterBehaviorMoveInfo moveInfo;
 
+    public int StuckTurnId = -1;
+
     public MonsterAction_Movement (MonsterBehaviorMoveInfo moveInfo, PriorityLayer layer, int priority) : base (layer, priority)
     {
         this.moveInfo = moveInfo;
@@ -15,6 +17,8 @@ public class MonsterAction_Movement : MonsterAction
 
     public override bool Condition()
     {
+        if (StuckTurnId == EntityOrder.Instance.id_turn) return false;
+
         Entity target = monsterBehavior.DecideWhoToAttack();
         int distance = F.DistanceBetweenTwoPos(target,info.monster);
 

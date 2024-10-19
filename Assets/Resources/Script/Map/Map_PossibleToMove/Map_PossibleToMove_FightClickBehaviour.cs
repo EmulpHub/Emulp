@@ -49,8 +49,6 @@ public partial class Map_PossibleToMove : MonoBehaviour
             if (V.player_entity.runningInfo.running)
                 return;
 
-            tile.AnimationApparition();
-
             Action_movement.Add(new PathFindingName.PathParam(V.player_entity.CurrentPosition_string, CursorInfo.Instance.position), V.player_entity);
         }
     }

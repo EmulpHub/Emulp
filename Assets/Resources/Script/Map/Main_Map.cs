@@ -9,7 +9,7 @@ public class Main_Map : MonoBehaviour
 
     public static float size_x = 1.575f, size_y = 0.7875f;
 
-    public static Vector3 size_x_vector3 = new Vector3(1.575f, 0, 0), size_y_vector3 = new Vector3(0, 0.7875f, 0);
+    public static Vector3 size_x_vector3 = new Vector3(size_x, 0, 0), size_y_vector3 = new Vector3(0, size_y, 0);
 
     public static Map currentMap;
 

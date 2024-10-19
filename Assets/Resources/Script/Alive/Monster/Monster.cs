@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +16,8 @@ public partial class Monster : Entity
             return (MonsterInfo)Info;
         }
     }
+
+    public UniqueCarac uniqueCarac;
 
     [HideInInspector]
     public bool ContainPassive;
@@ -119,3 +121,37 @@ public partial class Monster : Entity
     }
 }
 
+public class UniqueCarac
+{
+    private Color32 color { get; set; }
+
+    private TileRenderEngine.CornerSprite cornerSprite { get; set; }
+
+    private int order { get; set; }
+
+    public UniqueCarac(int order)
+    {
+        var listColor = MonsterBehaviorManager.Instance.listUniqueMonsterColor;
+        var listCorner = MonsterBehaviorManager.Instance.listUniqueCornerSprite;
+
+        color = listColor[order % listColor.Count];
+        cornerSprite = listCorner[order % listCorner.Count];
+
+        this.order = order + 1;
+    }
+
+    public void Uniquify(Tile tile)
+    {
+        tile.data.SetAdditionalSortingOrder(order);
+        tile.SetCornerSprite(cornerSprite);
+        tile.SetCornerValue(0.1f);
+
+        if (tile.data is TileData_graphic graphic)
+        {
+            graphic.SetOverrideColor(color);
+            tile.UpdateColor();
+        }
+
+        tile.UpdateSortingOrder();
+    }
+}

@@ -27,6 +27,9 @@ namespace LayerWorldGeneration
                 nbMonster++;
             }
 
+            if (V.administrator && V.script_Scene_Main_Administrator.nbMonster != 0)
+                nbMonster = V.script_Scene_Main_Administrator.nbMonster;
+
             int availablePoint = Random.Range(0, 2 + 1) + WorldData.distance;
 
             int lvl = 2 + WorldData.distance * 3;
@@ -36,6 +39,9 @@ namespace LayerWorldGeneration
                 Mathf.Clamp(nbMonster, 2, 99);
                 Mathf.Clamp(availablePoint, 3, 99);
             }
+
+            if (V.administrator && V.script_Scene_Main_Administrator.levelMonster != 0)
+                lvl = V.script_Scene_Main_Administrator.levelMonster;
 
             MonsterInMap listMonster = MonsterInMap.CreateRandomListMonster(lvl, lvl + 1, nbMonster, availablePoint);
 

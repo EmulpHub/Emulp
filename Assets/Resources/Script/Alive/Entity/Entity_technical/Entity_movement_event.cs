@@ -33,8 +33,6 @@ public partial class Entity : MonoBehaviour
         runningInfo.SetDirectionToArea(DirectionData.Direction.empty);
 
         event_EndOfRun.Call(this);
-
-        runningInfo.SetNextPos("999_999");
     }
 
 }

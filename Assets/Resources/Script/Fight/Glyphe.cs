@@ -11,7 +11,7 @@ public class Glyphe : MonoBehaviour
 
     public SpellGestion.List effect;
 
-    public Tile_Gestion.Color tile_color;
+    //public Tile_Gestion.Color tile_color;
 
     public Image render;
 
@@ -19,46 +19,46 @@ public class Glyphe : MonoBehaviour
 
     public Transform tile_parent;
 
-    public static GameObject CreateGlyphe(SpellGestion.List effect, List<string> rangeEffect, Tile_Gestion.Color tile_color, Sprite img, string originPos)
-    {
-        GameObject g = Instantiate(Resources.Load<GameObject>("Prefab/Glyphe"));
+    //public static GameObject CreateGlyphe(SpellGestion.List effect, List<string> rangeEffect, Tile_Gestion.Color tile_color, Sprite img, string originPos)
+    //{
+    //    GameObject g = Instantiate(Resources.Load<GameObject>("Prefab/Glyphe"));
 
-        g.transform.position = F.ConvertToWorldVector2(originPos);
+    //    g.transform.position = F.ConvertToWorldVector2(originPos);
 
-        Glyphe glyphe = g.GetComponent<Glyphe>();
+    //    Glyphe glyphe = g.GetComponent<Glyphe>();
 
-        glyphe.effect = effect;
+    //    glyphe.effect = effect;
 
-        glyphe.render.sprite = img;
+    //    glyphe.render.sprite = img;
 
-        glyphe.rangeEffect = rangeEffect;
+    //    glyphe.rangeEffect = rangeEffect;
 
-        glyphe.tile_color = tile_color;
+    //    glyphe.tile_color = tile_color;
 
-        List<string> effectiveRange = new List<string>();
+    //    List<string> effectiveRange = new List<string>();
 
-        foreach (string pos in rangeEffect)
-        {
-            if (F.IsTileExistWithNoObstacle(F.ConvertToVector2Int(pos)) && F.IsTileSeenable(pos))
-            {
-                //CombatTile_Gestion.Add_graphic_forGlyphe(pos, tile_color, true, glyphe);
-                effectiveRange.Add(pos);
-            }
+    //    foreach (string pos in rangeEffect)
+    //    {
+    //        if (F.IsTileExistWithNoObstacle(F.ConvertToVector2Int(pos)) && F.IsTileSeenable(pos))
+    //        {
+    //            //CombatTile_Gestion.Add_graphic_forGlyphe(pos, tile_color, true, glyphe);
+    //            effectiveRange.Add(pos);
+    //        }
 
-            Entity entity = EntityByPos.TryGet(pos);
+    //        Entity entity = EntityByPos.TryGet(pos);
 
-            if (entity)
-            {
-                glyphe.Apply(entity, true);
-            }
-        }
+    //        if (entity)
+    //        {
+    //            glyphe.Apply(entity, true);
+    //        }
+    //    }
 
-        glyphe.rangeEffect = effectiveRange;
+    //    glyphe.rangeEffect = effectiveRange;
 
-        allActiveGlyphe.Add(effectiveRange, glyphe);
+    //    allActiveGlyphe.Add(effectiveRange, glyphe);
 
-        return g;
-    }
+    //    return g;
+    //}
 
     public static Dictionary<Entity, List<(int idTurn, Glyphe g)>> memorieOfGlyphe = new Dictionary<Entity, List<(int idTurn, Glyphe g)>>();
 

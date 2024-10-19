@@ -18,7 +18,11 @@ public partial class Tile_Gestion : MonoBehaviour
 
             data.SetListTileDependancy(listeAOEPos);
 
-            ListAOE.Add(Tile_Graphic.Add(data));
+            var tile = Tile_Graphic.Add(data);
+
+            tile.SetOutline();
+
+            ListAOE.Add(tile);
         }
 
         MouseOnTile = TileInfo.Instance.Get(targetedSqaure);
@@ -33,7 +37,7 @@ public partial class Tile_Gestion : MonoBehaviour
             TileInfo.Instance.Remove(tile);
 
             if (tile != null)
-                tile.Erase(Tile.AnimationErase_type.instant);
+                tile.Erase();
         }
 
         ListAOE.Clear();

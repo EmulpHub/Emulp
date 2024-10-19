@@ -31,7 +31,7 @@ public partial class Monster : Entity
 
                 saveEntityPosition.Add(this, posToGo);
 
-                var pathParam = new PathParam(V.player_entity.CurrentPosition_string, posToGo, new WalkableParam(Walkable.GetCommonForbideenPos(),false));
+                var pathParam = new PathParam(V.player_entity.CurrentPosition_string, posToGo, new WalkableParam(Walkable.GetCommonForbideenPos(), false));
 
                 pathParam.walkableParam.RemoveToForbideenPos(this.CurrentPosition_string);
 
@@ -45,10 +45,15 @@ public partial class Monster : Entity
         base.OnMouseIsOver();
 
         AddHighLightMonster();
-        
-        if (V.game_state == V.State.fight && !Scene_Main.isMouseOverAWindow && Scene_Main.entityShowMovement != this && V.game_state_action == V.State_action.movement && !V.Tutorial_Get())
+
+        if (V.game_state == V.State.fight && V.game_state_action == V.State_action.movement)
         {
-            Scene_Main.SetGameAction_showMonsterMovement(this);
+            timerBeforeHighLight -= Time.deltaTime;
+
+            if (timerBeforeHighLight < 0 && !Scene_Main.isMouseOverAWindow && Scene_Main.entityShowMovement != this && !V.Tutorial_Get())
+            {
+                Scene_Main.SetGameAction_showMonsterMovement(this);
+            }
         }
 
         event_all_monster_mouseOver.Call(this);
@@ -107,14 +112,21 @@ public partial class Monster : Entity
         Main_UI.ManageDontMoveCursor(this.gameObject, false);
 
         event_all_monster_mouseExit.Call(this);
+
+        timerBeforeHighLight = timerBeforeHighLightMax;
     }
 
     public static List<Monster> HighlighMonster = new List<Monster>();
 
+    private float timerBeforeHighLightMax = 1;
+    private float timerBeforeHighLight = 1;
+
     public void AddHighLightMonster()
     {
         if (V.game_state == V.State.fight)
+        {
             HighlighMonster = new List<Monster>() { this };
+        }
         else
             HighlighMonster = new List<Monster>(Main_Map.currentMap.monsterInArea);
     }

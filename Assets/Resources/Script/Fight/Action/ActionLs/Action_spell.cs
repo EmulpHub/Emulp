@@ -13,8 +13,6 @@ public class Action_spell : Action
 
     protected override IEnumerator Execute_main()
     {
-        V.script_Scene_Main.EnregistredPath_clear();
-
         info.spell.CastSpell(info);
 
         yield return null;

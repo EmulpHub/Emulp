@@ -23,7 +23,10 @@ public class EntityOrder_Ennemy : MonoBehaviour
 
     public void Add(Monster ennemy)
     {
+        int index = list.Count;
         list.Add(ennemy);
+
+        ennemy.uniqueCarac = new UniqueCarac(index);
     }
 
     public void Remove(Monster ennemy)

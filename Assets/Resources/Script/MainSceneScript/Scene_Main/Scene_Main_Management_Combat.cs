@@ -53,28 +53,6 @@ public partial class Scene_Main : MonoBehaviour
         timeToShowMovement = Time.time + 0.2f;
     }
 
-    public Dictionary<(string pos1, string pos2), List<string>> enregistredPath = new Dictionary<(string pos1, string pos2), List<string>>();
-
-    public void EnregistredPath_add(string pos1, string pos2, List<string> path)
-    {
-        enregistredPath.Add((pos1, pos2), path);
-    }
-
-    public bool EnregistredPath_contain(string pos1, string pos2)
-    {
-        return enregistredPath.ContainsKey((pos1, pos2));
-    }
-
-    public List<string> EnregistredPath_get(string pos1, string pos2)
-    {
-        return enregistredPath[(pos1, pos2)];
-    }
-
-    public void EnregistredPath_clear()
-    {
-        enregistredPath.Clear();
-    }
-
     public static void Set_PossibleMovementTile(Entity entity)
     {
         TileInfo.Instance.ListTile_Clear();
@@ -83,6 +61,15 @@ public partial class Scene_Main : MonoBehaviour
 
         bool forPlayer = entity.Info.IsPlayer();
 
+        bool isAMonster = false;
+        Monster entityMonster = null;
+
+        if (entity is Monster m)
+        {
+            isAMonster = true;
+            entityMonster = m;
+        }
+
         foreach (var info in result)
         {
             string pos = info.Key;
@@ -90,18 +77,35 @@ public partial class Scene_Main : MonoBehaviour
 
             if (!entity.IsReachable(distance)) continue;
 
+            Tile tile = null;
+
             if (forPlayer)
             {
                 var data = new TileData_movement(pos, distance);
-                
-                Tile_Movement.Add(data);
+
+                tile = Tile_Movement.Add(data);
             }
             else
             {
                 var data = new TileData_graphic(pos, Tile_Gestion.Color.green);
 
-                Tile_Graphic.Add(data);
+                tile = Tile_Graphic.Add(data);
+
+                if (isAMonster)
+                {
+                    entityMonster.uniqueCarac.Uniquify(tile);
+                }
             }
+
+            tile.SetOutline();
+            tile.SetScale(0);
+
+            var anim = new AnimTileData_Scale(0.8f, 1, 0.05f);
+
+            if (forPlayer)
+                anim.SetDelay((distance - 1) * 0.05f);
+
+            tile.Animate(anim);
         }
 
         Tile_Gestion.Instance.UpdateAllTileSprite();
@@ -135,14 +139,16 @@ public partial class Scene_Main : MonoBehaviour
 
         Tile_Gestion.Instance.UpdateAllTileSprite();
     }
-
+    
     public void AddSpellAtPos(string pos, Spell.Range_type range_type)
     {
         bool lineOfView = F.IsLineOfView(pos, V.player_entity.CurrentPosition_string);
 
         var data = new TileData_spell(pos, lineOfView);
 
-        Tile_Spell.Add(data);
+        var tile = Tile_Spell.Add(data);
+
+        tile.SetOutline();
     }
 
     public static void SetGameAction_movement()

@@ -84,7 +84,7 @@ public class TileInfo : MonoBehaviour
         foreach (Tile tile in new List<Tile>(listTile))
         {
             Remove(tile);
-            tile.Erase(Tile.AnimationErase_type.instant);
+            tile.Erase();
         }
     }
 
@@ -95,7 +95,7 @@ public class TileInfo : MonoBehaviour
             if (PosToIgnore.Contains(tile.data.pos)) continue;
 
             Remove(tile);
-            tile.Erase(Tile.AnimationErase_type.instant);
+            tile.Erase();
         }
     }
 }

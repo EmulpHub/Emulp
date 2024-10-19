@@ -72,7 +72,7 @@ public partial class Tile_Gestion : MonoBehaviour
 
         if (V.game_state_action == V.State_action.spell)
         {
-            bool lineOfView = false;
+            bool lineOfView = true;
 
             if (tile.data.type == TileData.Type.spell)
             {
@@ -80,7 +80,7 @@ public partial class Tile_Gestion : MonoBehaviour
             }
 
             var color = lineOfView ? Color.blue_over : Color.blue_over_noLine;
-
+                 
             AOE_Create(tile.data.pos, color);
         }
         else

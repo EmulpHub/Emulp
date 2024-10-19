@@ -80,7 +80,7 @@ public class Scene_Main_Administrator : MonoBehaviour
 
     public int levelMonster = 0;
 
-    public int startMonsterNb = 0;
+    public int nbMonster = 0;
 
     public bool Infinite_PMPALEAK;
 
@@ -137,7 +137,7 @@ public class Scene_Main_Administrator : MonoBehaviour
         ForcePm_Monster = 0;
         InstaFight = false;
         levelMonster = 0;
-        startMonsterNb = 0;
+        nbMonster = 0;
         Infinite_PMPALEAK = false;
         focus_monster = new List<MonsterInfo.MonsterType>();
         focus_spell = new List<SpellGestion.List>();

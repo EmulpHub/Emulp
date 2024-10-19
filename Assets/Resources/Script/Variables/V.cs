@@ -94,6 +94,7 @@ public partial class V : MonoBehaviour
 
     private static bool Tutorial = false;
 
+
     public static bool Tutorial_Get()
     {
         return V.Tutorial || (V.administrator && (V.script_Scene_Main_Administrator != null && V.script_Scene_Main_Administrator.activeTutorial));

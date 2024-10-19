@@ -31,6 +31,9 @@ public class TileIconManager : MonoBehaviour
 
         TileIcon v = CreateTileIcon(pos, tile, img, couleur, scale, preserveAspect);
 
+        if (dicPosTileIcon.ContainsKey(pos))
+            Remove(pos);
+
         dicPosTileIcon.Add(pos, v);
 
         return v;

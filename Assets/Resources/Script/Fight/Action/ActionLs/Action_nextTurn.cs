@@ -13,8 +13,6 @@ public class Action_nextTurn : Action
     {
         SpellGestion.ResetSelectionnedSpell();
 
-        V.script_Scene_Main.EnregistredPath_clear();
-
         EntityOrder.Instance.PassTurn();
 
         yield return null;

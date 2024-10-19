@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Action_multi : Action
 {
-    public Action_multi () : base()
+    public Action_multi() : base()
     {
         type = Type.multi;
     }
@@ -13,7 +13,7 @@ public class Action_multi : Action
 
     protected override IEnumerator Execute_main()
     {
-        foreach(Action action in listAction)
+        foreach (Action action in listAction)
         {
             action.Execute();
         }
@@ -21,7 +21,7 @@ public class Action_multi : Action
         yield return null;
     }
 
-    public override bool IsFinished ()
+    public override bool IsFinished()
     {
         foreach (Action action in listAction)
         {
@@ -32,12 +32,27 @@ public class Action_multi : Action
         return base.IsFinished();
     }
 
-    public static void Add (List<Action> listAction)
+    protected override IEnumerator Finish_main()
+    {
+        foreach (var action in listAction)
+        {
+            action.Finish();
+        }
+
+        yield return null;
+    }
+
+    public static void Add(List<Action> listAction)
     {
         Action_multi action_Multi = new Action_multi();
 
         action_Multi.listAction = listAction;
 
         ActionManager.Instance.AddToDo(action_Multi);
+    }
+
+    public override string debug()
+    {
+        return "multi action count = " +listAction.Count;
     }
 }

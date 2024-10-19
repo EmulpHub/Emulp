@@ -2596,16 +2596,19 @@ MonoBehaviour:
     rgba: 4291725362
   blue_over:
     serializedVersion: 2
-    rgba: 4294228595
+    rgba: 4289884192
   blue_over_noLine:
     serializedVersion: 2
-    rgba: 4294563498
+    rgba: 4293240926
   blue_noLine:
     serializedVersion: 2
-    rgba: 4285875982
+    rgba: 4294228595
   red:
     serializedVersion: 2
     rgba: 4281480654
+  pink:
+    serializedVersion: 2
+    rgba: 4291363071
   colorMovement:
     serializedVersion: 2
     rgba: 4288148595
@@ -5546,8 +5549,8 @@ MonoBehaviour:
   focus_spell: 
   focus_Equipment: []
   AddSpell: 0
-  levelMonster: 0
-  startMonsterNb: 0
+  levelMonster: 10
+  nbMonster: 2
   Infinite_PMPALEAK: 0
   ResetStartMap: 0
   activeTutorial: 0
@@ -5562,7 +5565,7 @@ MonoBehaviour:
   ForcePm_Monster: 0
   Invulnerable: 0
   activeFps: 0
-  unlockAllEquipments: 0
+  unlockAllEquipments: 1
   unlockAllTalents: 0
   Language: 0
   permaShowAscension: 0
@@ -6621,6 +6624,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7d202aa71a44648be18a3c907c2a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listUniqueMonsterColor:
+  - serializedVersion: 2
+    rgba: 4284375525
+  - serializedVersion: 2
+    rgba: 4281480654
+  - serializedVersion: 2
+    rgba: 4280296370
+  - serializedVersion: 2
+    rgba: 4279506579
+  - serializedVersion: 2
+    rgba: 4279111797
+  - serializedVersion: 2
+    rgba: 4278190397
+  - serializedVersion: 2
+    rgba: 4282187832
+  - serializedVersion: 2
+    rgba: 4285861475
+  - serializedVersion: 2
+    rgba: 4287829120
+  - serializedVersion: 2
+    rgba: 4289863836
+  - serializedVersion: 2
+    rgba: 4291703487
+  - serializedVersion: 2
+    rgba: 4293222094
+  - serializedVersion: 2
+    rgba: 4294210532
+  - serializedVersion: 2
+    rgba: 4294552301
+  - serializedVersion: 2
+    rgba: 4294962174
+  - serializedVersion: 2
+    rgba: 4294563498
+  - serializedVersion: 2
+    rgba: 4294228595
+  - serializedVersion: 2
+    rgba: 4293240926
+  - serializedVersion: 2
+    rgba: 4291725362
+  - serializedVersion: 2
+    rgba: 4289884192
+  - serializedVersion: 2
+    rgba: 4287846932
+  - serializedVersion: 2
+    rgba: 4285875982
+  - serializedVersion: 2
+    rgba: 4282196480
+  listUniqueCornerSprite: 010000000200000000000000
 --- !u!1 &1637787002
 GameObject:
   m_ObjectHideFlags: 0
@@ -7661,7 +7712,7 @@ MonoBehaviour:
   cam_YPosMin_Passive: 0.2
   cam_XPosMax_Passive: 1.4
   cam_YPosMax_Passive: 1.4
-  cam_YPosMin_Fight: 0.28
+  cam_YPosMin_Fight: 0.2
   cam_XPosMax_Fight: 0.99
   cam_YPosMax_Fight: 0.99
   equipment_commonRef:

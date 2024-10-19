@@ -17,6 +17,10 @@ public class MonsterBehaviorManager : MonoBehaviour
         }
     }
 
+    public List<Color32> listUniqueMonsterColor;
+
+    public List<TileRenderEngine.CornerSprite> listUniqueCornerSprite;
+
     public void StartToBehave()
     {
         StartCoroutine(Manage());
@@ -33,6 +37,7 @@ public class MonsterBehaviorManager : MonoBehaviour
             if (info.mode == TurnInfo.Mode.turn)
             {
                 Action_nextTurn.Add();
+
             }
             else if (info.mode == TurnInfo.Mode.spell)
             {
@@ -108,12 +113,22 @@ public class MonsterBehaviorManager : MonoBehaviour
 
         var result = new List<Action>();
 
-        while (listActorMove.Count > 0)
+        int max = 100;
+        int o = 0;
+
+        while (o < max && listActorMove.Count > 0)
         {
+            o++;
+            if (o >= max)
+                throw new System.Exception("exception");
+
             var dicoListPathPerMonster = new Dictionary<MonsterWithMovementAction, List<PotentialPathInfo>>();
 
-            foreach (var monsterWithAction in listActorMove)
+            //Creation du dico 
+            for (int i = 0; i < listActorMove.Count; i++)
             {
+                var monsterWithAction = listActorMove[i];
+
                 var listListPath = GetPath(monsterWithAction, walkableParam);
 
                 if (listListPath.Count > 0)
@@ -121,18 +136,28 @@ public class MonsterBehaviorManager : MonoBehaviour
             }
 
             if (dicoListPathPerMonster.Count == 0)
-                throw new System.Exception("Pas de chemin");
+            {
+                foreach (var actor in listActorMove)
+                {
+                    actor.monsterAction.StuckTurnId = EntityOrder.Instance.id_turn;
+                }
+                break;
+            }
 
             var MonsterToMove = ChooseWichMonsterMove(dicoListPathPerMonster, out var ChoosenMonsterWithMovementAction);
 
-            var movementAction = Action_movement.Create(new PathParam(MonsterToMove.monster.CurrentPosition_string, MonsterToMove.endPos, new WalkableParam(new List<string>(listForbideenPos), true)), MonsterToMove.monster);
+            var param = new PathParam(MonsterToMove.monster.CurrentPosition_string, MonsterToMove.endPos, new WalkableParam(new List<string>(listForbideenPos), true));
+
+            var movementAction = Action_movement.Create(param, MonsterToMove.monster);
 
             listForbideenPos.Remove((MonsterToMove.monster.CurrentPosition_string));
             listForbideenPos.Add(MonsterToMove.endPos);
-            result.Add(movementAction);
-            listActorMove.Remove(ChoosenMonsterWithMovementAction);
-        }
 
+            result.Add(movementAction);
+
+            listActorMove.Remove(ChoosenMonsterWithMovementAction);
+
+        }
         return result;
     }
 

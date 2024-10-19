@@ -9,7 +9,9 @@ public class RunningInfo
 
     public int runId { get; private set; }
 
-    public PathResult path { get; private set; }
+    public PathResult pathResult { get; private set; }
+
+    public List<string> walkablePath { get; private set; }
 
     public enum Mode { walk, run }
 
@@ -25,6 +27,8 @@ public class RunningInfo
 
     private string _nextPos = "999_999";
 
+    public float speed { get; private set; }
+    
     public string NextPos
     {
         get
@@ -37,9 +41,18 @@ public class RunningInfo
         }
     }
 
-    public void SetPath(PathResult path)
+    public void SetSpeed(float value)
     {
-        this.path = path;
+        speed = value;
+    }
+    public void SetPath (PathResult path)
+    {
+        this.pathResult = path;
+    }
+
+    public void SetWalkablePath(List<string> path)
+    {
+        this.walkablePath = path;
     }
 
     public void Run()
@@ -52,7 +65,7 @@ public class RunningInfo
 
         if (!alreadyRunning || mode == Mode.walk)
         {
-            if (path.LengthInSquare > 2)
+            if (pathResult.LengthInSquare > 2)
                 mode = RunningInfo.Mode.run;
             else
                 mode = RunningInfo.Mode.walk;
@@ -61,6 +74,7 @@ public class RunningInfo
 
     public void stop()
     {
+        SetNextPos("999_999");
         running = false;
     }
 

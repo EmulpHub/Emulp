@@ -10,7 +10,7 @@ public class Tile_Movement : Tile
 {
     public TileData_movement dataMovement { get => (TileData_movement)data; }
 
-    public static void Add(TileData_movement movement)
+    public static Tile_Movement Add(TileData_movement movement)
     {
         var script = Instantiate(Tile_Gestion.Instance.prefab_Tile_Movement, Tile_Gestion.Instance.parent).GetComponent<Tile_Movement>();
 
@@ -19,6 +19,8 @@ public class Tile_Movement : Tile
         script.UpdateColor();
 
         TileInfo.Instance.Add(script);
+
+        return script;
     }
 
     private bool IsReachable()
